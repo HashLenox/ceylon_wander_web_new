@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('food', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('category')->references('id')->on('food_categories');
+            $table->foreignId('food_category_id')->references('id')->on('food_categories');
             $table->foreignId('location_id')->references('id')->on('locations');
             $table->text('description')->nullable();
             $table->decimal('price_small', 10, 2)->nullable();

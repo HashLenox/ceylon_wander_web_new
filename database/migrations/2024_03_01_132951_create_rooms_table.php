@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->index();
             $table->foreignId('location_id')->references('id')->on('locations');
-            $table->foreignId('room_type')->references('id')->on('room_types');
+            $table->foreignId('room_type_id')->references('id')->on('room_types');
             $table->integer('max_person_count');
             $table->integer('number_of_rooms');
             $table->integer('available_rooms');

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->foreignId('location')->references('id')->on('locations');
-            $table->foreignId('user')->references('id')->on('users');
+            $table->foreignId('location_id')->references('id')->on('locations');
+            $table->foreignId('userid')->references('id')->on('users');
             $table->integer('type');
             $table->decimal('amount', 10, 2);
             $table->timestamps();
