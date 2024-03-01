@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->index();
             $table->integer('type');
-            $table->foreignId('city_id')->references('id')->on('cities');
-            $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
+            $table->foreignId('city')->references('id')->on('cities');
+            $table->foreignId('category')->references('id')->on('categories')->cascadeOnDelete();
             $table->text('description')->nullable();
             $table->decimal('longitude', 10, 7);
             $table->decimal('latitude', 10, 7);

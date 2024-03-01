@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index();
-            $table->foreignId('location')->references('id')->on('locations');
+            $table->foreignId('location_id')->references('id')->on('locations');
             $table->foreignId('room_type')->references('id')->on('room_types');
             $table->integer('max_person_count');
             $table->integer('number_of_rooms');

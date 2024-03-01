@@ -47,15 +47,15 @@ class Reservation extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('location_id')
+            BelongsTo::make('location')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('room_id')
+            BelongsTo::make('room')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('user_id')
+            BelongsTo::make('user')
                 ->sortable()
                 ->rules('required'),
 

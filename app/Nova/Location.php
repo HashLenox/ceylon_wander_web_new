@@ -116,15 +116,15 @@ class Location extends Resource
             // created_by
             // updated_by foreign keys
 
-            //HasMany::make('reservations'),
+            HasMany::make('reservations'),
 
             HasMany::make('foods'),
 
-            // HasMany::make('statistics'),
+            HasMany::make('statistics'),
 
-            // HasMany::make('transactions'),
+            HasMany::make('transactions'),
 
-            //HasMany::make('reviews'),
+            HasMany::make('reviews'),
 
             HasMany::make('rooms'),
 
