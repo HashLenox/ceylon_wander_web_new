@@ -47,29 +47,29 @@ class Reservation extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('location')
+            BelongsTo::make('Location')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('room')
+            BelongsTo::make('Room')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('user')
+            BelongsTo::make('User')
                 ->sortable()
                 ->rules('required'),
 
-            Date::make('first_date')
+            Date::make('First Date', 'first_date')
                 ->rules('required'),
 
-            Date::make('last_date')
+            Date::make('Last Date', 'last_date')
                 ->rules('required'),
 
-            Boolean::make('approval')
+            Boolean::make('Approval')
                 ->rules('required')
                 ->default(false),
 
-            Boolean::make('arrived')
+            Boolean::make('Arrived')
                 ->rules('required')
                 ->default(false),
 

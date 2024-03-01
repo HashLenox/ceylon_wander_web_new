@@ -50,9 +50,9 @@ class Transaction extends Resource
 
             // BelongsTo::make('user'),
 
-            Number::make('type'),
+            Number::make('Type'),
 
-            Number::make('amount'),
+            Number::make('Amount'),
 
 
         ];

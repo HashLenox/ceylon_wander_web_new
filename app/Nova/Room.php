@@ -49,30 +49,28 @@ class Room extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->required()
                 ->sortable(),
 
-            BelongsTo::make('location')
+            BelongsTo::make('Location')
                 ->required(),
 
-            BelongsTo::make('room_type')
+            BelongsTo::make('Room Type', 'room_type')
                 ->required(),
 
-            Number::make('max_person_count')
+            Number::make('Number of Person Allowed', 'max_person_count')
                 ->required(),
 
-            Number::make('number_of_rooms')
+            Number::make('Number of Rooms', 'number_of_rooms')
                 ->required(),
 
-            Number::make('available_rooms')
+            Number::make('Available Rooms', 'available_rooms')
                 ->required(),
 
-            Text::make('description'),
+            Text::make('Description'),
 
-
-
-            Number::make('price')
+            Number::make('Price', 'price')
                 ->required(),
 
             Text::make('image_path'),

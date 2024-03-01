@@ -55,12 +55,12 @@ class Location extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->sortable()
                 ->rules('required'),
 
 
-            Select::make('type')->options([
+            Select::make('Type')->options([
                 '1' => 'Travel Location',
                 '2' => 'Restaurant',
                 '3' => 'Accommodation',
@@ -68,39 +68,39 @@ class Location extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('city')
+            BelongsTo::make('City')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('category')
+            BelongsTo::make('Category')
                 ->sortable()
                 ->rules('required')
                 ->searchable()
                 ->showCreateRelationButton(),
 
-            Textarea::make('description'),
+            Textarea::make('Description'),
 
-            Number::make('longitude')
+            Number::make('Longitude')
                 ->step(0.01)
                 ->min(0)
                 ->rules('required'),
 
-            Number::make('latitude')
+            Number::make('Latitude')
                 ->step(0.01)
                 ->min(0)
                 ->rules('required'),
 
 
-            Text::make('address')
+            Text::make('Address')
                 ->sortable()
                 ->rules('required'),
 
-            Text::make('contact_no')
+            Text::make('Contact No', 'contact_no')
                 ->rules('required'),
 
-            Boolean::make('status'),
+            Boolean::make('Status'),
 
-            Number::make('points')
+            Number::make('Points')
                 ->rules('required'),
 
             Text::make('image_path'),

@@ -47,15 +47,15 @@ class Review extends Resource
 
             ID::make()->sortable(),
 
-            Text::make('location'),
+            Text::make('Location'),
 
-            Number::make('ratings'),
+            Number::make('Ratings'),
 
-            Textarea::make('comments'),
+            Textarea::make('Comments'),
 
-            Number::make('views'),
+            Number::make('Views'),
 
-            Boolean::make('status'),
+            Boolean::make('Status'),
 
             Text::make('user'),
         ];

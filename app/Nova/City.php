@@ -92,14 +92,16 @@ class City extends Resource
                 ->sortable()
                 ->step(0.01)
                 ->min(0)
-                ->rules('max:20', 'required')
+                ->max(20)
+                ->rules('required')
                 ->hideFromIndex(),
 
             Number::make('Longitude')
                 ->sortable()
                 ->step(0.01)
                 ->min(0)
-                ->rules('max:20', 'required')
+                ->max(20)
+                ->rules('required')
                 ->hideFromIndex(),
 
 

@@ -45,11 +45,11 @@ class RoomType extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->required()
                 ->sortable(),
 
-            Text::make('description'),
+            Text::make('Description'),
 
             Text::make('image_path'),
 
