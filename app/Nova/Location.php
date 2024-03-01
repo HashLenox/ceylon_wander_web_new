@@ -5,29 +5,30 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Repeater;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class City extends Resource
+class Location extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\City>
+     * @var class-string<\App\Models\Location>
      */
-    public static $model = \App\Models\City::class;
+    public static $model = \App\Models\Location::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name_en';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -36,7 +37,11 @@ class City extends Resource
      */
     public static $search = [
         'id',
-        'name_en',
+        'name',
+        'type',
+        'contact_no',
+        'address',
+        'features'
     ];
 
     /**
@@ -50,67 +55,10 @@ class City extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('district')
-                ->sortable()
-                ->searchable()
-                ->withSubtitles()
-                ->showCreateRelationButton()
-                ->modalSize('5xl'),
-
-            Text::make('Name English', 'name_en')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('Name Sinhala', 'name_si')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('Name Tamil', 'name_ta')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('Sub Name English', 'sub_name_en')
-                ->sortable()
-                ->hideFromIndex()
-                ->rules('required'),
-
-            Text::make('Sub Name Sinhala', 'sub_name_si')
-                ->sortable()
-                ->hideFromIndex()
-                ->rules('required'),
-
-            Text::make('SUb Name Tamil', 'sub_name_ta')
-                ->sortable()
-                ->hideFromIndex()
-                ->rules('required'),
-
-            Text::make('postcode')
-                ->sortable()
-                ->rules('required'),
-
-            Number::make('latitude')
-                ->sortable()
-                ->step(0.01)
-                ->min(0)
-                ->rules('max:20', 'required')
-                ->hideFromIndex(),
-
-            Number::make('longitude')
-                ->sortable()
-                ->step(0.01)
-                ->min(0)
-                ->rules('max:20', 'required')
-                ->hideFromIndex(),
-
             Text::make('name')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('category')
-                ->sortable()
-                ->rules('required')
-                ->searchable()
-                ->showCreateRelationButton(),
 
             Select::make('type')->options([
                 '1' => 'Travel Location',
@@ -124,7 +72,13 @@ class City extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            Text::make('description'),
+            BelongsTo::make('category')
+                ->sortable()
+                ->rules('required')
+                ->searchable()
+                ->showCreateRelationButton(),
+
+            Textarea::make('description'),
 
             Number::make('longitude')
                 ->step(0.01)
@@ -136,7 +90,6 @@ class City extends Resource
                 ->min(0)
                 ->rules('required'),
 
-            Text::make('image_path'),
 
             Text::make('address')
                 ->sortable()
@@ -150,6 +103,8 @@ class City extends Resource
             Number::make('points')
                 ->rules('required'),
 
+            Text::make('image_path'),
+
 
             Repeater::make('Add Feature', 'features')
                 ->repeatables([
@@ -158,7 +113,20 @@ class City extends Resource
                 ->asJson()
                 ->rules('required'),
 
-            HasMany::make('locations'),
+            // created_by
+            // updated_by foreign keys
+
+            HasMany::make('reservations'),
+
+            HasMany::make('foods'),
+
+            HasMany::make('statistics'),
+
+            HasMany::make('transactions'),
+
+            HasMany::make('reviews'),
+
+            HasMany::make('rooms'),
 
         ];
     }

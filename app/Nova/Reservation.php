@@ -3,28 +3,29 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Reservation extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Reservation>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Reservation::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -33,7 +34,6 @@ class Category extends Resource
      */
     public static $search = [
         'id',
-        'name',
     ];
 
     /**
@@ -47,24 +47,46 @@ class Category extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
+            BelongsTo::make('location')
                 ->sortable()
                 ->rules('required'),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
+            BelongsTo::make('room')
                 ->sortable()
+                ->rules('required'),
+
+            BelongsTo::make('user')
+                ->sortable()
+                ->rules('required'),
+
+            Date::make('first_date')
+                ->rules('required'),
+
+            Date::make('last_date')
+                ->rules('required'),
+
+            Boolean::make('approval')
                 ->rules('required')
-                ->displayUsingLabels(),
+                ->default(false),
 
-            Textarea::make('Description', 'description')
-                ->sortable()
-                ->rules('required'),
+            Boolean::make('arrived')
+                ->rules('required')
+                ->default(false),
 
-            HasMany::make('locations'),
+
+            Select::make('Reservation Status', 'status')->options([
+                '1' => 'Cancelled',
+                '2' => 'Pending',
+                '3' => 'Completed',
+            ])
+                ->required()
+                ->sortable(),
+
+            Boolean::make('Availability', 'status')
+                ->required()
+                ->default(true),
+
+            Text::make('remark'),
         ];
     }
 

@@ -5,19 +5,18 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class FoodCategory extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\FoodCategory>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\FoodCategory::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,8 +31,7 @@ class Category extends Resource
      * @var array
      */
     public static $search = [
-        'id',
-        'name',
+        'id', 'name'
     ];
 
     /**
@@ -47,24 +45,11 @@ class Category extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
-                ->sortable()
-                ->rules('required'),
+            Text::make('Name'),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
-                ->sortable()
-                ->rules('required')
-                ->displayUsingLabels(),
+            Textarea::make('Description'),
 
-            Textarea::make('Description', 'description')
-                ->sortable()
-                ->rules('required'),
-
-            HasMany::make('locations'),
+            HasMany::make('foods'),
         ];
     }
 

@@ -3,21 +3,22 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Food extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Food>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Food::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -34,6 +35,7 @@ class Category extends Resource
     public static $search = [
         'id',
         'name',
+        'category',
     ];
 
     /**
@@ -47,24 +49,44 @@ class Category extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
-                ->sortable()
-                ->rules('required'),
+            Text::make('name')
+                ->sortable(),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
+            BelongsTo::make('category')
                 ->sortable()
-                ->rules('required')
-                ->displayUsingLabels(),
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            Textarea::make('Description', 'description')
+            BelongsTo::make('location')
                 ->sortable()
-                ->rules('required'),
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            HasMany::make('locations'),
+            Textarea::make('description'),
+
+            Number::make('price_small')
+                ->min(0)
+                ->required()
+                ->step(.02),
+
+            Number::make('price_regular')
+                ->min(0)
+                ->required()
+                ->step(.02),
+
+            Number::make('price_large')
+                ->min(0)
+                ->required()
+                ->step(.02),
+
+            Boolean::make('status')->default(true),
+
+            Text::make('image_path'),
+
         ];
     }
 

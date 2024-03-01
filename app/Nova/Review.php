@@ -3,28 +3,28 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Review extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Review>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Review::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -33,7 +33,6 @@ class Category extends Resource
      */
     public static $search = [
         'id',
-        'name',
     ];
 
     /**
@@ -45,26 +44,20 @@ class Category extends Resource
     public function fields(NovaRequest $request)
     {
         return [
+
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
-                ->sortable()
-                ->rules('required'),
+            Text::make('location'),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
-                ->sortable()
-                ->rules('required')
-                ->displayUsingLabels(),
+            Number::make('ratings'),
 
-            Textarea::make('Description', 'description')
-                ->sortable()
-                ->rules('required'),
+            Textarea::make('comments'),
 
-            HasMany::make('locations'),
+            Number::make('views'),
+
+            Boolean::make('status'),
+
+            Text::make('user'),
         ];
     }
 

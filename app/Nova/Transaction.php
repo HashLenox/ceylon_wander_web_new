@@ -3,28 +3,26 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Transaction extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Transaction>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Transaction::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -33,7 +31,6 @@ class Category extends Resource
      */
     public static $search = [
         'id',
-        'name',
     ];
 
     /**
@@ -47,24 +44,17 @@ class Category extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
-                ->sortable()
-                ->rules('required'),
+            Text::make('name'),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
-                ->sortable()
-                ->rules('required')
-                ->displayUsingLabels(),
+            // BelongsTo::make('location'),
 
-            Textarea::make('Description', 'description')
-                ->sortable()
-                ->rules('required'),
+            // BelongsTo::make('user'),
 
-            HasMany::make('locations'),
+            Number::make('type'),
+
+            Number::make('amount'),
+
+
         ];
     }
 

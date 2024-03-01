@@ -3,28 +3,29 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Repeater;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Category extends Resource
+class Room extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\Category>
+     * @var class-string<\App\Models\Room>
      */
-    public static $model = \App\Models\Category::class;
+    public static $model = \App\Models\Room::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -34,6 +35,7 @@ class Category extends Resource
     public static $search = [
         'id',
         'name',
+        'features'
     ];
 
     /**
@@ -47,24 +49,45 @@ class Category extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Category Name', 'name')
-                ->sortable()
+            Text::make('name')
+                ->required()
+                ->sortable(),
+
+            BelongsTo::make('location')
+                ->required(),
+
+            BelongsTo::make('room_type')
+                ->required(),
+
+            Number::make('max_person_count')
+                ->required(),
+
+            Number::make('number_of_rooms')
+                ->required(),
+
+            Number::make('available_rooms')
+                ->required(),
+
+            Text::make('description'),
+
+
+
+            Number::make('price')
+                ->required(),
+
+            Text::make('image_path'),
+
+
+            Repeater::make('Add Feature', 'features')
+                ->repeatables([
+                    \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
+                ])
+                ->asJson()
                 ->rules('required'),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
-                ->sortable()
-                ->rules('required')
-                ->displayUsingLabels(),
+            //created_by, updated_by foreign keys
 
-            Textarea::make('Description', 'description')
-                ->sortable()
-                ->rules('required'),
-
-            HasMany::make('locations'),
+            HasMany::make('reservations'),
         ];
     }
 
