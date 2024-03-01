@@ -2,13 +2,23 @@
 
 namespace App\Providers;
 
+use App\Nova\Food;
+use app\Nova\FoodCategory;
 use App\Nova\Category;
 use App\Nova\City;
 use App\Nova\Dashboards\Main;
 use App\Nova\District;
 use App\Nova\Feature;
+use App\Nova\Food as NovaFood;
+use App\Nova\Location;
 use App\Nova\Province;
+use App\Nova\Reservation;
+use App\Nova\Review;
 use App\Nova\Role;
+use App\Nova\Room;
+use App\Nova\RoomType;
+use App\Nova\Statistic;
+use App\Nova\Transaction;
 use App\Nova\User;
 use Bolechen\NovaActivitylog\Resources\Activitylog;
 use Illuminate\Http\Request;
@@ -155,6 +165,20 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
               </svg>
               '),
+
+
+                MenuSection::make('Food Category', [
+                    MenuItem::resource(FoodCategory::class),
+                    MenuItem::resource(Food::class),
+                    MenuItem::resource(Location::class),
+                    MenuItem::resource(Reservation::class),
+                    MenuItem::resource(Review::class),
+                    MenuItem::resource(RoomType::class),
+                    MenuItem::resource(Room::class),
+                    MenuItem::resource(Transaction::class),
+                    MenuItem::resource(Statistic::class),
+
+                ]),
 
                 MenuSection::make('Users', [
                     MenuGroup::make('Users and Roles', [

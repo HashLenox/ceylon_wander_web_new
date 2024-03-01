@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class RoomType extends Resource
@@ -20,7 +21,7 @@ class RoomType extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -29,6 +30,8 @@ class RoomType extends Resource
      */
     public static $search = [
         'id',
+        'name',
+
     ];
 
     /**
@@ -41,6 +44,16 @@ class RoomType extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('name')
+                ->required()
+                ->sortable(),
+
+            Text::make('description'),
+
+            Text::make('image_path'),
+
+            // HasMany::make('rooms'),
         ];
     }
 

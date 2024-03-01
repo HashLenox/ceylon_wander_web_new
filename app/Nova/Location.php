@@ -3,7 +3,15 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Repeater;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Location extends Resource
@@ -20,7 +28,7 @@ class Location extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -29,6 +37,11 @@ class Location extends Resource
      */
     public static $search = [
         'id',
+        'name',
+        'type',
+        'contact_no',
+        'address',
+        'features'
     ];
 
     /**
@@ -41,6 +54,80 @@ class Location extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('name')
+                ->sortable()
+                ->rules('required'),
+
+
+            Select::make('type')->options([
+                '1' => 'Travel Location',
+                '2' => 'Restaurant',
+                '3' => 'Accommodation',
+            ])
+                ->sortable()
+                ->rules('required'),
+
+            // BelongsTo::make('city')
+            //     ->sortable()
+            //     ->rules('required'),
+
+            // BelongsTo::make('category')
+            //     ->sortable()
+            //     ->rules('required')
+            //     ->searchable()
+            //     ->showCreateRelationButton(),
+
+            Textarea::make('description'),
+
+            Number::make('longitude')
+                ->step(0.01)
+                ->min(0)
+                ->rules('required'),
+
+            Number::make('latitude')
+                ->step(0.01)
+                ->min(0)
+                ->rules('required'),
+
+
+            Text::make('address')
+                ->sortable()
+                ->rules('required'),
+
+            Text::make('contact_no')
+                ->rules('required'),
+
+            Boolean::make('status'),
+
+            Number::make('points')
+                ->rules('required'),
+
+            Text::make('image_path'),
+
+
+            Repeater::make('Add Feature', 'features')
+                ->repeatables([
+                    \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
+                ])
+                ->asJson()
+                ->rules('required'),
+
+            // created_by
+            // updated_by foreign keys
+
+            //HasMany::make('reservations'),
+
+            // HasMany::make('foods'),
+
+            // HasMany::make('statistics'),
+
+            // HasMany::make('transactions'),
+
+            //HasMany::make('reviews'),
+
+            //HasMany::make('rooms'),
+
         ];
     }
 

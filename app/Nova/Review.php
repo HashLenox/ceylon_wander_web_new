@@ -3,7 +3,11 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Review extends Resource
@@ -40,7 +44,20 @@ class Review extends Resource
     public function fields(NovaRequest $request)
     {
         return [
+
             ID::make()->sortable(),
+
+            Text::make('location'),
+
+            Number::make('ratings'),
+
+            Textarea::make('comments'),
+
+            Number::make('views'),
+
+            Boolean::make('status'),
+
+            Text::make('user'),
         ];
     }
 

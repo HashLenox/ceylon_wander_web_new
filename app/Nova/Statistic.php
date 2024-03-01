@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Statistic extends Resource
@@ -29,6 +30,7 @@ class Statistic extends Resource
      */
     public static $search = [
         'id',
+        'location_id'
     ];
 
     /**
@@ -41,6 +43,18 @@ class Statistic extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            ID::make()->sortable(),
+
+            Number::make('views'),
+
+            Number::make('ratings'),
+
+            Number::make('reaches'),
+
+            Number::make('impressions'),
+
+            // BelongsTo::make('location'),
         ];
     }
 

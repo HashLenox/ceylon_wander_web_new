@@ -4,6 +4,8 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Transaction extends Resource
@@ -41,6 +43,18 @@ class Transaction extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('name'),
+
+            // BelongsTo::make('location'),
+
+            // BelongsTo::make('user'),
+
+            Number::make('type'),
+
+            Number::make('amount'),
+
+
         ];
     }
 

@@ -3,7 +3,11 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Reservation extends Resource
@@ -41,6 +45,47 @@ class Reservation extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            // BelongsTo::make('location_id')
+            //     ->sortable()
+            //     ->rules('required'),
+
+            // BelongsTo::make('room_id')
+            //     ->sortable()
+            //     ->rules('required'),
+
+            // BelongsTo::make('user_id')
+            //     ->sortable()
+            //     ->rules('required'),
+
+            Date::make('first_date')
+                ->rules('required'),
+
+            Date::make('last_date')
+                ->rules('required'),
+
+            Boolean::make('approval')
+                ->rules('required')
+                ->default(false),
+
+            Boolean::make('arrived')
+                ->rules('required')
+                ->default(false),
+
+
+            Select::make('Reservation Status', 'status')->options([
+                '1' => 'Cancelled',
+                '2' => 'Pending',
+                '3' => 'Completed',
+            ])
+                ->required()
+                ->sortable(),
+
+            Boolean::make('Availability', 'status')
+                ->required()
+                ->default(true),
+
+            Text::make('remark'),
         ];
     }
 

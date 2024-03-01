@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('category')->references('id')->on('food_categories');
             $table->foreignId('location')->references('id')->on('locations');
+            $table->text('description')->nullable();
             $table->decimal('price_small', 10, 2)->nullable();
             $table->decimal('price_regular', 10, 2)->nullable();
             $table->decimal('price_large', 10, 2)->nullable();

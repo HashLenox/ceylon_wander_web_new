@@ -4,6 +4,9 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Repeater;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Room extends Resource
@@ -29,6 +32,8 @@ class Room extends Resource
      */
     public static $search = [
         'id',
+        'name',
+        'features'
     ];
 
     /**
@@ -41,6 +46,43 @@ class Room extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('name')
+                ->required()
+                ->sortable(),
+
+            // BelongsTo::make('location_id')
+            //     ->required(),
+
+            // BelongsTo::make('room_type')
+            //     ->required(),
+
+            Number::make('max_person_count')
+                ->required(),
+
+            Number::make('number_of_rooms')
+                ->required(),
+
+            Number::make('available_rooms')
+                ->required(),
+
+            Text::make('description'),
+
+            Repeater::make('Add Feature', 'features')
+                ->repeatables([
+                    \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
+                ])
+                ->asJson()
+                ->rules('required'),
+
+            Number::make('price')
+                ->required(),
+
+            Text::make('image_path'),
+
+            //created_by, updated_by foreign keys
+
+            // HasMany::make('reservations'),
         ];
     }
 
