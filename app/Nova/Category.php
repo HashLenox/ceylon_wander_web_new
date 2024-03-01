@@ -51,7 +51,7 @@ class Category extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            Select::make('type')->options([
+            Select::make('Type')->options([
                 '1' => 'Travel Location',
                 '2' => 'Restaurant',
                 '3' => 'Accommodation',
@@ -64,7 +64,7 @@ class Category extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            HasMany::make('locations'),
+            HasMany::make('Locations'),
         ];
     }
 
