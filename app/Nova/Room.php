@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Repeater;
@@ -51,11 +52,11 @@ class Room extends Resource
                 ->required()
                 ->sortable(),
 
-            // BelongsTo::make('location_id')
-            //     ->required(),
+            BelongsTo::make('location')
+                ->required(),
 
-            // BelongsTo::make('room_type')
-            //     ->required(),
+            BelongsTo::make('room_type')
+                ->required(),
 
             Number::make('max_person_count')
                 ->required(),
@@ -68,17 +69,20 @@ class Room extends Resource
 
             Text::make('description'),
 
+
+
+            Number::make('price')
+                ->required(),
+
+            Text::make('image_path'),
+
+
             Repeater::make('Add Feature', 'features')
                 ->repeatables([
                     \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
                 ])
                 ->asJson()
                 ->rules('required'),
-
-            Number::make('price')
-                ->required(),
-
-            Text::make('image_path'),
 
             //created_by, updated_by foreign keys
 

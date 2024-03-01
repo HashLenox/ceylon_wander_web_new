@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
@@ -46,17 +47,17 @@ class Reservation extends Resource
         return [
             ID::make()->sortable(),
 
-            // BelongsTo::make('location_id')
-            //     ->sortable()
-            //     ->rules('required'),
+            BelongsTo::make('location_id')
+                ->sortable()
+                ->rules('required'),
 
-            // BelongsTo::make('room_id')
-            //     ->sortable()
-            //     ->rules('required'),
+            BelongsTo::make('room_id')
+                ->sortable()
+                ->rules('required'),
 
-            // BelongsTo::make('user_id')
-            //     ->sortable()
-            //     ->rules('required'),
+            BelongsTo::make('user_id')
+                ->sortable()
+                ->rules('required'),
 
             Date::make('first_date')
                 ->rules('required'),

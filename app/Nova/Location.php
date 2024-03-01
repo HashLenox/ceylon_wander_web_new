@@ -68,15 +68,15 @@ class Location extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            // BelongsTo::make('city')
-            //     ->sortable()
-            //     ->rules('required'),
+            BelongsTo::make('city')
+                ->sortable()
+                ->rules('required'),
 
-            // BelongsTo::make('category')
-            //     ->sortable()
-            //     ->rules('required')
-            //     ->searchable()
-            //     ->showCreateRelationButton(),
+            BelongsTo::make('category')
+                ->sortable()
+                ->rules('required')
+                ->searchable()
+                ->showCreateRelationButton(),
 
             Textarea::make('description'),
 
@@ -118,7 +118,7 @@ class Location extends Resource
 
             //HasMany::make('reservations'),
 
-            // HasMany::make('foods'),
+            HasMany::make('foods'),
 
             // HasMany::make('statistics'),
 
@@ -126,7 +126,7 @@ class Location extends Resource
 
             //HasMany::make('reviews'),
 
-            //HasMany::make('rooms'),
+            HasMany::make('rooms'),
 
         ];
     }

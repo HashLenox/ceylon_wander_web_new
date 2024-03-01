@@ -52,19 +52,19 @@ class Food extends Resource
             Text::make('name')
                 ->sortable(),
 
-            // BelongsTo::make('category')
-            //     ->sortable()
-            //     ->searchable()
-            //     ->withSubtitles()
-            //     ->showCreateRelationButton()
-            //     ->modalSize('5xl'),
+            BelongsTo::make('category')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            // BelongsTo::make('location')
-            //     ->sortable()
-            //     ->searchable()
-            //     ->withSubtitles()
-            //     ->showCreateRelationButton()
-            //     ->modalSize('5xl'),
+            BelongsTo::make('location')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
             Textarea::make('description'),
 
@@ -86,8 +86,6 @@ class Food extends Resource
             Boolean::make('status')->default(true),
 
             Text::make('image_path'),
-
-
 
         ];
     }

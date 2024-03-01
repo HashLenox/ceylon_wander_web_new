@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
@@ -62,6 +63,8 @@ class Category extends Resource
             Textarea::make('Description', 'description')
                 ->sortable()
                 ->rules('required'),
+
+            HasMany::make('locations'),
         ];
     }
 
