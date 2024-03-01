@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('room_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->index();
+            $table->text('description')->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

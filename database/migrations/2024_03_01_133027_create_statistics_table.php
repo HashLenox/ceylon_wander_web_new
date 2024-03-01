@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
+            $table->integer('views');
+            $table->integer('ratings');
+            $table->integer('reaches');
+            $table->integer('impressions');
+            $table->foreignId('location_id')->references('id')->on('locations');
             $table->timestamps();
         });
     }

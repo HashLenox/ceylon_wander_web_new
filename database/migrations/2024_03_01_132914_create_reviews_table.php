@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('location_id')->references('id')->on('locations');
+            $table->decimal('ratings', 3, 1);
+            $table->text('comments');
+            $table->integer('views');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
