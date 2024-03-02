@@ -34,6 +34,11 @@ class Reservation extends Resource
      */
     public static $search = [
         'id',
+        'location_id',
+        'room_id',
+        'user_id',
+        'first_date',
+        'last_date',
     ];
 
     /**
@@ -60,10 +65,12 @@ class Reservation extends Resource
                 ->rules('required'),
 
             Date::make('First Date', 'first_date')
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Date::make('Last Date', 'last_date')
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Boolean::make('Approval')
                 ->rules('required')
@@ -86,7 +93,8 @@ class Reservation extends Resource
                 ->required()
                 ->default(true),
 
-            Text::make('remark'),
+            Text::make('remark')
+                ->hideFromIndex(),
         ];
     }
 

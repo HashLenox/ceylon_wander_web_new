@@ -66,6 +66,7 @@ class Location extends Resource
                 '3' => 'Accommodation',
             ])
                 ->sortable()
+                ->filterable()
                 ->rules('required'),
 
             BelongsTo::make('City')
@@ -78,32 +79,39 @@ class Location extends Resource
                 ->searchable()
                 ->showCreateRelationButton(),
 
-            Textarea::make('Description'),
+            Textarea::make('Description')
+                ->hideFromIndex(),
 
             Number::make('Longitude')
                 ->step(0.01)
                 ->min(0)
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Number::make('Latitude')
                 ->step(0.01)
                 ->min(0)
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
 
             Text::make('Address')
                 ->sortable()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
-            Text::make('Contact No', 'contact_no')
-                ->rules('required'),
+            Number::make('Contact No', 'contact_no')
+                ->rules('required')
+                ->max('9999999999')
+                ->min(0),
 
             Boolean::make('Status'),
 
             Number::make('Points')
                 ->rules('required'),
 
-            Text::make('image_path'),
+            Text::make('image_path')
+                ->hideFromIndex(),
 
 
             Repeater::make('Add Feature', 'features')

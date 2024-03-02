@@ -72,7 +72,8 @@ class City extends Resource
             Text::make('Sub Name English', 'sub_name_en')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Text::make('Sub Name Sinhala', 'sub_name_si')
                 ->sortable()
@@ -103,7 +104,6 @@ class City extends Resource
                 ->max(20)
                 ->rules('required')
                 ->hideFromIndex(),
-
 
             HasMany::make('locations'),
 

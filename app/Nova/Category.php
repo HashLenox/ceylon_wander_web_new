@@ -64,7 +64,7 @@ class Category extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            HasMany::make('Locations'),
+            HasMany::make('locations'),
         ];
     }
 

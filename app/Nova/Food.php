@@ -66,26 +66,32 @@ class Food extends Resource
                 ->showCreateRelationButton()
                 ->modalSize('5xl'),
 
-            Textarea::make('Description'),
+            Textarea::make('Description')
+                ->hideFromIndex(),
 
             Number::make('Small Portion Price', 'price_small')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
             Number::make('Regular Portion Price', 'price_regular')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
             Number::make('Large Portion Price', 'price_large')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
             Boolean::make('Status')->default(true),
 
-            Text::make('image_path'),
+
+            Text::make('image_path')
+                ->hideFromIndex(),
 
         ];
     }

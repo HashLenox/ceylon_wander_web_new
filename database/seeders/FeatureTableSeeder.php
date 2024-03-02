@@ -17,30 +17,38 @@ class FeatureTableSeeder extends Seeder
 
         DB::table('features')->insert(
             array(
+
                 0 =>
-                    array(
-                        'id' => 1,
-                        'name' => 'Attached Bathroom',
-                        'slug' => 'bathroom',
-                    ),
+                array(
+                    'id' => 1,
+                    'name' => 'None',
+                    'slug' => 'None',
+                ),
+
                 1 =>
-                    array(
-                        'id' => 2,
-                        'name' => 'Shared Bathroom',
-                        'slug' => 'sharedbathroom',
-                    ),
+                array(
+                    'id' => 2,
+                    'name' => 'Attached Bathroom',
+                    'slug' => 'bathroom',
+                ),
                 2 =>
-                    array(
-                        'id' => 3,
-                        'name' => 'Air Condition',
-                        'slug' => 'aircondition',
-                    ),
+                array(
+                    'id' => 3,
+                    'name' => 'Shared Bathroom',
+                    'slug' => 'sharedbathroom',
+                ),
                 3 =>
-                    array(
-                        'id' => 4,
-                        'name' => 'Tap water',
-                        'slug' => 'tapwater',
-                    ),
+                array(
+                    'id' => 4,
+                    'name' => 'Air Condition',
+                    'slug' => 'aircondition',
+                ),
+                4 =>
+                array(
+                    'id' => 5,
+                    'name' => 'Tap water',
+                    'slug' => 'tapwater',
+                ),
 
             )
         );

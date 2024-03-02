@@ -56,24 +56,28 @@ class Room extends Resource
             BelongsTo::make('Location')
                 ->required(),
 
-            BelongsTo::make('Room Type', 'room_type')
+            BelongsTo::make('Room Type', 'roomtype')
                 ->required(),
 
             Number::make('Number of Person Allowed', 'max_person_count')
-                ->required(),
+                ->required()
+                ->hideFromIndex(),
 
             Number::make('Number of Rooms', 'number_of_rooms')
-                ->required(),
+                ->required()
+                ->hideFromIndex(),
 
             Number::make('Available Rooms', 'available_rooms')
                 ->required(),
 
-            Text::make('Description'),
+            Text::make('Description')
+                ->hideFromIndex(),
 
             Number::make('Price', 'price')
                 ->required(),
 
-            Text::make('image_path'),
+            Text::make('image_path')
+                ->hideFromIndex(),
 
 
             Repeater::make('Add Feature', 'features')
@@ -81,7 +85,8 @@ class Room extends Resource
                     \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
                 ])
                 ->asJson()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             //created_by, updated_by foreign keys
 
