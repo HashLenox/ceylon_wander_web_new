@@ -54,10 +54,18 @@ class Room extends Resource
                 ->sortable(),
 
             BelongsTo::make('Location')
-                ->required(),
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            BelongsTo::make('Room Type', 'roomtype')
-                ->required(),
+            BelongsTo::make('Room Type', 'room_type')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
             Number::make('Number of Person Allowed', 'max_person_count')
                 ->required()

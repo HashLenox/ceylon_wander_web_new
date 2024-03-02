@@ -74,11 +74,23 @@ class Reservation extends Resource
 
             Boolean::make('Approval')
                 ->rules('required')
-                ->default(false),
+                ->default(false)
+                ->hideWhenCreating(),
 
             Boolean::make('Arrived')
                 ->rules('required')
-                ->default(false),
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('checkout')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('paid')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
 
 
             Select::make('Reservation Status', 'status')->options([
