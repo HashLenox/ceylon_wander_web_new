@@ -108,12 +108,6 @@ class Reservation extends Resource
                 ->step(.02)
                 ->hideFromIndex(),
 
-            Number::make('Cut Ammount', 'cut_amount')
-                ->min(0)
-                ->required()
-                ->step(.02)
-                ->hideFromIndex(),
-
             Boolean::make('Status', 'status')
                 ->required()
                 ->default(true),

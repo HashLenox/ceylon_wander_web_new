@@ -54,6 +54,12 @@ class Transaction extends Resource
 
             Number::make('Amount'),
 
+            Number::make('Cut Ammount', 'cut_amount')
+                ->min(0)
+                ->required()
+                ->step(.02)
+                ->hideFromIndex(),
+
 
         ];
     }
