@@ -59,22 +59,30 @@ class Room extends Resource
             BelongsTo::make('Room Type', 'roomtype')
                 ->required(),
 
-            Number::make('Number of Person Allowed', 'max_person_count')
+            Number::make('Person Count', 'max_person_count')
+                ->min(0)
                 ->required()
-                ->hideFromIndex(),
+                ->hideFromIndex()
+                ->help('Maximum number of person allowed for the room'),
 
-            Number::make('Number of Rooms', 'number_of_rooms')
+            Number::make('Total', 'number_of_rooms')
+                ->min(0)
                 ->required()
-                ->hideFromIndex(),
+                ->hideFromIndex()
+                ->help('Total number of rooms'),
 
-            Number::make('Available Rooms', 'available_rooms')
-                ->required(),
+            Number::make('Available', 'available_rooms')
+                ->min(0)
+                ->required()
+                ->help('Total number of available rooms'),
 
             Text::make('Description')
                 ->hideFromIndex(),
 
             Number::make('Price', 'price')
-                ->required(),
+                ->min(0)
+                ->required()
+                ->step(.02),
 
             Text::make('image_path')
                 ->hideFromIndex(),

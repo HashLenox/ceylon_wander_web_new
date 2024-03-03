@@ -108,11 +108,11 @@ class Location extends Resource
             Boolean::make('Status'),
 
             Number::make('Points')
-                ->rules('required'),
+                ->rules('required')
+                ->min(0),
 
             Text::make('image_path')
                 ->hideFromIndex(),
-
 
             Repeater::make('Add Feature', 'features')
                 ->repeatables([
