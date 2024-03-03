@@ -52,7 +52,7 @@ class Food extends Resource
             Text::make('Name')
                 ->sortable(),
 
-            BelongsTo::make('Category')
+            BelongsTo::make('food_category')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()

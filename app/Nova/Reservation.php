@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -74,11 +75,23 @@ class Reservation extends Resource
 
             Boolean::make('Approval')
                 ->rules('required')
-                ->default(false),
+                ->default(false)
+                ->hideWhenCreating(),
 
             Boolean::make('Arrived')
                 ->rules('required')
-                ->default(false),
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('checkout')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('paid')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
 
 
             Select::make('Reservation Status', 'status')->options([
@@ -89,7 +102,13 @@ class Reservation extends Resource
                 ->required()
                 ->sortable(),
 
-            Boolean::make('Availability', 'status')
+            Number::make('Ammount', 'price')
+                ->min(0)
+                ->required()
+                ->step(.02)
+                ->hideFromIndex(),
+
+            Boolean::make('Status', 'status')
                 ->required()
                 ->default(true),
 

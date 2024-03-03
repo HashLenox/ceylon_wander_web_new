@@ -9,7 +9,7 @@ class Food extends Model
 {
     use HasFactory;
 
-    public function category()
+    public function foodCategory()
     {
         return $this->belongsTo(FoodCategory::class);
     }

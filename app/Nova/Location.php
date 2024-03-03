@@ -71,13 +71,17 @@ class Location extends Resource
 
             BelongsTo::make('City')
                 ->sortable()
-                ->rules('required'),
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
             BelongsTo::make('Category')
                 ->sortable()
-                ->rules('required')
                 ->searchable()
-                ->showCreateRelationButton(),
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
             Textarea::make('Description')
                 ->hideFromIndex(),
