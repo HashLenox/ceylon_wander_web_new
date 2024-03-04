@@ -49,43 +49,49 @@ class Food extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->sortable(),
 
-            BelongsTo::make('category')
+            BelongsTo::make('food_category')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()
                 ->showCreateRelationButton()
                 ->modalSize('5xl'),
 
-            BelongsTo::make('location')
+            BelongsTo::make('Location')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()
                 ->showCreateRelationButton()
                 ->modalSize('5xl'),
 
-            Textarea::make('description'),
+            Textarea::make('Description')
+                ->hideFromIndex(),
 
-            Number::make('price_small')
+            Number::make('Small Portion Price', 'price_small')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
-            Number::make('price_regular')
+            Number::make('Regular Portion Price', 'price_regular')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
-            Number::make('price_large')
+            Number::make('Large Portion Price', 'price_large')
                 ->min(0)
                 ->required()
-                ->step(.02),
+                ->step(.02)
+                ->hideFromIndex(),
 
-            Boolean::make('status')->default(true),
+            Boolean::make('Status')->default(true),
 
-            Text::make('image_path'),
+
+            Text::make('image_path')
+                ->hideFromIndex(),
 
         ];
     }

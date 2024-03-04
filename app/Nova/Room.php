@@ -49,33 +49,51 @@ class Room extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->required()
                 ->sortable(),
 
-            BelongsTo::make('location')
-                ->required(),
+            BelongsTo::make('Location')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            BelongsTo::make('room_type')
-                ->required(),
+            BelongsTo::make('Room Type', 'room_type')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            Number::make('max_person_count')
-                ->required(),
+            Number::make('Person Count', 'max_person_count')
+                ->min(0)
+                ->required()
+                ->hideFromIndex()
+                ->help('Maximum number of person allowed for the room'),
 
-            Number::make('number_of_rooms')
-                ->required(),
+            Number::make('Total', 'number_of_rooms')
+                ->min(0)
+                ->required()
+                ->hideFromIndex()
+                ->help('Total number of rooms'),
 
-            Number::make('available_rooms')
-                ->required(),
+            Number::make('Available', 'available_rooms')
+                ->min(0)
+                ->required()
+                ->help('Total number of available rooms'),
 
-            Text::make('description'),
+            Text::make('Description')
+                ->hideFromIndex(),
 
+            Number::make('Price', 'price')
+                ->min(0)
+                ->required()
+                ->step(.02),
 
-
-            Number::make('price')
-                ->required(),
-
-            Text::make('image_path'),
+            Text::make('image_path')
+                ->hideFromIndex(),
 
 
             Repeater::make('Add Feature', 'features')
@@ -83,7 +101,8 @@ class Room extends Resource
                     \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
                 ])
                 ->asJson()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             //created_by, updated_by foreign keys
 

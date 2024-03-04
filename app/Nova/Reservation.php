@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -34,6 +35,11 @@ class Reservation extends Resource
      */
     public static $search = [
         'id',
+        'location_id',
+        'room_id',
+        'user_id',
+        'first_date',
+        'last_date',
     ];
 
     /**
@@ -47,31 +53,45 @@ class Reservation extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('location')
+            BelongsTo::make('Location')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('room')
+            BelongsTo::make('Room')
                 ->sortable()
                 ->rules('required'),
 
-            BelongsTo::make('user')
+            BelongsTo::make('User')
                 ->sortable()
                 ->rules('required'),
 
-            Date::make('first_date')
-                ->rules('required'),
-
-            Date::make('last_date')
-                ->rules('required'),
-
-            Boolean::make('approval')
+            Date::make('First Date', 'first_date')
                 ->rules('required')
-                ->default(false),
+                ->hideFromIndex(),
 
-            Boolean::make('arrived')
+            Date::make('Last Date', 'last_date')
                 ->rules('required')
-                ->default(false),
+                ->hideFromIndex(),
+
+            Boolean::make('Approval')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('Arrived')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('checkout')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
+
+            Boolean::make('paid')
+                ->rules('required')
+                ->default(false)
+                ->hideWhenCreating(),
 
 
             Select::make('Reservation Status', 'status')->options([
@@ -82,11 +102,18 @@ class Reservation extends Resource
                 ->required()
                 ->sortable(),
 
-            Boolean::make('Availability', 'status')
+            Number::make('Ammount', 'price')
+                ->min(0)
+                ->required()
+                ->step(.02)
+                ->hideFromIndex(),
+
+            Boolean::make('Status', 'status')
                 ->required()
                 ->default(true),
 
-            Text::make('remark'),
+            Text::make('remark')
+                ->hideFromIndex(),
         ];
     }
 

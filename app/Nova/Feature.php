@@ -44,7 +44,7 @@ class Feature extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('icon')
+            Text::make('Icon')
                 ->sortable()
                 ->rules('required'),
 
@@ -52,7 +52,7 @@ class Feature extends Resource
                 ->sortable()
                 ->rules('required'),
 
-            Text::make('slug')
+            Text::make('Slug')
                 ->sortable()
                 ->rules('required')
         ];

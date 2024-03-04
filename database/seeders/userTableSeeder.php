@@ -18,16 +18,29 @@ class userTableSeeder extends Seeder
         \DB::table('users')->insert(
             array(
                 0 =>
-                    array(
-                        'id' => 1,
-                        'name' => 'Developer Team',
-                        'email' => 'developer@web.com',
-                        'email_verified_at' => NULL,
-                        'password' => Hash::make('pass1234'),
-                        'remember_token' => NULL,
-                        'created_at' => '2023-08-28 06:43:11',
-                        'updated_at' => '2023-08-28 06:43:11',
-                    ),
+                array(
+                    'id' => 1,
+                    'name' => 'Developer Team',
+                    'email' => 'developer@web.com',
+                    'email_verified_at' => NULL,
+                    'password' => Hash::make('pass1234'),
+                    'remember_token' => NULL,
+                    'created_at' => '2023-08-28 06:43:11',
+                    'updated_at' => '2023-08-28 06:43:11',
+                ),
+
+                1 =>
+                array(
+                    'id' => 2,
+                    'name' => 'Hashini Lenox',
+                    'email' => 'junior@web.com',
+                    'email_verified_at' => NULL,
+                    'password' => Hash::make('pass1234'),
+                    'remember_token' => NULL,
+                    'created_at' => '2023-08-28 06:43:11',
+                    'updated_at' => '2023-08-28 06:43:11',
+                ),
+
             )
         );
     }

@@ -47,7 +47,8 @@ class FoodCategory extends Resource
 
             Text::make('Name'),
 
-            Textarea::make('Description'),
+            Textarea::make('Description')
+                ->hideFromIndex(),
 
             HasMany::make('foods'),
         ];

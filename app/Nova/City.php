@@ -50,7 +50,7 @@ class City extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('district')
+            BelongsTo::make('District')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()
@@ -72,7 +72,8 @@ class City extends Resource
             Text::make('Sub Name English', 'sub_name_en')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Text::make('Sub Name Sinhala', 'sub_name_si')
                 ->sortable()
@@ -84,79 +85,25 @@ class City extends Resource
                 ->hideFromIndex()
                 ->rules('required'),
 
-            Text::make('postcode')
+            Text::make('Postal Code', 'postcode')
                 ->sortable()
                 ->rules('required'),
 
-            Number::make('latitude')
+            Number::make('Latitude')
                 ->sortable()
                 ->step(0.01)
                 ->min(0)
-                ->rules('max:20', 'required')
-                ->hideFromIndex(),
-
-            Number::make('longitude')
-                ->sortable()
-                ->step(0.01)
-                ->min(0)
-                ->rules('max:20', 'required')
-                ->hideFromIndex(),
-
-            Text::make('name')
-                ->sortable()
-                ->rules('required'),
-
-            BelongsTo::make('category')
-                ->sortable()
+                ->max(20)
                 ->rules('required')
-                ->searchable()
-                ->showCreateRelationButton(),
+                ->hideFromIndex(),
 
-            Select::make('type')->options([
-                '1' => 'Travel Location',
-                '2' => 'Restaurant',
-                '3' => 'Accommodation',
-            ])
+            Number::make('Longitude')
                 ->sortable()
-                ->rules('required'),
-
-            BelongsTo::make('city')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('description'),
-
-            Number::make('longitude')
                 ->step(0.01)
                 ->min(0)
-                ->rules('required'),
-
-            Number::make('latitude')
-                ->step(0.01)
-                ->min(0)
-                ->rules('required'),
-
-            Text::make('image_path'),
-
-            Text::make('address')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('contact_no')
-                ->rules('required'),
-
-            Boolean::make('status'),
-
-            Number::make('points')
-                ->rules('required'),
-
-
-            Repeater::make('Add Feature', 'features')
-                ->repeatables([
-                    \App\Nova\Repeater\Facilities::make()->confirmRemoval(),
-                ])
-                ->asJson()
-                ->rules('required'),
+                ->max(20)
+                ->rules('required')
+                ->hideFromIndex(),
 
             HasMany::make('locations'),
 

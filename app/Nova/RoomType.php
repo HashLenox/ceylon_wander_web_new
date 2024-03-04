@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -45,15 +46,16 @@ class RoomType extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->required()
                 ->sortable(),
 
-            Text::make('description'),
+            Text::make('Description'),
 
-            Text::make('image_path'),
+            Text::make('image_path')
+                ->hideFromIndex(),
 
-            // HasMany::make('rooms'),
+            HasMany::make('rooms'),
         ];
     }
 

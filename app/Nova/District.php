@@ -46,7 +46,7 @@ class District extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('province')
+            BelongsTo::make('Province')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()

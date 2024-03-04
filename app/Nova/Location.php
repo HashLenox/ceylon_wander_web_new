@@ -55,56 +55,68 @@ class Location extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('name')
+            Text::make('Name')
                 ->sortable()
                 ->rules('required'),
 
 
-            Select::make('type')->options([
+            Select::make('Type')->options([
                 '1' => 'Travel Location',
                 '2' => 'Restaurant',
                 '3' => 'Accommodation',
             ])
                 ->sortable()
+                ->filterable()
                 ->rules('required'),
 
-            BelongsTo::make('city')
+            BelongsTo::make('City')
                 ->sortable()
-                ->rules('required'),
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
 
-            BelongsTo::make('category')
+            BelongsTo::make('Category')
+                ->sortable()
+                ->searchable()
+                ->withSubtitles()
+                ->showCreateRelationButton()
+                ->modalSize('5xl'),
+
+            Textarea::make('Description')
+                ->hideFromIndex(),
+
+            Number::make('Longitude')
+                ->step(0.01)
+                ->min(0)
+                ->rules('required')
+                ->hideFromIndex(),
+
+            Number::make('Latitude')
+                ->step(0.01)
+                ->min(0)
+                ->rules('required')
+                ->hideFromIndex(),
+
+
+            Text::make('Address')
                 ->sortable()
                 ->rules('required')
-                ->searchable()
-                ->showCreateRelationButton(),
+                ->hideFromIndex(),
 
-            Textarea::make('description'),
+            Number::make('Contact No', 'contact_no')
+                ->rules('required')
+                ->max('9999999999')
+                ->min(0),
 
-            Number::make('longitude')
-                ->step(0.01)
-                ->min(0)
-                ->rules('required'),
+            Boolean::make('Status'),
 
-            Number::make('latitude')
-                ->step(0.01)
-                ->min(0)
-                ->rules('required'),
+            Number::make('Points')
+                ->rules('required')
+                ->min(0),
 
-
-            Text::make('address')
-                ->sortable()
-                ->rules('required'),
-
-            Text::make('contact_no')
-                ->rules('required'),
-
-            Boolean::make('status'),
-
-            Number::make('points')
-                ->rules('required'),
-
-            Text::make('image_path'),
-
+            Text::make('image_path')
+                ->hideFromIndex(),
 
             Repeater::make('Add Feature', 'features')
                 ->repeatables([

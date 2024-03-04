@@ -46,13 +46,13 @@ class Statistic extends Resource
 
             ID::make()->sortable(),
 
-            Number::make('views'),
+            Number::make('Views'),
 
-            Number::make('ratings'),
+            Number::make('Ratings'),
 
-            Number::make('reaches'),
+            Number::make('Reaches'),
 
-            Number::make('impressions'),
+            Number::make('Impressions'),
 
             // BelongsTo::make('location'),
         ];
