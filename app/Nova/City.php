@@ -4,9 +4,13 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Repeater;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class City extends Resource
@@ -46,7 +50,7 @@ class City extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('district')
+            BelongsTo::make('District')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()
@@ -68,7 +72,8 @@ class City extends Resource
             Text::make('Sub Name English', 'sub_name_en')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required'),
+                ->rules('required')
+                ->hideFromIndex(),
 
             Text::make('Sub Name Sinhala', 'sub_name_si')
                 ->sortable()
@@ -80,24 +85,27 @@ class City extends Resource
                 ->hideFromIndex()
                 ->rules('required'),
 
-            Text::make('postcode')
+            Text::make('Postal Code', 'postcode')
                 ->sortable()
                 ->rules('required'),
 
-            Number::make('latitude')
+            Number::make('Latitude')
                 ->sortable()
                 ->step(0.01)
                 ->min(0)
-                ->rules('max:20', 'required')
+                ->max(20)
+                ->rules('required')
                 ->hideFromIndex(),
 
-            Number::make('longitude')
+            Number::make('Longitude')
                 ->sortable()
                 ->step(0.01)
                 ->min(0)
-                ->rules('max:20', 'required')
+                ->max(20)
+                ->rules('required')
                 ->hideFromIndex(),
 
+            HasMany::make('locations'),
 
         ];
     }
