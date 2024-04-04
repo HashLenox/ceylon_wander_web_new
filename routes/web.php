@@ -35,3 +35,19 @@ Route::middleware([
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/feed', function () {
+    return view('feed');
+})->name("feed");
+
+Route::get('/travel', function () {
+    return view('travel');
+})->name("travel");
+
+Route::get('/resturents', function () {
+    return view('resturent');
+})->name("resturent");
+
+Route::get('/hotels', function () {
+    return view('hotel');
+})->name("hotel");
