@@ -12,15 +12,21 @@ export default {
         './node_modules/flowbite/**/*.js',
     ],
 
+    darkMode: 'class',
+
     theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            container: {
+                center: true,
+              },
         },
     },
 
-    plugins: [forms,
-        typography,
-        require('flowbite/plugin')],
+    plugins: [typography,
+        require('flowbite/plugin'),
+        require('@tailwindcss/forms'),
+    ],
 };
