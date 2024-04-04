@@ -104,7 +104,12 @@ class Location extends Resource
                 ->rules('required')
                 ->hideFromIndex(),
 
-            Number::make('Contact No', 'contact_no')
+            Number::make('Contact No 1', 'contact_no_1')
+                ->rules('required')
+                ->max('9999999999')
+                ->min(0),
+
+            Number::make('Contact No 2', 'contact_no_2')
                 ->rules('required')
                 ->max('9999999999')
                 ->min(0),
@@ -114,6 +119,11 @@ class Location extends Resource
             Number::make('Points')
                 ->rules('required')
                 ->min(0),
+
+            Number::make('Boosting')
+                ->rules('required')
+                ->min(0)
+                ->default(0),
 
             Text::make('image_path')
                 ->hideFromIndex(),

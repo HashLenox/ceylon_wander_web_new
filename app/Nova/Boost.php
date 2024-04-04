@@ -24,7 +24,7 @@ class Boost extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'type';
 
     /**
      * The columns that should be searched.
@@ -33,6 +33,7 @@ class Boost extends Resource
      */
     public static $search = [
         'id',
+        'type',
     ];
 
     /**

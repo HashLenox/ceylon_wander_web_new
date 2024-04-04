@@ -19,12 +19,15 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->references('id')->on('users');
             $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
             $table->text('description')->nullable();
+            $table->json('opening_hours')->nullable();
             $table->decimal('longitude', 10, 7);
             $table->decimal('latitude', 10, 7);
             $table->string('address');
-            $table->string('contact_no', 10);
+            $table->string('contact_no_1', 10);
+            $table->string('contact_no_2', 10);
             $table->boolean('status')->default(true);
             $table->integer('points')->default('10');
+            $table->integer('Boosting')->default('0');
             $table->string('image_path')->nullable();
             $table->json('features');
             $table->foreignId('created_by')->nullable()->references('id')->on('users')->cascadeOnDelete();
