@@ -8,7 +8,7 @@
     <x-banner-slider> </x-banner-slider>
 
     <div>
-        <x-header>Best hotels in Area</x-header>
+        <x-header>Best Resturent in Area</x-header>
     </div>
 
     <div class="mt-5">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 
 <head>
     <meta charset="utf-8">
@@ -19,13 +19,14 @@
     @livewireStyles
 </head>
 
-<body>
-    <x-toast />
-    <div class="font-sans text-white-900 antialiased">
-        {{ $slot }}
-    </div>
+<body class="font-sans antialiased h-full bg-slate-100 dark:bg-slate-900">
+    <x-app-loader></x-app-loader>
+    @stack('modals')
 
     @livewireScripts
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+   
 </body>
 
 </html>

@@ -7,15 +7,18 @@
     "require": {
         "php": "^8.1",
         "bolechen/nova-activitylog": "^0.4.3",
+        "davidhsianturi/blade-bootstrap-icons": "^1.4",
         "digital-creative/collapsible-resource-manager": "^2.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
-        "laravel/jetstream": "^4.2",
+        "laravel/jetstream": "^4.3",
         "laravel/nova": "*",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "livewire/livewire": "^3.0",
-        "pktharindu/nova-permissions": "^3.0"
+        "livewire/livewire": "^3.4",
+        "owenvoke/blade-fontawesome": "^2.6",
+        "pktharindu/nova-permissions": "^3.0",
+        "robsontenorio/mary": "^1.25"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
