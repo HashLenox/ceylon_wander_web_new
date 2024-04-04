@@ -34,7 +34,6 @@ class Boost extends Resource
     public static $search = [
         'id',
         'type',
-        'views'
     ];
 
     /**

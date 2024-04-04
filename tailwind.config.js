@@ -9,19 +9,24 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
-        './vendor/robsontenorio/mary/src/View/Components/**/*.php'
+        './node_modules/flowbite/**/*.js',
     ],
+
+    darkMode: 'class',
 
     theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            container: {
+                center: true,
+              },
         },
     },
 
-    plugins: [forms,
-        typography,
-    require('daisyui')
-],
+    plugins: [typography,
+        require('flowbite/plugin'),
+        require('@tailwindcss/forms'),
+    ],
 };
