@@ -23,7 +23,7 @@ return new class extends Migration {
             $table->boolean('paid')->default(false);
             $table->integer('status');
             $table->string('remark');
-            $table->decimal('price', 99, 2);
+            $table->decimal('price', 9, 2);
             $table->timestamps();
         });
     }

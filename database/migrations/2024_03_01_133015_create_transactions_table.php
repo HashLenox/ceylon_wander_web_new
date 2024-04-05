@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->foreignId('userid')->references('id')->on('users');
             $table->integer('type');
             $table->decimal('amount', 10, 2);
-            $table->decimal('cut_amount', 99, 2);
+            $table->decimal('cut_amount', 9, 2);
             $table->timestamps();
         });
     }
