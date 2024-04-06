@@ -12,7 +12,7 @@
     </div>
 
     <div class="mt-5">
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             <x-hotel-card></x-hotel-card>
             <x-hotel-card></x-hotel-card>
             <x-hotel-card></x-hotel-card>
