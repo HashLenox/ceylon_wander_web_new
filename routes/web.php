@@ -44,9 +44,9 @@ Route::get('/travel', function () {
     return view('travel');
 })->name("travel");
 
-Route::get('/resturents', function () {
-    return view('resturent');
-})->name("resturent");
+Route::get('/restaurants', function () {
+    return view('restaurant');
+})->name("restaurant");
 
 Route::get('/hotels', function () {
     return view('hotel');
