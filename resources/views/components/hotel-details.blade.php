@@ -41,7 +41,6 @@
 
         <div class="w-full px-2 mt-2 lg:max-w-sm lg:mt-0 shrink-0">
             <x-hotel-overview-side-card></x-hotel-overview-side-card>
-            <x-check-form></x-check-form>
         </div>
 
 

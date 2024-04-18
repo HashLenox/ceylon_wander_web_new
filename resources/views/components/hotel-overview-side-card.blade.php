@@ -28,5 +28,7 @@
         <span class="p-2 text-xs bg-purple-200 rounded-md">10% off</span>
     </div>
 
+    <x-check-form></x-check-form>
+
 
 </div>
