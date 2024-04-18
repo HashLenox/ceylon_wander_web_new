@@ -1,5 +1,5 @@
+<!--Start - Ratings-->
 <div>
-
     <div class="flex items-center my-2">
         <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             viewBox="0 0 22 20">
@@ -30,41 +30,49 @@
         <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">out of</p>
         <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">5</p>
     </div>
-    <p class="text-sm font-medium text-gray-500 dark:text-gray-400">1,745 global ratings</p>
+    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">178+
+        <a href="#" class="underline">reviews</a>
+    </span>
+
     <div class="flex items-center mt-4">
-        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5 star</a>
+        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5
+            star</a>
         <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
             <div class="h-5 bg-yellow-300 rounded" style="width: 70%"></div>
         </div>
         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
     </div>
     <div class="flex items-center mt-4">
-        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4 star</a>
+        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4
+            star</a>
         <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
             <div class="h-5 bg-yellow-300 rounded" style="width: 17%"></div>
         </div>
         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
     </div>
     <div class="flex items-center mt-4">
-        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3 star</a>
+        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3
+            star</a>
         <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
             <div class="h-5 bg-yellow-300 rounded" style="width: 8%"></div>
         </div>
         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
     </div>
     <div class="flex items-center mt-4">
-        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2 star</a>
+        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2
+            star</a>
         <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
             <div class="h-5 bg-yellow-300 rounded" style="width: 4%"></div>
         </div>
         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
     </div>
     <div class="flex items-center mt-4">
-        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1 star</a>
+        <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1
+            star</a>
         <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
             <div class="h-5 bg-yellow-300 rounded" style="width: 1%"></div>
         </div>
         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
     </div>
-
 </div>
+<!--End - Ratings-->

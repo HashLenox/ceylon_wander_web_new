@@ -1,3 +1,4 @@
+<!--Start - Hotel Title with save and share buttons-->
 <div class="flex items-center justify-between p-5">
     <h2 class="mx-4 my-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
         Hotel ABC
@@ -24,5 +25,8 @@
             </svg>
             Share
         </a>
+
+
     </div>
 </div>
+<!--End- Hotel Title with save and share buttons-->

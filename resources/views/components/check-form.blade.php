@@ -1,3 +1,4 @@
+<!--Start - Reservation check form-->
 <div class="my-4 bg-purple-100 border-2 rounded-lg border-gray-950 dark:border-gray-700">
     <h4 class="py-1 text-2xl font-light text-center text-purple-900 md:mt-4 dark:text-gray-400">
         Check Availability
@@ -114,3 +115,4 @@
 
     </div>
 </div>
+<!--End - Reservation check form-->
