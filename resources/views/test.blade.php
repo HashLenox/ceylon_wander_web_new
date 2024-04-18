@@ -5,6 +5,7 @@
 
 
 <main class="h-auto px-4 py-16 mt-5 md:ml-64">
+
     <nav class="flex pb-4 border-b-2" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
@@ -41,6 +42,7 @@
             </li>
         </ol>
     </nav>
+
     <x-hotel-details></x-hotel-details>
 
 
