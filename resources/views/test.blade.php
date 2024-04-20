@@ -44,6 +44,4 @@
     </nav>
 
     <x-hotel-details></x-hotel-details>
-
-
 </main>

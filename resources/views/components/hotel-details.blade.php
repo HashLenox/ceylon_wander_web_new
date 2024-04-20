@@ -5,29 +5,56 @@
         <div class="px-8 md:mb-4">
             <!--Start - Image grid-->
             <div class="flex flex-col justify-center max-w-md mx-auto mb-4 lg:max-w-none lg:flex-row">
-                <div class="grid grid-cols-2 grid-rows-4 gap-1 md:grid-cols-4 md:grid-rows-2">
-                    <div class="col-span-2 row-span-4 rounded-l-xl">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-1.png"
-                            alt="Image 1"
-                            class="object-cover object-center w-full h-auto rounded-l-xl md:h-full md:w-auto">
+                <div class="flex flex-col gap-2 select-none md:flex-row">
+                    <div class="flex flex-col flex-1">
+                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
+                            data-caption="<h6>View from
+                            Herzogstand over Lake Walchen, Bavaria</h6>"
+                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;w=1200&amp;h=1500&amp;dpi=2&amp;fit=crop"
+                            draggable="false">
+                            <img draggable="false" alt="View from Herzogstand over Lake Walchen, Bavaria"
+                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;w=240&amp;h=300&amp;dpi=2&amp;fit=crop">
+                        </a>
                     </div>
-                    <div class="col-start-3 row-span-2 ">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-2.png"
-                            alt="Image 2" class="object-cover object-center w-full h-auto md:h-full md:w-auto">
-                    </div>
-                    <div class="col-start-4 row-span-2 rounded-tr-xl">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-                            alt="Image 3"
-                            class="object-cover object-center w-full h-auto rounded-tr-xl md:h-full md:w-auto">
-                    </div>
-                    <div class="col-start-3 row-span-2 row-start-3">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-4.png"
-                            alt="Image 3" class="object-cover object-center w-full h-auto md:h-full md:w-auto">
-                    </div>
-                    <div class="col-start-4 row-span-2 row-start-3 rounded-br-xl">
-                        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-5.png"
-                            alt="Image 3"
-                            class="object-cover object-center w-full h-auto rounded-br-xl md:h-full md:w-auto">
+                    <div class="flex flex-1">
+                        <div class="grid grid-cols-2 gap-2">
+                            <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
+                                data-caption="<h6>View from
+                            Herzogstand over Lake Walchen, Bavaria</h6>"
+                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
+                                draggable="false">
+                                <img class="object-cover h-full" draggable="false"
+                                    alt="View from Herzogstand over Lake Walchen, Bavaria"
+                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
+                            </a>
+                            <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
+                                data-caption="<h6>View from
+                            Herzogstand over Lake Walchen, Bavaria</h6>"
+                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
+                                draggable="false">
+                                <img class="object-cover h-full" draggable="false"
+                                    alt="View from Herzogstand over Lake Walchen, Bavaria"
+                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
+                            </a>
+                            <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
+                                data-caption="<h6>View from
+                            Herzogstand over Lake Walchen, Bavaria</h6>"
+                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
+                                draggable="false">
+                                <img class="object-cover h-full" draggable="false"
+                                    alt="View from Herzogstand over Lake Walchen, Bavaria"
+                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
+                            </a>
+                            <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
+                                data-caption="<h6>View from
+                            Herzogstand over Lake Walchen, Bavaria</h6>"
+                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
+                                draggable="false">
+                                <img class="object-cover h-full" draggable="false"
+                                    alt="View from Herzogstand over Lake Walchen, Bavaria"
+                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
