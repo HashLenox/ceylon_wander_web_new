@@ -37,17 +37,17 @@ Route::get('/test', function () {
 });
 
 Route::get('/feed', function () {
-    return view('feed');
+    return view('user.feed');
 })->name("feed");
 
 Route::get('/travel', function () {
-    return view('travel');
+    return view('user.travel');
 })->name("travel");
 
 Route::get('/restaurants', function () {
-    return view('restaurant');
+    return view('user.restaurant');
 })->name("restaurant");
 
 Route::get('/hotels', function () {
-    return view('hotel');
+    return view('user.hotel');
 })->name("hotel");
