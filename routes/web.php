@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,18 +37,11 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/feed', function () {
-    return view('user.feed');
-})->name("feed");
 
-Route::get('/travel', function () {
-    return view('user.travel');
-})->name("travel");
+Route::get('/feed', [ProfileController::class, 'feed'])->name('feed');
+Route::get('/travel', [ProfileController::class, 'travel'])->name('travel');
+Route::get('/restaurants', [ProfileController::class, 'restaurant'])->name('restaurant');
+Route::get('/hotels', [ProfileController::class, 'hotel'])->name('hotel');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
 
-Route::get('/restaurants', function () {
-    return view('user.restaurant');
-})->name("restaurant");
-
-Route::get('/hotels', function () {
-    return view('user.hotel');
-})->name("hotel");
