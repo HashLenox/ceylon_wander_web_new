@@ -1,10 +1,9 @@
-<div>
-    <div
-        class="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-        <img class="mb-2 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
+{{-- <div>
+    <div class="h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <img class="object-cover object-center mb-2 rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
             alt="office laptop working" />
-        <div class="flex justify-between items-center">
+        <div class="flex items-center justify-between">
             <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Hotel ABC
             </h2>
@@ -12,13 +11,12 @@
                 class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
         </div>
 
-        <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
+        <p class="mb-4 font-light text-gray-500 tow-lines dark:text-gray-400">Lorem ipsum dolor sit
             amet,
             consectetur adipisicing elit. Similique, optio dolor.</p>
         <div class="flex items-center justify-between">
-
             <div class="flex items-center">
-                <svg class="w-6 h-6 text-purple-800 dark:text-white mr-1" aria-hidden="true"
+                <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
@@ -38,9 +36,39 @@
                 <span class="ml-2">4.5</span>
             </div>
 
-            <p class="font-sm py-1">
+            <p class="py-1 font-sm">
                 58 reviews
             </p>
         </div>
     </div>
-</div>
+</div> --}}
+
+
+{{-- <div class="p-2 bg-white rounded-lg m-h-72 hover:shadow-xl">
+    <figure class="mb-2">
+        <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png" alt=""
+            class="ml-auto mr-auto m-h-72" />
+    </figure>
+    <div class="flex flex-col p-4 bg-purple-700 rounded-lg">
+        <div>
+            <h5 class="text-2xl font-bold leading-none text-white">
+                iPhone 11 Pro Max
+            </h5>
+            <span class="text-xs leading-none text-gray-400">And then there was Pro.</span>
+        </div>
+        <div class="flex items-center">
+            <div class="text-lg font-light text-white">
+                $1099,00
+            </div>
+            <button href="javascript:;"
+                class="flex w-10 h-10 ml-auto text-white transition duration-300 bg-purple-900 rounded-full hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="m-auto stroke-current">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div> --}}
