@@ -6,8 +6,8 @@
                 data-caption="<h6>View from
                 Herzogstand over Lake Walchen, Bavaria</h6>"
                 href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3" draggable="false">
-                <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                    class="object-cover object-center w-full transition duration-500 transform h-96 hover:scale-105"
+                <img alt="View from Herzogstand over Lake Walchen, Bavaria" class="object-cover object-center w-full h-96"
+                    class="object-cover object-center w-full h-96"
                     src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
 
             </a>

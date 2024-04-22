@@ -34,6 +34,4 @@
             <x-hotel-card></x-hotel-card>
         </div>
     </div>
-
-
 </div>

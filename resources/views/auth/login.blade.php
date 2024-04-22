@@ -1,49 +1,50 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+@vite('resources/css/app.css')
 
-        <x-validation-errors class="mb-4" />
-
-        @if (session('status'))
-            <div class="mb-4 text-sm font-medium text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        <form method="POST" action="{{ route('login') }}">
+<div class="relative flex flex-col justify-center h-screen overflow-hidden">
+    <div class="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
+        <h1 class="text-3xl font-semibold text-center text-gray-700">Login</h1>
+        <form action="{{ route('login.action') }}" method="POST" class="space-y-4">
             @csrf
-
+            @if ($errors->any())
+                <div role="alert" class="alert alert-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current shrink-0" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div>
-                <x-input label="Email/Username" id="email" class="block w-full mt-1" type="email" name="email"
-                    :value="old('email')" required autofocus autocomplete="username" />
+                <label class="label">
+                    <span class="text-base label-text">Email</span>
+                </label>
+                <input name="email" type="email" placeholder="Email Address" class="w-full input input-bordered" />
             </div>
-
-            <div class="mt-4">
-                <x-input label="Password" id="password" class="block w-full mt-1" type="password" name="password"
-                    required autocomplete="current-password" />
+            <div>
+                <label class="label">
+                    <span class="text-base label-text">Password</span>
+                </label>
+                <input name="password" type="password" placeholder="Enter Password"
+                    class="w-full input input-bordered" />
             </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="text-sm text-gray-600 ms-2">{{ __('Remember me') }}</span>
+            <div>
+                <button type="submit" class="btn btn-block">Login</button>
+            </div>
+            <div>
+                <label class="cursor-pointer label">
+                    <span class="label-text">Remember me</span>
+                    <input name="remember" type="checkbox" checked="checked" id="customCheck"
+                        class="checkbox checkbox-primary" />
                 </label>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="text-sm text-gray-600 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
+            <span>Don't have an account yet?
+                <a href="{{ route('register') }}"
+                    class="text-blue-600 hover:text-blue-800 hover:underline">Register</a></span>
         </form>
-    </x-authentication-card>
-</x-guest-layout>
+    </div>
+</div>
