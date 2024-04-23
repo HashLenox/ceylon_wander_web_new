@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\View;
 
 class AuthController extends Controller
 {
@@ -53,7 +54,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('feed');
     }
 
     public function logout(Request $request)
@@ -69,4 +70,6 @@ class AuthController extends Controller
     {
         return view('profile');
     }
+
+
 }
