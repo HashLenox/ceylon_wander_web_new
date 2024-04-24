@@ -11,6 +11,8 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\View;
 
 class AuthController extends Controller
+
+
 {
     public function register()
     {
@@ -36,6 +38,7 @@ class AuthController extends Controller
 
     public function login()
     {
+
         return view('auth/login');
     }
 
@@ -52,10 +55,14 @@ class AuthController extends Controller
             ]);
         }
 
+
+
         $request->session()->regenerate();
 
         return redirect()->route('feed');
     }
+
+
 
     public function logout(Request $request)
     {
@@ -70,6 +77,7 @@ class AuthController extends Controller
     {
         return view('profile');
     }
+
 
 
 }

@@ -56,6 +56,8 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/user/name', [AuthController::class, 'getLoggedInUserName'])->name('user.name');
+
 
 Route::get('/feed', [ProfileController::class, 'feed'])->name('feed');
 Route::get('/travel', [ProfileController::class, 'travel'])->name('travel');
