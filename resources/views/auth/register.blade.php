@@ -23,12 +23,23 @@
                 </div>
             @endif
             <div>
-                <input name="name" type="text" placeholder="Enter Name"
-                    class="@error('name')is-invalid @enderror block text-sm py-3 px-4 rounded-lg w-full border outline-purple-500" />
-                @error('name')
-                    <span class="text-red-600">{{ $message }}</span>
-                @enderror
+                <div class="flex space-x-2">
+                    <input name="first_name" type="text" placeholder="First Name"
+                        class="@error('first_name') is-invalid @enderror block text-sm py-3 px-4 rounded-lg w-full border outline-purple-500" />
+                    @error('first_name')
+                        <span class="text-red-600">{{ $message }}</span>
+                    @enderror
+
+                    <input name="last_name" type="text" placeholder="Last Name"
+                        class="@error('last_name') is-invalid @enderror block text-sm py-3 px-4 rounded-lg w-full border outline-purple-500" />
+                    @error('last_name')
+                        <span class="text-red-600">{{ $message }}</span>
+                    @enderror
+                </div>
             </div>
+
+
+
 
             <div>
                 <input name="email" type="email" placeholder="Enter Email Address"

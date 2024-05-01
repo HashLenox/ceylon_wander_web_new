@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\ProfileController;
+use app\Http\Controllers\UserProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 USE App\Http\Controllers\AuthController;

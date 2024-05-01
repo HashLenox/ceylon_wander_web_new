@@ -4,6 +4,6 @@
 @include('layouts.side_navigation')
 
 
-<main class="p-4 md:ml-64 h-auto pt-20 ">
+<main class="h-auto p-4 pt-20 md:ml-64 ">
     <h1>This is Travel page</h1>
 </main>
