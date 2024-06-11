@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index()->unique();
+            $table->string('slug')->index()->unique();
             $table->integer('type');
             $table->string('description')->default('Not Provided');
             $table->foreignId('created_by')->nullable()->references('id')->on('users')->cascadeOnDelete();
