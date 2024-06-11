@@ -36,5 +36,12 @@
                 </li>
             </ol>
         </nav>
+
+        <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
+            <x-hotel-title>Name</x-hotel-title>
+
+            {{-- Your code goes here --}}
+
+        </div>
     </div>
 </x-layouts.user-layout>
