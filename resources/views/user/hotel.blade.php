@@ -1,8 +1,4 @@
-@include('layouts.main')
-@include('layouts.navigation_main')
-
-@include('layouts.side_navigation')
-
+<x-layouts.user-layout>
 
 <main class="p-4 md:ml-64 h-auto pt-20 mt-5">
     <x-banner-slider> </x-banner-slider>
@@ -22,3 +18,4 @@
         </div>
     </div>
 </main>
+</x-layouts.user-layout>
