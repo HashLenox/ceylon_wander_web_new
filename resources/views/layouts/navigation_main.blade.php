@@ -21,7 +21,7 @@
             </button>
             <a href="#" class="flex items-center justify-between mr-4">
                 <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="h-8 mr-3" alt="Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ceylon Wander</span>
+                <span class="hidden lg:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ceylon Wander</span>
             </a>
             <div>
                 <livewire:global-search />
