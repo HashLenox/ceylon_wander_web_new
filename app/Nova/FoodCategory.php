@@ -31,7 +31,8 @@ class FoodCategory extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name'
+        'id',
+        'name'
     ];
 
     /**
@@ -46,6 +47,10 @@ class FoodCategory extends Resource
             ID::make()->sortable(),
 
             Text::make('Name'),
+
+            Text::make('Category slug', 'slug')
+                ->sortable()
+                ->rules('required'),
 
             Textarea::make('Description')
                 ->hideFromIndex(),

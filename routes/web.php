@@ -1,10 +1,14 @@
 <?php
 
 use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\UserController\AccommodationController;
+use App\Http\Controllers\UserController\FeedController;
+use App\Http\Controllers\UserController\LocationController;
+use App\Http\Controllers\UserController\RestaurantController;
 use app\Http\Controllers\UserProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-USE App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,10 +68,19 @@ Route::get('/test2', function () {
 Route::get('/user/name', [AuthController::class, 'getLoggedInUserName'])->name('user.name');
 
 
-Route::get('/feed', [ProfileController::class, 'feed'])->name('feed');
-Route::get('/travel', [ProfileController::class, 'travel'])->name('travel');
-Route::get('/restaurants', [ProfileController::class, 'restaurant'])->name('restaurant');
-Route::get('/hotels', [ProfileController::class, 'hotel'])->name('hotel');
-Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
-Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
+
+
+Route::middleware(['auth'])->group(
+    function () {
+        Route::get('/feed', [FeedController::class, 'feed'])->name('feed');
+        Route::get('/travel', [LocationController::class, 'travel'])->name('travel');
+        Route::get('/restaurants', [RestaurantController::class, 'restaurant'])->name('restaurant');
+        Route::get('/hotels', [AccommodationController::class, 'hotel'])->name('hotel');
+        Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+        Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
+
+        Route::get('/hotel/details/{id}', [AccommodationController::class, 'singleHotel'])->name('hotel.details');
+    }
+);
+
 
