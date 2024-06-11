@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\ProfileController;
+use app\Http\Controllers\UserProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+USE App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('register', 'register')->name('register');
+    Route::post('register', 'registerSave')->name('register.save');
+
+    Route::get('login', 'login')->name('login');
+    Route::post('login', 'loginAction')->name('login.action');
+
+    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+});
 
 
 Route::get('/home', function () {
@@ -36,18 +57,13 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/feed', function () {
-    return view('feed');
-})->name("feed");
+Route::get('/user/name', [AuthController::class, 'getLoggedInUserName'])->name('user.name');
 
-Route::get('/travel', function () {
-    return view('travel');
-})->name("travel");
 
-Route::get('/resturents', function () {
-    return view('resturent');
-})->name("resturent");
+Route::get('/feed', [ProfileController::class, 'feed'])->name('feed');
+Route::get('/travel', [ProfileController::class, 'travel'])->name('travel');
+Route::get('/restaurants', [ProfileController::class, 'restaurant'])->name('restaurant');
+Route::get('/hotels', [ProfileController::class, 'hotel'])->name('hotel');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
 
-Route::get('/hotels', function () {
-    return view('hotel');
-})->name("hotel");

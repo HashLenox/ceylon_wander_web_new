@@ -1,1003 +1,344 @@
-@extends('layouts.main')
-<div class="bg-white  dark:bg-gray-900">
-    <div class="container bg-white border border-gray-200 shadow-md  dark:bg-gray-800 dark:border-gray-700">
-        <div
-            class="p-8 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/coast-house-view.jpg')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply">
-            <div class="relative max-w-screen-xl px-4 py-8 mx-auto text-white lg:py-16 xl:px-0 z-1 ">
-                <div class="max-w-screen-md mb-6 lg:mb-0">
-                    <h1
-                        class="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
-                        Every home is a destination</h1>
-                    <p class="mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">The best
-                        of Luxury Retreats is now Flowbite Luxe—offering the world's most
-                        extraordinary homes with the highest standard of service.</p>
-                    {{-- <a href="#"
-                        class="inline-flex items-center px-5 py-3 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                        Sign In / Register
-                    </a> --}}
+@include('layouts.main')
+@include('layouts.navigation_main')
+@include('layouts.side_navigation')
+
+
+<main class="h-full pt-16 bg-white dark:bg-gray-900 md:ml-64">
+    <x-travel-img-slider></x-travel-img-slider>
+
+    <div class="max-w-screen-xl px-4 pt-8 pb-4 mx-auto">
+        <div class="flex flex-col flex-wrap md:flex-row md:-mx-2">
+            <div class="w-full mb-4 md:w-1/2 lg:w-1/4 lg:mb-0">
+                <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
+                    <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
+                        class="absolute z-0 object-cover w-full transform h-72 md:h-96 group-hover:scale-150">
+                    <div
+                        class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
+                        <div class="relative h-1/2">
+                            <div class="absolute bottom-0">
+                                <h2
+                                    class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
+                                    Facebook and Instagram encryption plans delayed by Meta until 2023</h2>
+                            </div>
+                        </div>
+                        <div class="h-1/2">
+                            <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">
+                                Plans to roll out end-to-end encryption on Facebook and Instagram have been delayed
+                                amid a row over child safety.</p>
+                            <button
+                                class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
+                                More</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 lg:mb-0">
+                <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
+                    <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
+                        class="absolute z-0 object-cover w-full h-72 md:h-96">
+                    <div
+                        class="absolute w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96 z-100">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
+                        <div class="relative h-1/2">
+                            <div class="absolute bottom-0">
+                                <h2
+                                    class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
+                                    El Salvador Bitcoin city planned at base of Conchagua volcano</h2>
+                            </div>
+                        </div>
+                        <div class="h-1/2">
+                            <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">El
+                                Salvador plans to build a Bitcoin city at the base of a volcano, with the
+                                cryptocurrency used to fund the project.</p>
+                            <button
+                                class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
+                                More</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 md:mb-0">
+                <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
+                        class="absolute z-0 object-cover w-full h-72 md:h-96">
+                    <div
+                        class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
+                        <div class="relative h-1/2">
+                            <div class="absolute bottom-0">
+                                <h2
+                                    class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
+                                    New homes in England to have electric car chargers by law</h2>
+                            </div>
+                        </div>
+                        <div class="h-1/2">
+                            <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">New
+                                homes and buildings in England will be required by law to install electric vehicle
+                                charging points from next year.</p>
+                            <button
+                                class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
+                                More</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 md:mb-0">
+                <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
+                    <img src="https://images.unsplash.com/photo-1521542464131-cb30f7398bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
+                        class="absolute z-0 object-cover w-full h-72 md:h-96">
+                    <div
+                        class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
+                        <div class="relative h-1/2">
+                            <div class="absolute bottom-0">
+                                <h2
+                                    class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
+                                    Six million Sky routers had serious security flaw</h2>
+                            </div>
+                        </div>
+                        <div class="h-1/2">
+                            <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">
+                                About six million Sky routers had a significant software bug that could have allowed
+                                hackers to take over home networks.</p>
+                            <button
+                                class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
+                                More</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    {{-- <!-- ====== Footer Section Start -->
+    <footer class="relative z-10 bg-white p-16 pr-0 dark:bg-dark pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
+                    <div class="w-full mb-10">
+                        <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
+                            <img src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg" alt="logo"
+                                class="max-w-full dark:hidden" />
+                            <img src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
+                                alt="logo" class="hidden max-w-full dark:block" />
+                        </a>
+                        <p class="text-base text-body-color dark:text-dark-6 mb-7">
+                            Sed ut perspiciatis undmnis is iste natus error sit amet
+                            voluptatem totam rem aperiam.
+                        </p>
+                        <p class="flex items-center text-sm font-medium text-dark dark:text-white">
+                            <span class="mr-3 text-primary">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_941_15626)">
+                                        <path
+                                            d="M15.1875 19.4688C14.3438 19.4688 13.375 19.25 12.3125 18.8438C10.1875 18 7.84377 16.375 5.75002 14.2813C3.65627 12.1875 2.03127 9.84377 1.18752 7.68752C0.250019 5.37502 0.343769 3.46877 1.43752 2.40627C1.46877 2.37502 1.53127 2.34377 1.56252 2.31252L4.18752 0.750025C4.84377 0.375025 5.68752 0.562525 6.12502 1.18752L7.96877 3.93753C8.40627 4.59378 8.21877 5.46877 7.59377 5.90627L6.46877 6.68752C7.28127 8.00002 9.59377 11.2188 13.2813 13.5313L13.9688 12.5313C14.5 11.7813 15.3438 11.5625 16.0313 12.0313L18.7813 13.875C19.4063 14.3125 19.5938 15.1563 19.2188 15.8125L17.6563 18.4375C17.625 18.5 17.5938 18.5313 17.5625 18.5625C17 19.1563 16.1875 19.4688 15.1875 19.4688ZM2.37502 3.46878C1.78127 4.12503 1.81252 5.46877 2.50002 7.18752C3.28127 9.15627 4.78127 11.3125 6.75002 13.2813C8.68752 15.2188 10.875 16.7188 12.8125 17.5C14.5 18.1875 15.8438 18.2188 16.5313 17.625L18.0313 15.0625C18.0313 15.0313 18.0313 15.0313 18.0313 15L15.2813 13.1563C15.2813 13.1563 15.2188 13.1875 15.1563 13.2813L14.4688 14.2813C14.0313 14.9063 13.1875 15.0938 12.5625 14.6875C8.62502 12.25 6.18752 8.84377 5.31252 7.46877C4.90627 6.81252 5.06252 5.96878 5.68752 5.53128L6.81252 4.75002V4.71878L4.96877 1.96877C4.96877 1.93752 4.93752 1.93752 4.90627 1.96877L2.37502 3.46878Z"
+                                            fill="currentColor" />
+                                        <path
+                                            d="M18.3125 8.90633C17.9375 8.90633 17.6563 8.62508 17.625 8.25008C17.375 5.09383 14.7813 2.56258 11.5938 2.34383C11.2188 2.31258 10.9063 2.00008 10.9375 1.59383C10.9688 1.21883 11.2813 0.906333 11.6875 0.937583C15.5625 1.18758 18.7188 4.25008 19.0313 8.12508C19.0625 8.50008 18.7813 8.84383 18.375 8.87508C18.375 8.90633 18.3438 8.90633 18.3125 8.90633Z"
+                                            fill="currentColor" />
+                                        <path
+                                            d="M15.2187 9.18755C14.875 9.18755 14.5625 8.93755 14.5312 8.56255C14.3437 6.87505 13.0312 5.56255 11.3437 5.3438C10.9687 5.31255 10.6875 4.93755 10.7187 4.56255C10.75 4.18755 11.125 3.9063 11.5 3.93755C13.8437 4.2188 15.6562 6.0313 15.9375 8.37505C15.9687 8.75005 15.7187 9.0938 15.3125 9.1563C15.25 9.18755 15.2187 9.18755 15.2187 9.18755Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_941_15626">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <span>+012 (345) 678 99</span>
+                        </p>
+                    </div>
                 </div>
-                <form action="#"
-                    class="grid w-full p-4 bg-white rounded gap-y-8 lg:gap-x-4 lg:grid-cols-9 lg:mt-12 dark:bg-gray-800">
-                    <div class="lg:col-span-3">
-                        <label for="location-form" class="sr-only">Location</label>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                        clip-rule="evenodd"></path>
+                <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                    <div class="w-full mb-10">
+                        <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
+                            Resources
+                        </h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    SaaS Development
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Our Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    User Flow
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    User Strategy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                    <div class="w-full mb-10">
+                        <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
+                            Company
+                        </h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    About TailGrids
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Contact & Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Success History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Setting & Privacy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                    <div class="w-full mb-10">
+                        <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
+                            Quick Links
+                        </h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Premium Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Our Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Know Our Team
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"
+                                    class="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
+                                    Download App
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
+                    <div class="w-full mb-10">
+                        <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
+                            Follow Us On
+                        </h4>
+                        <div class="flex items-center mb-6">
+                            <a href="javascript:void(0)"
+                                class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4">
+                                <svg width="8" height="16" viewBox="0 0 8 16" class="fill-current">
+                                    <path
+                                        d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z" />
                                 </svg>
-                            </div>
-                            <input type="text" id="location-form"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Search destinations">
-                        </div>
-                    </div>
-                    <div date-rangepicker datepicker-orientation="top" class="grid grid-cols-2 gap-x-4 lg:col-span-3">
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4">
+                                <svg width="16" height="12" viewBox="0 0 16 12" class="fill-current">
+                                    <path
+                                        d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z" />
                                 </svg>
-                            </div>
-                            <input name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Check in">
-                        </div>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4">
+                                <svg width="16" height="12" viewBox="0 0 16 12" class="fill-current">
+                                    <path
+                                        d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z" />
                                 </svg>
-                            </div>
-                            <input name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Check out">
-                        </div>
-                    </div>
-                    <div class="lg:col-span-1">
-                        <label for="guests" class="sr-only">Select number of guests</label>
-                        <select id="guests"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                            <option>Guests</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5+</option>
-                        </select>
-                    </div>
-                    <button type="submit"
-                        class="lg:col-span-2 justify-center md:w-auto text-white bg-purple-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 inline-flex items-center">
-                        <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Search
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="max-w-screen-xl px-4 py-8 mx-auto border-b-2 lg:py-8 lg:px-6">
-        <div class="grid gap-3 p-4 bg-white dark:bg-gray-900 md:p-2 sm:p-2">
-            <div class="flex items-center justify-between mt-3">
-                <h6 class="text-3xl font-extrabold tracking-tight text-gray-900  dark:text-white">
-                    Recommended for you</h6>
-                <button
-                    class="px-4 py-2 font-semibold underline duration-300 rounded-lg text-purple-950 hover:text-purple-500">See
-                    all</button>
-            </div>
-
-            <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-8 lg:px-6">
-        <div class="grid gap-3 p-4 bg-white dark:bg-gray-900 md:p-2 sm:p-2">
-            <div class="flex items-center justify-between mt-3">
-                <h6 class="text-3xl font-extrabold tracking-tight text-gray-900  dark:text-white">
-                    Nearby you</h6>
-                <button
-                    class="px-4 py-2 font-semibold underline duration-300 rounded-lg text-purple-950 hover:text-purple-500">See
-                    all</button>
-            </div>
-
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-                <a href="#"
-                    class="p-4 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="mb-2 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                        alt="office laptop working" />
-                    <div class="flex items-center justify-between">
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Hotel ABC
-                        </h2>
-                        <span
-                            class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-1.5 py-1 rounded dark:bg-purple-200 dark:text-purple-900">Top-rated</span>
-                    </div>
-
-                    <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipisicing elit. Similique, optio dolor.</p>
-                    <div class="flex items-center justify-between">
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 mr-1 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span>1.6 mi</span>
-                        </div>
-
-                        <div class="flex items-center">
-                            <svg class="w-6 h-6 text-purple-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                            </svg>
-                            <span class="ml-2">4.5</span>
-                        </div>
-
-                        <p class="py-1 font-sm">
-                            58 reviews
-                        </p>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </div>
-</div>
-<section class="p-8 bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto border-2 lg:py-8 lg:px-6 sm:py-2 rounded-xl">
-        <div class="max-w-screen-md mx-auto mb-2 text-center lg:mb-4">
-            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                Top Hotels of All time</h2>
-            <p class="mb-1 font-light text-gray-500 sm:text-xl dark:text-gray-400">Lorem ipsum dolor, sit
-                amet consectetur adipisicing elit. Ad, veritatis nemo. Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Delectus.
-            </p>
-        </div>
-        <aside aria-label="Top destionations" class="py-8 antialiased bg-white dark:bg-gray-900 md:py-2 sm:py-2">
-            <div class="w-full max-w-screen-xl px-4 mx-auto ">
-                <div id="animation-carousel " data-carousel="slide">
-                    <div class="relative overflow-hidden rounded-lg h-[440px]">
-                        <div class="hidden duration-700 ease-in-out bg-white dark:bg-gray-900" data-carousel-item>
-                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                                <div
-                                    class="max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                                            alt="office laptop working">
-                                    </a>
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first office</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 sm:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png"
-                                            alt="google hq">
-                                    </a>
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">We partnered up with Google</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 xl:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png"
-                                            alt="office laptop working">
-                                    </a>
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first project with React</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden duration-700 ease-in-out bg-white dark:bg-gray-900" data-carousel-item>
-                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                                <div
-                                    class="max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png"
-                                            alt="google hq">
-                                    </a>
-
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">We partnered up with Google</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 sm:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                                            alt="office laptop working">
-                                    </a>
-
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first office</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 xl:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png"
-                                            alt="office laptop working">
-                                    </a>
-
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first project with React</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hidden duration-700 ease-in-out bg-white dark:bg-gray-900" data-carousel-item>
-                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                                <div
-                                    class="max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png"
-                                            alt="office laptop working">
-                                    </a>
-
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first project with React</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 sm:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png"
-                                            alt="google hq">
-                                    </a>
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">We partnered up with Google</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div
-                                    class="hidden max-w-sm p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 xl:block">
-                                    <a href="#">
-                                        <img class="mb-5 rounded-lg"
-                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png"
-                                            alt="office laptop working">
-                                    </a>
-
-                                    <h3
-                                        class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                                        <a href="#">Our first office</a>
-                                    </h3>
-                                    <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year,
-                                        Volosoft has undergone many changes! After months of preparation and
-                                        some hard work, we moved to our new office.</p>
-                                    <a href="#"
-                                        class="inline-flex items-center font-medium text-purple-600 hover:text-purple-800 dark:text-purple-500 hover:no-underline">
-                                        Read more <svg class="w-3 h-3 mt-px ml-1" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <button type="button"
-                            class="flex items-center justify-center h-full mr-4 cursor-pointer group focus:outline-none"
-                            data-carousel-prev>
-                            <span
-                                class="text-purple-500 dark:text-gray-400 hover:text-purple-700 dark:hover:text-gray-200">
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4" />
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4">
+                                <svg width="14" height="14" viewBox="0 0 14 14" class="fill-current">
+                                    <path
+                                        d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z" />
                                 </svg>
-                                <span class="hidden">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="flex items-center justify-center h-full cursor-pointer group focus:outline-none"
-                            data-carousel-next>
-                            <span
-                                class="text-purple-500 dark:text-gray-400 hover:text-purple-700 dark:hover:text-gray-200">
-                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                                <span class="hidden">Next</span>
-                            </span>
-                        </button>
+                            </a>
+                        </div>
+                        <p class="text-base text-body-color dark:text-dark-6">
+                            &copy; 2025 TailGrids
+                        </p>
                     </div>
                 </div>
             </div>
-    </div>
-</section>
-
-<section class="p-8 bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:px-6">
-        <div class="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0">
-            <div>
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Compare
-                    Flowbite to other platforms on the market</h2>
-                <p class="mb-4 text-gray-500 sm:text-xl dark:text-gray-400">Here we focus on markets where
-                    technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-                <a href="#"
-                    class="inline-flex items-center font-medium sm:text-lg text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400">
-                    Learn what makes Flowbite different <svg class="w-5 h-5 ml-1" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
-            <div>
-                <a href="#"
-                    class="flex items-center justify-between p-4 mb-6 bg-white border-l-8 rounded-lg shadow dark:bg-gray-800 dark:hover:bg-gray-700 border-primary-600 dark:border-primary-500 hover:bg-gray-50">
-                    <div>
-                        <span
-                            class="block mb-1 text-xs font-medium text-gray-500 uppercase dark:text-gray-400">Simplicity
-                            and Affordability</span>
-                        <span class="text-xl font-semibold text-primary-600 dark:text-primary-500">Flowbite vs
-                            Google</span>
-                    </div>
-                    <svg class="w-6 h-6 text-primary-600 dark:text-primary-500" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-                <a href="#"
-                    class="flex items-center justify-between p-4 mb-6 bg-white border-l-8 border-purple-600 rounded-lg shadow dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-purple-500 hover:bg-gray-50">
-                    <div>
-                        <span class="block mb-1 text-xs font-medium text-gray-500 uppercase dark:text-gray-400">Built
-                            for customer support</span>
-                        <span class="text-xl font-semibold text-purple-600 dark:text-purple-500">Microsoft vs
-                            Apple</span>
-                    </div>
-                    <svg class="w-6 h-6 text-purple-600 dark:text-purple-500" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-                <a href="#"
-                    class="flex items-center justify-between p-4 bg-white border-l-8 border-teal-600 rounded-lg shadow dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-teal-500 hover:bg-gray-50">
-                    <div>
-                        <span class="block mb-1 text-xs font-medium text-gray-500 uppercase dark:text-gray-400">Modern
-                            and intuitive ui</span>
-                        <span class="text-xl font-semibold text-teal-600 dark:text-teal-500">Zendesk vs Meet</span>
-                    </div>
-                    <svg class="w-6 h-6 text-teal-600 dark:text-teal-500" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-            </div>
         </div>
-    </div>
-</section>
+        <div>
+            <span class="absolute left-0 bottom-0 z-[-1]">
+                <svg width="217" height="229" viewBox="0 0 217 229" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z"
+                        fill="url(#paint0_linear_1179_5)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_1179_5" x1="76.5" y1="281" x2="76.5"
+                            y2="1.22829e-05" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3056D3" stop-opacity="0.08" />
+                            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+            <span class="absolute top-10 right-10 z-[-1]">
+                <svg width="75" height="75" viewBox="0 0 75 75" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z"
+                        fill="url(#paint0_linear_1179_4)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_1179_4" x1="-1.63917e-06" y1="37.5" x2="75"
+                            y2="37.5" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#13C296" stop-opacity="0.31" />
+                            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+        </div>
+    </footer>
+    <!-- ====== Footer Section End --> --}}
+
+
+
+</main>
