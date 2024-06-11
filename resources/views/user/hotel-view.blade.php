@@ -4,7 +4,5 @@
 @include('layouts.side_navigation')
 
 
-<main class="p-4 md:ml-64 h-auto pt-20 mt-5">
-
-    <h1>This is Feed page</h1>
+<main class="h-auto px-4 py-16 mt-5 md:ml-64">
 </main>
