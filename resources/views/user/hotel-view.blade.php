@@ -1,8 +1,6 @@
-@include('layouts.main')
-@include('layouts.navigation_main')
+<x-layouts.user-layout>
 
-@include('layouts.side_navigation')
+    <main class="h-auto px-4 py-16 mt-5 md:ml-64">
+    </main>
 
-
-<main class="h-auto px-4 py-16 mt-5 md:ml-64">
-</main>
+</x-layouts.user-layout>
