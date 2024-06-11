@@ -8,12 +8,16 @@ use Illuminate\View\Component;
 
 class ImageGrid extends Component
 {
+    public $images;
+
     /**
      * Create a new component instance.
+     *
+     * @param $images The schedule data
      */
-    public function __construct()
+    public function __construct($images)
     {
-        //
+        $this->images = $images;
     }
 
     /**
