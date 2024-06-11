@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use DigitalCreative\Filepond\Filepond;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
@@ -110,7 +111,6 @@ class Location extends Resource
                 ->min(0),
 
             Number::make('Contact No 2', 'contact_no_2')
-                ->rules('required')
                 ->max('9999999999')
                 ->min(0),
 
@@ -125,8 +125,11 @@ class Location extends Resource
                 ->min(0)
                 ->default(0),
 
-            Text::make('image_path')
-                ->hideFromIndex(),
+            Filepond::make('Main Image', 'main_image')
+                ->required(),
+
+            Filepond::make('Images', 'images')
+                ->multiple(),
 
             Repeater::make('Add Feature', 'features')
                 ->repeatables([
