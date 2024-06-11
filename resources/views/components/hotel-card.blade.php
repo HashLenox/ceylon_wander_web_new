@@ -3,9 +3,8 @@
     <div class="relative">
         <a href="#">
             <div class="h-32 overflow-hidden relative">
-                <img class="absolute inset-0 w-full h-full object-cover"
-                    src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                    alt="Sunset in the mountains">
+                <img class="absolute inset-0 w-full h-full object-cover" src="{{ asset('storage/' . $location->main_image) }}"
+                    alt="{{$location->main_image}}">
             </div>
             <div
                 class="absolute top-0 bottom-0 left-0 right-0 transition duration-300 bg-gray-900 opacity-25 hover:bg-transparent">

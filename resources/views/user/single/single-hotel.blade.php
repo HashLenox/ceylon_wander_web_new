@@ -38,16 +38,16 @@
         </nav>
 
         <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
-            <x-hotel-title>{{$hotel?->category?->name}}</x-hotel-title>
+            <x-hotel-title>{{ $hotel?->category?->name }}</x-hotel-title>
 
             <div class="justify-between border-b-2 lg:flex">
                 <div class="px-8 md:mb-4">
-                    <x-image-grid></x-image-grid>
+                    <x-image-grid :images="$hotel->images" />
 
                     <!--Start - Hotel Name-->
                     <div class="max-w-md mx-auto mb-4 lg:max-w-none">
                         <h2 class="my-2 text-4xl font-bold tracking-tight text-gray-900 capitalize dark:text-white">
-                            {{$hotel->name}}
+                            {{ $hotel->name }}
                         </h2>
                     </div>
                     <!--End - Hotel Name-->
