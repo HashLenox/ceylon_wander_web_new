@@ -9,6 +9,7 @@
         "bolechen/nova-activitylog": "^0.4.3",
         "davidhsianturi/blade-bootstrap-icons": "^1.4",
         "digital-creative/collapsible-resource-manager": "^2.1",
+        "digital-creative/nova-filepond": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/jetstream": "^4.3",

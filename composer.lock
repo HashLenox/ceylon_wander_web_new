@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "238a8d877ba60593a33ee0ac3ca78cc9",
+    "content-hash": "690f5122607616d4de7eb2d43c554b4b",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -685,6 +685,68 @@
                 }
             ],
             "time": "2023-10-25T14:58:20+00:00"
+        },
+        {
+            "name": "digital-creative/nova-filepond",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dcasia/nova-filepond.git",
+                "reference": "d2301c01e17da3fa2fff4a9ea3cddef7c9511af2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dcasia/nova-filepond/zipball/d2301c01e17da3fa2fff4a9ea3cddef7c9511af2",
+                "reference": "d2301c01e17da3fa2fff4a9ea3cddef7c9511af2",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DigitalCreative\\Filepond\\FilepondServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DigitalCreative\\Filepond\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Milewski"
+                }
+            ],
+            "description": "A Nova field for uploading File, Image and Video using filepond.",
+            "keywords": [
+                "field",
+                "file",
+                "laravel",
+                "nova",
+                "nova4",
+                "upload",
+                "video"
+            ],
+            "support": {
+                "issues": "https://github.com/dcasia/nova-filepond/issues",
+                "source": "https://github.com/dcasia/nova-filepond/tree/v1.0.6"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/milewski",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-31T04:51:42+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -3356,7 +3418,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/livewire/livewire/zipball/6f90e2d7f8e80a97a7406c22a0fbc61ca1256ed9",
                 "reference": "6f90e2d7f8e80a97a7406c22a0fbc61ca1256ed9",
-
                 "shasum": ""
             },
             "require": {
@@ -3412,7 +3473,6 @@
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
                 "source": "https://github.com/livewire/livewire/tree/v3.4.10"
-
             },
             "funding": [
                 {
@@ -3420,7 +3480,6 @@
                     "type": "github"
                 }
             ],
-
             "time": "2024-04-02T14:22:50+00:00"
         },
         {
