@@ -14,4 +14,10 @@ class AccommodationController extends Controller
         $locations = Location::where('type', LocationType::Accommodation->value)->paginate(10);
         return view('user.hotel', ['locations' => $locations]);
     }
+
+    public function singleHotel($id)
+    {
+        $hotel = Location::where('id', $id)->first();
+        return view('user.single.single-hotel', ['hotel' => $hotel]);
+    }
 }

@@ -78,6 +78,8 @@ Route::middleware(['auth'])->group(
         Route::get('/hotels', [AccommodationController::class, 'hotel'])->name('hotel');
         Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
         Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
+
+        Route::get('/hotel/details/{id}', [AccommodationController::class, 'singleHotel'])->name('hotel.details');
     }
 );
 

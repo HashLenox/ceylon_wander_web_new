@@ -3,5 +3,8 @@
 
 @include('layouts.side_navigation')
 
-
-{{ $slot }}
+<div class="lg:ml-64">
+    <main class="px-4 max-w-7xl mx-auto">
+        {{ $slot }}
+    </main>
+</div>

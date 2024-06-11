@@ -1,7 +1,7 @@
 <!--Start - Hotel details with save and share buttons-->
 <div class="flex items-center justify-between p-5">
     <h6 class="mx-4 my-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-        Short description about the hotel
+        {{$slot}}
     </h6>
     <div class="flex justify-between space-x-8">
         <a href="#" title=""
