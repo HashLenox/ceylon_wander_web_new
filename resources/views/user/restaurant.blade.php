@@ -1,25 +1,20 @@
-@include('layouts.main')
-@include('layouts.navigation_main')
+<x-layouts.user-layout>
 
-@include('layouts.side_navigation')
+    <main class="h-auto p-4 pt-20 mt-5 md:ml-64">
+        <x-banner-slider> </x-banner-slider>
 
-
-<main class="h-auto p-4 pt-20 mt-5 md:ml-64">
-    <x-banner-slider> </x-banner-slider>
-
-    <div>
-        <x-header>Best Resturent in Area</x-header>
-    </div>
-
-    <div class="mt-5">
-        <div class="grid items-center justify-center gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-            <x-hotel-card></x-hotel-card>
-            <x-hotel-card></x-hotel-card>
-            <x-hotel-card></x-hotel-card>
-            <x-hotel-card></x-hotel-card>
+        <div>
+            <x-header>Best Resturent in Area</x-header>
         </div>
-    </div>
 
+        <div class="mt-5">
+            <div class="grid items-center justify-center gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+                <x-hotel-card></x-hotel-card>
+                <x-hotel-card></x-hotel-card>
+                <x-hotel-card></x-hotel-card>
+                <x-hotel-card></x-hotel-card>
+            </div>
+        </div>
+    </main>
 
-
-</main>
+</x-layouts.user-layout>

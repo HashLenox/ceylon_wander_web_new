@@ -57,6 +57,10 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/test2', function () {
+    return view('user.single-hotel');
+});
+
 Route::get('/user/name', [AuthController::class, 'getLoggedInUserName'])->name('user.name');
 
 
