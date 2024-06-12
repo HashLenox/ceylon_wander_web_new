@@ -13,6 +13,8 @@
                             alt=""
                             class="object-cover object-top mb-6 rounded-lg shadow-md w-52 h-52 bg-slate-50 sm:mb-0 xl:mb-0">
 
+
+
                         <div class="flex-1 order-1 px-1 sm:ml-4 xl:ml-4 ">
                             <span class="block mb-4 font-semibold leading-6 text-indigo-800 text-md">Type</span>
 
