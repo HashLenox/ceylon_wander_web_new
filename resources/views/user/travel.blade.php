@@ -2,117 +2,79 @@
     <div class="mt-20">
         <x-travel-img-slider></x-travel-img-slider>
 
-        <div class="max-w-screen-xl px-4 pt-8 pb-4 mx-auto">
-            <div class="flex flex-col flex-wrap md:flex-row md:-mx-2">
-                <div class="w-full mb-4 md:w-1/2 lg:w-1/4 lg:mb-0">
-                    <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
-                        <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
-                            class="absolute z-0 object-cover w-full transform h-72 md:h-96 group-hover:scale-150">
-                        <div
-                            class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
-                            <div class="relative h-1/2">
-                                <div class="absolute bottom-0">
-                                    <h2
-                                        class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
-                                        Facebook and Instagram encryption plans delayed by Meta until 2023</h2>
+
+        <div class="container px-4 py-6 mx-auto">
+
+            <ul class="grid items-start grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-y-6 gap-x-4">
+
+                <a href="#">
+                    <li class="relative flex flex-col items-start rounded-lg sm:flex-row xl:flex-row">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""
+                            class="object-cover object-top mb-6 rounded-lg shadow-md w-52 h-52 bg-slate-50 sm:mb-0 xl:mb-0">
+
+                        <div class="flex-1 order-1 px-1 sm:ml-4 xl:ml-4 ">
+                            <span class="block mb-4 font-semibold leading-6 text-indigo-800 text-md">Type</span>
+
+
+                            <div class="flex items-center justify-between ">
+
+                                <h3 class="mb-1 text-xl font-bold text-slate-900">
+                                    Place name
+                                </h3>
+
+                                <div class="flex items-center">
+
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <p class="text-sm font-bold text-gray-900 ms-1 dark:text-white">4.6</p>
+
                                 </div>
+
                             </div>
-                            <div class="h-1/2">
-                                <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">
-                                    Plans to roll out end-to-end encryption on Facebook and Instagram have been delayed
-                                    amid a row over child safety.</p>
-                                <button
-                                    class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
-                                    More</button>
+                            <div class="prose prose-md prose-slate text-slate-600">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, facilis.</p>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 lg:mb-0">
-                    <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
-                        <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
-                            class="absolute z-0 object-cover w-full h-72 md:h-96">
-                        <div
-                            class="absolute w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96 z-100">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
-                            <div class="relative h-1/2">
-                                <div class="absolute bottom-0">
-                                    <h2
-                                        class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
-                                        El Salvador Bitcoin city planned at base of Conchagua volcano</h2>
-                                </div>
-                            </div>
-                            <div class="h-1/2">
-                                <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">El
-                                    Salvador plans to build a Bitcoin city at the base of a volcano, with the
-                                    cryptocurrency used to fund the project.</p>
-                                <button
-                                    class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
-                                    More</button>
+
+                            <div class="flex flex-row items-center justify-between py-3 ">
+                                <span href="#"
+                                    class="flex flex-row items-center py-1 mr-1 text-xs text-gray-900 font-regular">
+                                    <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                        xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span class="ml-1">6 miles away</span>
+                                </span>
+
+                                <span href="#"
+                                    class="flex flex-row items-center py-1 mr-1 text-xs text-gray-900 font-regular">
+                                    <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                                        </path>
+                                    </svg>
+                                    <span class="ml-1">74 Reviews</span>
+                                </span>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 md:mb-0">
-                    <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
-                        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
-                            class="absolute z-0 object-cover w-full h-72 md:h-96">
-                        <div
-                            class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
-                            <div class="relative h-1/2">
-                                <div class="absolute bottom-0">
-                                    <h2
-                                        class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
-                                        New homes in England to have electric car chargers by law</h2>
-                                </div>
-                            </div>
-                            <div class="h-1/2">
-                                <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">New
-                                    homes and buildings in England will be required by law to install electric vehicle
-                                    charging points from next year.</p>
-                                <button
-                                    class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
-                                    More</button>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="w-full mb-4 h-72 md:h-96 md:w-1/2 lg:w-1/4 md:mb-0">
-                    <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
-                        <img src="https://images.unsplash.com/photo-1521542464131-cb30f7398bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=384&q=80"
-                            class="absolute z-0 object-cover w-full h-72 md:h-96">
-                        <div
-                            class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 z-30 h-full p-6 transition duration-300 delay-100 transform translate-y-1/2 group-hover:translate-y-0">
-                            <div class="relative h-1/2">
-                                <div class="absolute bottom-0">
-                                    <h2
-                                        class="pb-6 text-xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
-                                        Six million Sky routers had serious security flaw</h2>
-                                </div>
-                            </div>
-                            <div class="h-1/2">
-                                <p class="pb-4 text-white transition duration-300 opacity-0 group-hover:opacity-100">
-                                    About six million Sky routers had a significant software bug that could have allowed
-                                    hackers to take over home networks.</p>
-                                <button
-                                    class="px-3 py-1 text-sm font-semibold text-black transition duration-300 bg-white border-2 border-white opacity-0 group-hover:opacity-100 focus:border-black focus:bg-gray-300">Read
-                                    More</button>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+
+                    </li>
+                </a>
+
+
+            </ul>
         </div>
     </div>
+
 </x-layouts.user-layout>
