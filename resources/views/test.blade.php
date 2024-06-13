@@ -180,7 +180,7 @@
                                     Another</p>
                             </div>
                         </h2>
-                        <p class="leading-relaxed">
+                        <p class="leading-relaxed text-gray-900 dark:text-gray-400">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ipsum vel nunc
                             commodo hendrerit sit amet vel
                             nisi. Donec sodales maximus justo, nec dictum lectus malesuada non. Sed auctor ultrices
@@ -197,19 +197,8 @@
 
                     </div>
                     <!--End - Hotel Name-->
-
                     <x-hotel-nav></x-hotel-nav>
-
-                    <!--Start - Contact-->
-                    <div class="flex items-center justify-center max-w-md mx-auto mb-4 bg-red-700 h-44 lg:max-w-none">
-                        <h2 class="my-2 text-4xl font-bold tracking-tight text-gray-900 capitalize dark:text-white">
-                            Contact Details
-                        </h2>
-                    </div>
-                    <!--End - Contact-->
                 </div>
-                {{-- <x-hotel-overview-side-card></x-hotel-overview-side-card> --}}
-
                 <div class="w-full px-2 mt-2 mr-6 lg:max-w-sm lg:mt-1 shrink-0">
                     <div
                         class="p-3 border border-gray-200 rounded-lg sm:p-6 lg:p-4 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
@@ -219,21 +208,94 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </h1>
 
-                        <x-hotel-rating></x-hotel-rating>
+                        <!--Start - Ratings-->
+                        <div>
+                            <div class="flex items-center my-2">
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">4.95</p>
+                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">out of</p>
+                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">5</p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">178+
+                                <a href="#" class="underline">reviews</a>
+                            </span>
 
-                        <!--Start - Address and Charges-->
-                        <div class="flex items-center gap-1 mt-4 ">
-                            <svg class="w-5 h-5 text-purple-950 dark:text-purple-100" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                            </svg>
+                            <div
+                                class="items-center justify-center hidden h-48 md:block sm:items-center md:items-center md:h-auto">
+                                <div class="flex items-center mt-4">
+                                    <a href="#"
+                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5
+                                        star</a>
+                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                        <div class="h-5 bg-yellow-300 rounded" style="width: 70%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <a href="#"
+                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4
+                                        star</a>
+                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                        <div class="h-5 bg-yellow-300 rounded" style="width: 17%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <a href="#"
+                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3
+                                        star</a>
+                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                        <div class="h-5 bg-yellow-300 rounded" style="width: 8%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <a href="#"
+                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2
+                                        star</a>
+                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                        <div class="h-5 bg-yellow-300 rounded" style="width: 4%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <a href="#"
+                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1
+                                        star</a>
+                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                        <div class="h-5 bg-yellow-300 rounded" style="width: 1%"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
+                                </div>
+                            </div>
                         </div>
-                        <!--End - Address and Charges-->
+                        <!--End - Ratings-->
+
+
                     </div>
 
                     <x-map-card></x-map-card>
@@ -242,9 +304,7 @@
             </div>
         </div>
 
-
-
-        <div class="bg-white border-t-2 border-gray-300">
+        {{-- <div class="my-4 bg-white border-t-2 border-gray-300">
 
             <ul class="grid items-start grid-cols-1 p-8 xl:grid-cols-3 gap-y-10 gap-x-6">
                 <a href="#">
@@ -441,10 +501,11 @@
                 </a>
 
             </ul>
-        </div>
+        </div> --}}
 
 
-    </div>
+
+
 </x-layouts.user-layout>
 
 
