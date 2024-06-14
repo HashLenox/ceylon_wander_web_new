@@ -2,12 +2,11 @@
 
 namespace App\Nova\Repeater;
 
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Repeater\Repeatable;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Facilities extends Repeatable
+class RoomFacilities extends Repeatable
 {
     /**
      * Get the fields displayed by the repeatable.
@@ -18,16 +17,9 @@ class Facilities extends Repeatable
     public function fields(NovaRequest $request)
     {
         return [
-            Select::make('Feature Name', 'name')
-                ->options(\App\Models\Feature::pluck('name', 'name'))
-                ->searchable()
+            Text::make('Name')
                 ->required()
                 ->sortable(),
-
-            Boolean::make('Availability', 'status')
-                ->required()
-                ->default(true),
-
         ];
     }
 }
