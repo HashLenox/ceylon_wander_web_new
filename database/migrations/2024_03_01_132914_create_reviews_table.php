@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->foreignId('location_id')->references('id')->on('locations');
-            $table->decimal('ratings', 3, 1);
-            $table->text('comments');
+            $table->string('title')->nullable();
+            $table->text('review')->nullable();
+            $table->integer('rating')->nullable();
             $table->integer('views');
             $table->boolean('status')->default(true);
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
