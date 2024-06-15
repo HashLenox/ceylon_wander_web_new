@@ -2,204 +2,172 @@
     <div class="mt-20 ">
         <x-travel-img-slider></x-travel-img-slider>
 
+        <div class="max-w-screen-xl px-6 pt-8 pb-4 mx-auto mt-4 sm:mt-2">
+            <x-card-list-header></x-card-list-header>
 
-        {{-- <div class="container px-4 py-6 mx-auto mt-4">
-            <ul class="grid items-start grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-y-6 gap-x-4">
+            <div class="flex flex-col flex-wrap px-2 md:flex-row md:-mx-4">
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+            </div>
+        </div>
 
-                <a href="#">
-                    <li
-                        class="relative flex flex-col items-start bg-red-500 rounded-lg sm:flex sm:flex-row xl:flex-row">
 
-                        <div class="relative max-w-xs overflow-hidden bg-no-repeat bg-cover rounded-lg ">
-                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt=""
-                                class="object-cover object-top overflow-hidden transition duration-1000 ease-in-out rounded-lg shadow-md w-52 h-52 hover:scale-110 sm:mb-0 xl:mb-0">
+        <div class="max-w-screen-xl px-6 pt-8 pb-4 mx-auto mt-4 sm:mt-2">
+            <x-card-list-header></x-card-list-header>
 
-                            <svg class="absolute top-0 left-0 w-6 h-6 m-2 text-red-500"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M2.8 2L10 9.2l7.2-7.2L19 2.8 11.8 10 19 17.2l-1.8 1.8L10 10.8 2.8 19 1 17.2 8.2 10 1 2.8 2.8 2z" />
-                            </svg>
+            <div class="flex flex-col flex-wrap px-2 md:flex-row md:-mx-4">
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+                <x-travel-card></x-travel-card>
+            </div>
+        </div>
+
+        <x-travel-banner></x-travel-banner>
+
+
+        <div class="max-w-full px-4 py-10 mx-auto my-2 rounded-lg sm:px-6 lg:px-8 lg:py-14 dark:border">
+
+            <div class="w-3/4 max-w-2xl mb-6 lg:w-1/2 sm:mb-10 md:mb-8">
+                <h2 class="text-2xl font-semibold text-black dark:text-white sm:text-3xl lg:text-4xl">
+                    Browse locations by top cities
+                </h2>
+            </div>
+
+            <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6">
+                <x-city-card></x-city-card>
+                <x-city-card></x-city-card>
+                <x-city-card></x-city-card>
+                <x-city-card></x-city-card>
+                <x-city-card></x-city-card>
+                <x-city-card></x-city-card>
+            </div>
+
+        </div>
+
+
+        <x-travel-feature-card></x-travel-feature-card>
+
+        <div class="items-center justify-center p-8 mb-8 bg-red-400 h-7">
+            <h1 class="text-center">Multi card slider goes here</h1>
+        </div>
+
+        <!-- Hero -->
+        <div class="relative overflow-hidden">
+            <!-- Gradients -->
+            <div aria-hidden="true" class="absolute flex transform -translate-x-1/2 -top-96 start-1/2">
+                <div
+                    class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900">
+                </div>
+                <div
+                    class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-indigo-900/70 dark:via-indigo-900/70 dark:to-blue-900/70">
+                </div>
+            </div>
+            <!-- End Gradients -->
+
+            <div class="relative z-10">
+                <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <!-- Title -->
+                        <div class="max-w-2xl mt-5">
+                            <h1
+                                class="block text-4xl font-semibold text-gray-800 md:text-5xl lg:text-6xl dark:text-neutral-200">
+                                Do we <span class="text-blue-600">missing</span> a place <span
+                                    class="text-blue-600">?</span>
+                            </h1>
+                        </div>
+                        <!-- End Title -->
+
+                        <div class="max-w-3xl mt-5">
+                            <p class="text-lg text-gray-600 dark:text-neutral-400">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Aut nostrum mollitia reprehenderit? Ea, architecto eaque.
+                            </p>
                         </div>
 
+                        <!-- Buttons -->
+                        <div class="mt-4">
+                            <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                                class="inline-flex items-center px-4 py-3 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-lg gap-x-2 hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                Add a place
+                                <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
 
-                        <div class="flex-1 order-1 p-4 sm:ml-4 xl:ml-4 ">
-                            <span class="block mb-4 font-semibold leading-6 text-indigo-800 text-md">Type</span>
+                        </div>
+                        <!-- End Buttons -->
+                    </div>
+                </div>
+            </div>
 
-
-                            <div class="flex items-center justify-between">
-
-                                <h3 class="mb-1 text-xl font-bold text-slate-900">
-                                    Place name
-                                </h3>
-
-                                <div class="flex items-center">
-                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                        <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                    </svg>
-                                    <p class="text-sm font-bold text-gray-900 dark:text-white">4.6</p>
-
+            <div id="crud-modal" tabindex="-1" aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-md max-h-full p-4">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div
+                            class="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                Add a place
+                            </h3>
+                            <button type="button"
+                                class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
+                                data-modal-toggle="crud-modal">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <form class="p-4 md:p-5">
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="col-span-2">
+                                    <label for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location
+                                        Name</label>
+                                    <input type="text" name="name" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        placeholder="Type product name" required="">
                                 </div>
 
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label for="category"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                                    <select id="category"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                        <option selected="">Select category</option>
+                                        <option value="TV">Travel Location</option>
+                                        <option value="PC">Restaurant</option>
+                                        <option value="GA">Accommodation</option>
+                                    </select>
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="description"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
+                                        Description</label>
+                                    <textarea id="description" rows="4"
+                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Write product description here"></textarea>
+                                </div>
                             </div>
-                            <div class="prose prose-md prose-slate text-slate-600">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, facilis.</p>
-                            </div>
+                            <button type="submit"
+                                class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 
-                            <div class="flex flex-row items-center justify-between py-3 ">
-                                <span href="#"
-                                    class="flex flex-row items-center py-1 mr-1 text-xs text-gray-900 font-regular">
-                                    <svg height="13px" width="13px" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                        xml:space="preserve">
-                                        <g>
-                                            <g>
-                                                <path
-                                                    d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
-                                                </path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                    <span class="ml-1">6 miles away</span>
-                                </span>
-
-                                <span href="#"
-                                    class="flex flex-row items-center py-1 mr-1 text-xs text-gray-900 font-regular">
-                                    <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
-                                        </path>
-                                    </svg>
-                                    <span class="ml-1">74 Reviews</span>
-                                </span>
-                            </div>
-                        </div>
-
-                    </li>
-                </a>
-
-
-
-
-
-            </ul>
-        </div> --}}
-
-        <div class="grid grid-cols-2 mt-6 lg:grid-cols-4 lg:gap-x-4 md:px-8 md:gap-x-8 md:grid-cols-3 gap-x-6 gap-y-4 ">
-            <div class="items-center">
-                <div class="relative items-center overflow-hidden bg-no-repeat bg-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt=""
-                        class="object-cover object-top overflow-hidden transition duration-1000 ease-in-out rounded-lg shadow-md aspect-square hover:scale-110">
-                    <span
-                        class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">Hiking</span>
-                </div>
-
-
-                <div class="items-center px-4 my-4 text-center text-gray-700 font-semilight" id="content">
-                    <h1 class="text-2xl font-bold text-blue-900">ABC Mountains</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                        nihil porro odit. Lorem ipsum dolor sit amet.
-                    </p>
-
-                    <div class="flex flex-row items-center justify-between mx-8 my-1 text-xs text-blue-900 ">
-                        <p><span class="font-semibold">1.6 </span> miles</p>
-                        <p><span>4.6 </span> ratings</p>
-                        <p>186 reviews</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="items-center">
-                <div class="relative items-center overflow-hidden bg-no-repeat bg-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt=""
-                        class="object-cover object-top overflow-hidden transition duration-1000 ease-in-out rounded-lg shadow-md aspect-square hover:scale-110">
-                    <span
-                        class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">Hiking</span>
-                </div>
-
-
-                <div class="items-center px-4 my-4 text-center text-gray-700 font-semilight" id="content">
-                    <h1 class="text-2xl font-bold text-blue-900">ABC Mountains</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                        nihil porro odit. Lorem ipsum dolor sit amet.
-                    </p>
-
-                    <div class="flex flex-row items-center justify-between mx-8 my-1 text-xs text-blue-900 ">
-                        <p><span class="font-semibold">1.6 </span> miles</p>
-                        <p><span>4.6 </span> ratings</p>
-                        <p>186 reviews</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="items-center">
-                <div class="relative items-center overflow-hidden bg-no-repeat bg-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt=""
-                        class="object-cover object-top overflow-hidden transition duration-1000 ease-in-out rounded-lg shadow-md aspect-square hover:scale-110">
-                    <span
-                        class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">Hiking</span>
-                </div>
-
-
-                <div class="items-center px-4 my-4 text-center text-gray-700 font-semilight" id="content">
-                    <h1 class="text-2xl font-bold text-blue-900">ABC Mountains</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                        nihil porro odit. Lorem ipsum dolor sit amet.
-                    </p>
-
-                    <div class="flex flex-row items-center justify-between mx-8 my-1 text-xs text-blue-900 ">
-                        <p><span class="font-semibold">1.6 </span> miles</p>
-                        <p><span>4.6 </span> ratings</p>
-                        <p>186 reviews</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="items-center">
-                <div class="relative items-center overflow-hidden bg-no-repeat bg-cover rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt=""
-                        class="object-cover object-top overflow-hidden transition duration-1000 ease-in-out rounded-lg shadow-md aspect-square hover:scale-110">
-                    <span
-                        class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">Hiking</span>
-                </div>
-
-
-                <div class="items-center px-4 my-4 text-center text-gray-700 font-semilight" id="content">
-                    <h1 class="text-2xl font-bold text-blue-900">ABC Mountains</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-                        nihil porro odit. Lorem ipsum dolor sit amet.
-                    </p>
-
-                    <div class="flex flex-row items-center justify-between mx-8 my-1 text-xs text-blue-900 ">
-                        <p><span class="font-semibold">1.6 </span> miles</p>
-                        <p><span>4.6 </span> ratings</p>
-                        <p>186 reviews</p>
+                                Send Inquery
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-        <div class="h-16 mt-20">
-            hello
-        </div>
-
-
-    </div>
-
-
-
-
+        <!-- End Hero -->
 
 </x-layouts.user-layout>
