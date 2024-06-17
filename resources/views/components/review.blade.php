@@ -3,8 +3,8 @@
         <x-star-rating />
 
         <div class="space-y-0.5">
-            <p class="text-base font-semibold text-gray-900 dark:text-white">{{$comment?->user?->name}}</p>
-            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">{{$comment->created_at}}</p>
+            <p class="text-base font-semibold text-gray-900 dark:text-white">{{ $comment?->user?->name }}</p>
+            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">{{ $comment->created_at }}</p>
         </div>
 
         <div class="inline-flex items-center gap-1">
@@ -19,8 +19,18 @@
     </div>
 
     <div class="mt-4 min-w-0 flex-1 space-y-4 sm:mt-0">
-        <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{$comment->review}}
+        <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{ $comment->review }}
         </p>
+
+        <div class="grid grid-cols-4 gap-4">
+            @if ($comment->images)
+                @foreach ($comment->images as $image)
+                    <div class="w-full h-24 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="{{ asset('storage/' . $image) }}" alt="" class="w-full h-full object-cover">
+                    </div>
+                @endforeach
+            @endif
+        </div>
 
     </div>
 </div>
