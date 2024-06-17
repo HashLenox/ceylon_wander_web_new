@@ -74,7 +74,7 @@ class CommentSection extends Component
 
         $this->images = [];
         $this->imageCount = 0;
-        $this->review = null;
+        $this->review = "";
 
     }
 

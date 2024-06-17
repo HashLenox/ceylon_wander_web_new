@@ -200,7 +200,7 @@
                             </div>
                             <div class="flex pl-0 space-x-1 sm:pl-2">
                                 <button type="button" wire:click="removeImages"
-                                    class="inline-flex justify-center p-2 text-red-600 rounded cursor-pointer hover:text-red-900 hover:bg-red-100 dark:text-red-400 dark:hover:text-white dark:hover:bg-red-600">
+                                    class="{{ $imageCount == 0 ? 'hidden' : '' }} inline-flex justify-center p-2 text-red-600 rounded cursor-pointer hover:text-red-900 hover:bg-red-100 dark:text-red-400 dark:hover:text-white dark:hover:bg-red-600">
                                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                         fill="currentColor" viewBox="0 0 16 20">
                                         <path
