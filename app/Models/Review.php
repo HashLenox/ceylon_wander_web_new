@@ -17,6 +17,12 @@ class Review extends Model
         'status',
         'user_id',
         'location_id',
+        'likes',
+        'images',
+    ];
+
+    protected $casts = [
+        'images' => 'array',
     ];
 
     public function location()
