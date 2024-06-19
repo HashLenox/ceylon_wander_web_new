@@ -15,6 +15,8 @@ class Location extends Model
      * @var array<string, string>
      */
     protected $casts = [
+        'images' => 'array',
+        'main_image' => 'array',
         'features' => 'array',
     ];
 
@@ -56,5 +58,10 @@ class Location extends Model
     public function reservations()
     {
         return $this->hasMany(Reservation::class);
+    }
+
+    public function boosts()
+    {
+        return $this->hasMany(Boost::class);
     }
 }

@@ -9,15 +9,24 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './node_modules/flowbite/**/*.js',
     ],
+
+    darkMode: 'class',
 
     theme: {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            container: {
+                center: true,
+              },
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [typography,
+        require('flowbite/plugin'),
+        require('@tailwindcss/forms'),
+    ],
 };
