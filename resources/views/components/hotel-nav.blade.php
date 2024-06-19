@@ -15,12 +15,11 @@
     </h2>
     <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-            <p class="mb-2 text-gray-500 dark:text-gray-400">The product is a high-quality, durable solution
-                designed to meet the needs of modern consumers. It features advanced technology and
-                ergonomic design for optimal performance and comfort.</p>
-            <p class="text-gray-500 dark:text-gray-400">Key features include a sleek interface, customizable
-                settings, and compatibility with various devices. It is ideal for professionals and
-                enthusiasts alike.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur officiis ut, animi ipsa ab qui voluptates soluta ullam natus. Molestiae.</p>
+            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat eligendi, labore, numquam placeat voluptatem facere, laudantium autem dolorem illum ratione
+                tempore? Eum quasi explicabo consequatur reprehenderit exercitationem enim!</p>
         </div>
     </div>
     <h2 id="accordion-flush-heading-2">
@@ -38,11 +37,11 @@
     </h2>
     <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-            <p class="mb-2 text-gray-500 dark:text-gray-400">Specifications include advanced processor
-                capabilities, extensive storage options, and seamless connectivity. The product is designed
-                to handle demanding tasks efficiently.</p>
-            <p class="text-gray-500 dark:text-gray-400">Additional features include high-resolution display,
-                long-lasting battery life, and intuitive user interface for enhanced productivity.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam dolorem cum consectetur, labore illo minima nesciunt porro! Facilis dignissimos temporibus id?
+            </p>
+            <p class="text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, odit tempore.</p>
         </div>
     </div>
     <h2 id="accordion-flush-heading-3">
@@ -60,11 +59,11 @@
     </h2>
     <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-            <p class="mb-2 text-gray-500 dark:text-gray-400">The product comes with a comprehensive warranty
-                that covers manufacturing defects and malfunctions. It provides peace of mind and assurance
-                of product quality.</p>
-            <p class="mb-2 text-gray-500 dark:text-gray-400">Customers can enjoy reliable support and prompt
-                assistance for any issues related to the product during the warranty period.</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam ipsum iusto distinctio iste soluta? Maiores, doloremque dolorem?</p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quibusdam obcaecati, deserunt delectus, nisi quidem repudiandae nesciunt harum neque perspiciatis vitae
+                molestias ullam!</p>
         </div>
     </div>
 </div>

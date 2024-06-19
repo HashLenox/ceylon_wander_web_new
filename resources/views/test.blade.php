@@ -1,3 +1,6 @@
+<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+
 <x-layouts.user-layout>
     <div class="mt-20">
         <nav class="flex pb-4 border-b-2" aria-label="Breadcrumb">
@@ -40,163 +43,13 @@
         <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
             <x-hotel-title>Name</x-hotel-title>
 
-            <!--Start - Image grid-->
-            <div class="flex flex-col justify-center max-w-md mx-8 mb-4 rounded-lg lg:max-w-none lg:flex-row">
-                <div class="flex flex-col gap-2 select-none md:flex-row">
-                    <!-- Left side image -->
-                    <div class="relative flex-1">
-                        <a data-fancybox="gallery" class="block w-full h-full "
-                            data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-full rounded-l-lg"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-                            <div class="absolute inset-0 bg-black rounded-l-lg bg-opacity-20 hover:bg-opacity-0"></div>
-                        </a>
-                    </div>
-
-
-                    <!-- Right side grid -->
-                    <div class="flex-1">
-                        <div class="relative grid w-full h-full grid-cols-2 gap-2">
-                            <a data-fancybox="gallery" class="relative block w-full h-full"
-                                data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                                draggable="false">
-                                <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                    class="object-cover object-center w-full h-full"
-                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-                                <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-0"></div>
-                            </a>
-                            <a data-fancybox="gallery" class="relative block w-full h-full"
-                                data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                                draggable="false">
-                                <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                    class="object-cover object-center w-full h-full rounded-tr-lg"
-                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-                                <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-0"></div>
-                            </a>
-                            <a data-fancybox="gallery" class="relative block w-full h-full"
-                                data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                                draggable="false">
-                                <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                    class="object-cover object-center w-full h-full"
-                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-                                <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-0"></div>
-                            </a>
-                            <a data-fancybox="gallery" class="relative block w-full h-full"
-                                data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                                draggable="false">
-                                <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                    class="object-cover object-center w-full h-full rounded-br-lg"
-                                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-                                <div
-                                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-0">
-                                    <button
-                                        class="px-4 py-2 text-sm font-bold text-black bg-white shadow-lg rounded-2xl hover:bg-black hover:text-white">See
-                                        All
-                                        Photos</button>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="hidden">
-                    <div class="grid grid-cols-12 gap-0.5">
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from  Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from  Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-                        <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
-                            data-caption="<h6>View from Herzogstand over Lake Walchen, Bavaria</h6>"
-                            href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3"
-                            draggable="false">
-                            <img alt="View from Herzogstand over Lake Walchen, Bavaria"
-                                class="object-cover object-center w-full h-96"
-                                src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
-
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <!--End - Image grid-->
+            <x-travel-image-grid></x-travel-image-grid>
 
             <div class="justify-between lg:flex ">
                 <div class="px-8 md:mb-4 ">
-                    <!--Start - Hotel Name-->
-                    <div class="mb-4 ">
-                        <h2 class="my-2 text-xl font-bold tracking-tight text-gray-900 capitalize dark:text-white">
-                            <div class="flex">
-                                <p>Category <span class="m-2 text-4xl">.</span>
-                                    Other <span class="m-2 text-4xl">.</span>
-                                    Another</p>
-                            </div>
-                        </h2>
-                        <p class="leading-relaxed text-gray-900 dark:text-gray-400">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non ipsum vel nunc
-                            commodo hendrerit sit amet vel
-                            nisi. Donec sodales maximus justo, nec dictum lectus malesuada non. Sed auctor ultrices
-                            tellus non varius.
-                            <span class="hidden" id="more-text">
-                                Sed eu enim malesuada, fermentum mi eu, finibus velit. Nam quis blandit velit, vel
-                                vehicula neque. Etiam eu lorem suscipit, sollicitudin ante at, pharetra quam.
-                            </span>
-                        </p>
-                        <button id="toggle-btn" class="text-blue-500 focus:outline-none">Read More</button>
-                        <button id="hide-btn" class="hidden mt-4 text-blue-500 focus:outline-none">Hide</button>
 
+                    <x-travel-name-card></x-travel-name-card>
 
-
-                    </div>
-                    <!--End - Hotel Name-->
                     <x-hotel-nav></x-hotel-nav>
                 </div>
                 <div class="w-full px-2 mt-2 mr-6 lg:max-w-sm lg:mt-1 shrink-0">
@@ -331,7 +184,7 @@
                                 </div>
 
                             </div>
-                            <div class="prose prose-md prose-slate text-slate-600">
+                            <div class="pblue pblue-md pblue-slate text-slate-600">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, facilis.</p>
                             </div>
 
@@ -395,7 +248,7 @@
                                 </div>
 
                             </div>
-                            <div class="prose prose-md prose-slate text-slate-600">
+                            <div class="pblue pblue-md pblue-slate text-slate-600">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, facilis.</p>
                             </div>
 
@@ -459,7 +312,7 @@
                                 </div>
 
                             </div>
-                            <div class="prose prose-md prose-slate text-slate-600">
+                            <div class="pblue pblue-md pblue-slate text-slate-600">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, facilis.</p>
                             </div>
 
@@ -503,34 +356,13 @@
             </ul>
         </div> --}}
 
+        <x-main-components.side-img-slider />
 
 
+
+    </div>
+
+
+    </div>
 
 </x-layouts.user-layout>
-
-
-
-
-
-
-
-
-
-
-<script>
-    const moreTextEl = document.getElementById('more-text');
-    const toggleBtnEl = document.getElementById('toggle-btn');
-    const hideBtnEl = document.getElementById('hide-btn');
-
-    toggleBtnEl.addEventListener('click', () => {
-        moreTextEl.classList.toggle('hidden');
-        toggleBtnEl.classList.toggle('hidden');
-        hideBtnEl.classList.toggle('hidden');
-    });
-
-    hideBtnEl.addEventListener('click', () => {
-        moreTextEl.classList.toggle('hidden');
-        toggleBtnEl.classList.toggle('hidden');
-        hideBtnEl.classList.toggle('hidden');
-    });
-</script>
