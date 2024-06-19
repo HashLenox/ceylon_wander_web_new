@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\UserController\ProfileController;
 use App\Http\Controllers\UserController\AccommodationController;
 use App\Http\Controllers\UserController\FeedController;
 use App\Http\Controllers\UserController\FrontendController;
