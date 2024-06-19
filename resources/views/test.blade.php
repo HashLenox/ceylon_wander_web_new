@@ -2,162 +2,184 @@
 
 
 <x-layouts.user-layout>
-    <div class="mt-20">
-        <nav class="flex pb-4 border-b-2" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                <li class="inline-flex items-center">
-                    <a href="#"
-                        class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 20 20">
+    <form id="upload-form" class="p-4 md:p-5" method="POST" action="{{ route('addreview') }}" enctype="multipart/form-data">
+        @csrf
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <!-- Star rating and description fields -->
+            <div class="col-span-2">
+                <div class="flex space-x-1">
+                    <input type="hidden" name="rating" id="rating-input" value="">
+
+                    <!-- Star SVGs for rating -->
+                    @for ($i = 1; $i <= 5; $i++)
+                        <svg aria-hidden="true" class="w-8 h-8 text-gray-400 star" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-value="{{ $i }}">
                             <path
-                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
                         </svg>
                         Home
-                    </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <a href="#"
-                            class="text-sm font-medium text-gray-700 ms-1 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Hotels</a>
-                    </div>
-                </li>
-                <li aria-current="page">
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">ABC Hotel</span>
-                    </div>
-                </li>
-            </ol>
-        </nav>
-
-        <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
-            <x-hotel-title>Name</x-hotel-title>
-
-            <x-travel-image-grid></x-travel-image-grid>
-
-            <div class="justify-between lg:flex ">
-                <div class="px-8 md:mb-4 ">
-
-                    <x-travel-name-card></x-travel-name-card>
-
-                    <x-hotel-nav></x-hotel-nav>
-                </div>
-                <div class="w-full px-2 mt-2 mr-6 lg:max-w-sm lg:mt-1 shrink-0">
-                    <div
-                        class="p-3 border border-gray-200 rounded-lg sm:p-6 lg:p-4 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-
-                        <!--Start - Sample description-->
-                        <h1 class="font-semibold text-gray-900 dark:text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </h1>
-
-                        <!--Start - Ratings-->
-                        <div>
-                            <div class="flex items-center my-2">
-                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                                    <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                                </svg>
-                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">4.95</p>
-                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">out of</p>
-                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">5</p>
+                                <a href="#"
+                                    class="text-sm font-medium text-gray-700 ms-1 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Hotels</a>
                             </div>
-                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">178+
-                                <a href="#" class="underline">reviews</a>
-                            </span>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                </svg>
+                                <span class="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">ABC
+                                    Hotel</span>
+                            </div>
+                        </li>
+                        </ol>
+                        </nav>
 
-                            <div
-                                class="items-center justify-center hidden h-48 md:block sm:items-center md:items-center md:h-auto">
-                                <div class="flex items-center mt-4">
-                                    <a href="#"
-                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5
-                                        star</a>
-                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-                                        <div class="h-5 bg-yellow-300 rounded" style="width: 70%"></div>
-                                    </div>
-                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
+                        <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
+                            <x-hotel-title>Name</x-hotel-title>
+
+                            <x-travel-image-grid></x-travel-image-grid>
+
+                            <div class="justify-between lg:flex ">
+                                <div class="px-8 md:mb-4 ">
+
+                                    <x-travel-name-card></x-travel-name-card>
+
+                                    <x-hotel-nav></x-hotel-nav>
                                 </div>
-                                <div class="flex items-center mt-4">
-                                    <a href="#"
-                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4
-                                        star</a>
-                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-                                        <div class="h-5 bg-yellow-300 rounded" style="width: 17%"></div>
+                                <div class="w-full px-2 mt-2 mr-6 lg:max-w-sm lg:mt-1 shrink-0">
+                                    <div
+                                        class="p-3 border border-gray-200 rounded-lg sm:p-6 lg:p-4 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+
+                                        <!--Start - Sample description-->
+                                        <h1 class="font-semibold text-gray-900 dark:text-white">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </h1>
+
+                                        <!--Start - Ratings-->
+                                        <div>
+                                            <div class="flex items-center my-2">
+                                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 22 20">
+                                                    <path
+                                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                                </svg>
+                                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 22 20">
+                                                    <path
+                                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                                </svg>
+                                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 22 20">
+                                                    <path
+                                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                                </svg>
+                                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                    viewBox="0 0 22 20">
+                                                    <path
+                                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                                </svg>
+                                                <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="currentColor" viewBox="0 0 22 20">
+                                                    <path
+                                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                                </svg>
+                                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">
+                                                    4.95</p>
+                                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">out
+                                                    of</p>
+                                                <p class="text-sm font-medium text-gray-500 ms-1 dark:text-gray-400">5
+                                                </p>
+                                            </div>
+                                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">178+
+                                                <a href="#" class="underline">reviews</a>
+                                            </span>
+
+                                            <div
+                                                class="items-center justify-center hidden h-48 md:block sm:items-center md:items-center md:h-auto">
+                                                <div class="flex items-center mt-4">
+                                                    <a href="#"
+                                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5
+                                                        star</a>
+                                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                        <div class="h-5 bg-yellow-300 rounded" style="width: 70%"></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-sm font-medium text-gray-500 dark:text-gray-400">70%</span>
+                                                </div>
+                                                <div class="flex items-center mt-4">
+                                                    <a href="#"
+                                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4
+                                                        star</a>
+                                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                        <div class="h-5 bg-yellow-300 rounded" style="width: 17%"></div>
+                                                    </div>
+                                                    <span
+                                                        class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
+                                                </div>
+                                                <div class="flex items-center mt-4">
+                                                    <a href="#"
+                                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3
+                                                        star</a>
+                                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                        <div class="h-5 bg-yellow-300 rounded" style="width: 8%">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
+                                                </div>
+                                                <div class="flex items-center mt-4">
+                                                    <a href="#"
+                                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2
+                                                        star</a>
+                                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                        <div class="h-5 bg-yellow-300 rounded" style="width: 4%">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
+                                                </div>
+                                                <div class="flex items-center mt-4">
+                                                    <a href="#"
+                                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1
+                                                        star</a>
+                                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                        <div class="h-5 bg-yellow-300 rounded" style="width: 1%">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End - Ratings-->
+
+
                                     </div>
-                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">17%</span>
+
+                                    <x-map-card></x-map-card>
                                 </div>
-                                <div class="flex items-center mt-4">
-                                    <a href="#"
-                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3
-                                        star</a>
-                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-                                        <div class="h-5 bg-yellow-300 rounded" style="width: 8%"></div>
-                                    </div>
-                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8%</span>
-                                </div>
-                                <div class="flex items-center mt-4">
-                                    <a href="#"
-                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2
-                                        star</a>
-                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-                                        <div class="h-5 bg-yellow-300 rounded" style="width: 4%"></div>
-                                    </div>
-                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4%</span>
-                                </div>
-                                <div class="flex items-center mt-4">
-                                    <a href="#"
-                                        class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1
-                                        star</a>
-                                    <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
-                                        <div class="h-5 bg-yellow-300 rounded" style="width: 1%"></div>
-                                    </div>
-                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">1%</span>
-                                </div>
+                                <!--End - Side card-->
                             </div>
                         </div>
-                        <!--End - Ratings-->
 
-
-                    </div>
-
-                    <x-map-card></x-map-card>
-                </div>
-                <!--End - Side card-->
-            </div>
-        </div>
-
-        {{-- <div class="my-4 bg-white border-t-2 border-gray-300">
+                        {{-- <div class="my-4 bg-white border-t-2 border-gray-300">
 
             <ul class="grid items-start grid-cols-1 p-8 xl:grid-cols-3 gap-y-10 gap-x-6">
                 <a href="#">
@@ -356,13 +378,13 @@
             </ul>
         </div> --}}
 
-        <x-main-components.side-img-slider />
+                        <x-main-components.side-img-slider />
 
 
 
-    </div>
+                </div>
 
 
-    </div>
+            </div>
 
 </x-layouts.user-layout>
