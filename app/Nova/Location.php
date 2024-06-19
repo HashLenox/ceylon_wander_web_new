@@ -39,10 +39,6 @@ class Location extends Resource
     public static $search = [
         'id',
         'name',
-        'type',
-        'contact_no',
-        'address',
-        'features'
     ];
 
     /**

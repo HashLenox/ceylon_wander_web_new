@@ -1,47 +1,192 @@
 <x-layouts.user-layout>
-    <div class="mt-20">
-        <nav class="flex pb-4 border-b-2" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                <li class="inline-flex items-center">
-                    <a href="#"
-                        class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 20 20">
+    <form id="upload-form" class="p-4 md:p-5" method="POST" action="{{ route('addreview') }}" enctype="multipart/form-data">
+        @csrf
+        <div class="mb-4 grid grid-cols-2 gap-4">
+            <!-- Star rating and description fields -->
+            <div class="col-span-2">
+                <div class="flex space-x-1">
+                    <input type="hidden" name="rating" id="rating-input" value="">
+
+                    <!-- Star SVGs for rating -->
+                    @for ($i = 1; $i <= 5; $i++)
+                        <svg aria-hidden="true" class="w-8 h-8 text-gray-400 star" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-value="{{ $i }}">
                             <path
-                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
                         </svg>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <a href="#"
-                            class="text-sm font-medium text-gray-700 ms-1 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Hotels</a>
-                    </div>
-                </li>
-                <li aria-current="page">
-                    <div class="flex items-center">
-                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">ABC Hotel</span>
-                    </div>
-                </li>
-            </ol>
-        </nav>
+                    @endfor
 
-        <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
-            <x-hotel-title>Name</x-hotel-title>
+                    {{-- <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const stars = document.querySelectorAll('.star');
+                            stars.forEach(star => {
+                                star.addEventListener('click', function() {
+                                    const rating = this.getAttribute('data-value');
+                                    document.getElementById('rating-input').value = rating;
+                                    stars.forEach(s => {
+                                        if (s.getAttribute('data-value') <= rating) {
+                                            s.classList.remove('text-gray-400');
+                                            s.classList.add('text-yellow-400');
+                                        } else {
+                                            s.classList.remove('text-yellow-400');
+                                            s.classList.add('text-gray-400');
+                                        }
+                                    });
+                                });
+                            });
+                        });
+                    </script> --}}
+                </div>
+            </div>
 
-            {{-- Your code goes here --}}
+            <div class="col-span-2">
+                <label for="description" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Review
+                    description</label>
+                <textarea id="review" rows="6" name="review"
+                    class="mb-2 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                    required></textarea>
+            </div>
 
+            <input type="text" name="id" value="1" hidden>
+
+            <div id="preview-container" class="col-span-2 grid grid-cols-4 gap-2 px-2">
+                <!-- Image upload field -->
+                <div id="upload-label" class="flex justify-center items-center w-full">
+                    <label for="dropzone-file" class="flex flex-col justify-center items-center sm:w-36 sm:h-36 ...">
+                        <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                            <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                </path>
+                            </svg>
+                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400 text-center"><span
+                                    class="font-semibold">Click to upload</span></p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" accept="image/*" name="images[]"
+                            multiple>
+                    </label>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const uploadLabel = document.getElementById('upload-label');
+                    const dropzoneFile = document.getElementById('dropzone-file');
+                    const previewContainer = document.getElementById('preview-container');
+                    const uploadForm = document.getElementById('upload-form');
+                    let imageCount = 0;
+                    const maxImages = 4;
+                    const imageFiles = new DataTransfer();
+
+                    dropzoneFile.addEventListener('change', function(event) {
+                        const files = Array.from(event.target.files);
+                        if (imageCount + files.length > maxImages) {
+                            alert(`You can only upload up to ${maxImages} images.`);
+                            return;
+                        }
+
+                        files.forEach(file => {
+                            if (!file.type.startsWith('image/')) {
+                                alert('Only images are allowed.');
+                                return;
+                            }
+
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                const imageDiv = document.createElement('div');
+                                imageDiv.classList.add('relative', 'w-36', 'h-36', 'bg-gray-100',
+                                    'border', 'border-gray-300', 'rounded-lg', 'overflow-hidden');
+
+                                const img = document.createElement('img');
+                                img.src = e.target.result;
+                                img.classList.add('object-cover', 'w-full', 'h-full');
+
+                                const removeButton = document.createElement('button');
+                                removeButton.textContent = 'Remove';
+                                removeButton.classList.add('absolute', 'top-2', 'right-2', 'bg-red-500',
+                                    'text-white', 'rounded-full', 'p-1', 'text-xs',
+                                    'focus:outline-none');
+                                removeButton.addEventListener('click', function() {
+                                    previewContainer.removeChild(imageDiv);
+                                    imageFiles.items.remove(imageFiles.items.findIndex(i => i
+                                        .file === file));
+                                    imageCount--;
+                                    if (imageCount < maxImages) {
+                                        uploadLabel.style.display = 'flex';
+                                    }
+                                });
+
+                                imageDiv.appendChild(img);
+                                imageDiv.appendChild(removeButton);
+                                previewContainer.appendChild(imageDiv);
+                            };
+                            reader.readAsDataURL(file);
+                            imageFiles.items.add(file);
+                            imageCount++;
+                        });
+
+                        if (imageCount >= maxImages) {
+                            uploadLabel.style.display = 'none';
+                        }
+
+                        dropzoneFile.files = imageFiles.files; // Update the file input with the new files
+                        dropzoneFile.value = ''; // Reset file input
+                    });
+
+                    uploadForm.addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent the default form submission
+
+                        const formData = new FormData(uploadForm);
+                        for (let i = 0; i < imageFiles.files.length; i++) {
+                            formData.append('images[]', imageFiles.files[i]);
+                        }
+
+                        // You can now use `formData` to send the form data via AJAX, for example:
+                        fetch(uploadForm.action, {
+                            method: uploadForm.method,
+                            body: formData
+                        }).then(response => {
+                            // Handle the response from the server
+                            if (response.ok) {
+                                // Reset values
+                                previewContainer.innerHTML = ''; // Clear preview container
+                                dropzoneFile.value = ''; // Reset file input
+                                imageFiles.items.clear(); // Clear DataTransfer object
+                                imageCount = 0; // Reset image count
+                                alert('Images uploaded successfully!');
+                            } else {
+                                alert('Failed to upload images.');
+                            }
+                        }).catch(error => {
+                            console.error('Error uploading images:', error);
+                            alert('Error uploading images.');
+                        });
+                    });
+                });
+            </script>
+
+
+
+            <div class="col-span-2">
+                <div class="flex items-center">
+                    <input id="review-checkbox" type="checkbox" value=""
+                        class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-primary-600"
+                        required>
+                    <label for="review-checkbox" class="ms-2 text-sm font-medium text-gray-500 dark:text-gray-400">By
+                        publishing this review you agree with the <a href="#"
+                            class="text-primary-600 hover:underline dark:text-primary-500">terms and
+                            conditions</a>.</label>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="border-t border-gray-200 pt-4 dark:border-gray-700 md:pt-5">
+            <button type="submit" data-modal-toggle="review-modal"
+                class="me-2 inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Add
+                review</button>
+            <button type="button" data-modal-toggle="review-modal"
+                class="me-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Cancel</button>
+        </div>
+    </form>
+
 </x-layouts.user-layout>

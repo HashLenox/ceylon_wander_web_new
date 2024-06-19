@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="hidden">
+    {{-- <div class="hidden">
         <div class="grid grid-cols-12 gap-0.5">
             <a data-fancybox="gallery" class="flex flex-col flex-1 w-full"
                 data-caption="<h6>View from
@@ -127,6 +127,6 @@
 
             </a>
         </div>
-    </div>
+    </div> --}}
 </div>
 <!--End - Image grid-->

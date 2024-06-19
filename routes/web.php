@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\UserController\AccommodationController;
 use App\Http\Controllers\UserController\FeedController;
+use App\Http\Controllers\UserController\FrontendController;
 use App\Http\Controllers\UserController\LocationController;
 use App\Http\Controllers\UserController\RestaurantController;
 use app\Http\Controllers\UserProfileController;
@@ -80,6 +81,10 @@ Route::middleware(['auth'])->group(
         Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
 
         Route::get('/hotel/details/{id}', [AccommodationController::class, 'singleHotel'])->name('hotel.details');
+
+
+
+        Route::POST('/add-review', [FrontendController::class, 'addReview'])->name('addreview');
     }
 );
 
