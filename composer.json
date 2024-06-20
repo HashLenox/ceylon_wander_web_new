@@ -17,6 +17,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
+        "orangehill/iseed": "^3.0",
         "owenvoke/blade-fontawesome": "^2.6",
         "pktharindu/nova-permissions": "^3.0",
         "robsontenorio/mary": "^1.25"
