@@ -217,6 +217,23 @@ class CityTableSeeder extends Seeder
                         'created_at' => NULL,
                         'updated_at' => NULL,
                     ),
+
+                    11 =>
+                    array(
+                        'id' => 13,
+                        'district_id' => 6,
+                        'name_en' => 'Kandy',
+                        'name_si' => 'මහනුවර',
+                        'name_ta' => 'கண்டி',
+                        'sub_name_en' => NULL,
+                        'sub_name_si' => NULL,
+                        'sub_name_ta' => NULL,
+                        'postcode' => '20000',
+                        'latitude' => '6.91993310',
+                        'longitude' => '79.85402740',
+                        'created_at' => NULL,
+                        'updated_at' => NULL,
+                    ),
             )
         );
     }

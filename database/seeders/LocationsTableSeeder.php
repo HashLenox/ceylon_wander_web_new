@@ -1,0 +1,208 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class LocationsTableSeeder extends Seeder
+{
+
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     */
+    public function run()
+    {
+        
+
+        \DB::table('locations')->delete();
+        
+        \DB::table('locations')->insert(array (
+            0 => 
+            array (
+                'id' => 1,
+                'name' => 'Coco Garden Villa',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 13,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi, perferendis eligendi dolore, voluptates maxime.',
+                'opening_hours' => NULL,
+                'longitude' => '56.0000000',
+                'latitude' => '42.0000000',
+                'address' => 'No.24/ Peradeniya rd, Mahanuwara',
+                'contact_no_1' => '0748596325',
+                'contact_no_2' => NULL,
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 1,
+                'main_image' => '"k71r84G6D6c7CRvVSbqwr7KBkscHt0octykVQPrq.jpg"',
+                'images' => '["kKn7VnQEuDmwWW2gLsPY6hv53cmkdASBgOr8XODi.jpg", "VkFWCBBUMOWfuvjB3YruBXPEZfgDPkYNXF00IDeL.jpg", "F3Hehlt9ZHXjRVHCQVQM0VCyGEZR89pkikg8sY9F.jpg", "oaulLsPPWeGdUvW8ZwFrABHzRgfoC70q0ImRm7lB.jpg", "3TZdRwhy0KCe01YneGQE17t4cPO0sLacwYjtJE4U.jpg", "Ys7h7g5IBubAB927Ir4MVcClPohPwQEBUKCEhyvN.jpg", "ERyUYWVGfe5iHuibPE8oF6ePyyJCWr3MYk5ErdZG.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "2", "status": true}}, {"type": "facility", "fields": {"name": "4", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:09:59',
+                'updated_at' => '2024-06-20 04:09:59',
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'The Grand Grove',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 6,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi.',
+                'opening_hours' => NULL,
+                'longitude' => '65.0000000',
+                'latitude' => '41.0000000',
+                'address' => '39 1st Cross Street, Kandy',
+                'contact_no_1' => '0789635214',
+                'contact_no_2' => NULL,
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 5,
+                'main_image' => '"9YTHACpS2ikvg2jMA0MHsGuNenobnGx29M98ysMq.jpg"',
+                'images' => '["JW21TcSPDzseIMoydbmUcIOucgw7BdMcxLv7ut3d.jpg", "0aNE1sMWWfbK6212mns6XTgWcwXcOz5fvofaWfBh.jpg", "CWm7M8Z4WJ6nnB2vBP04YNctdiYNEb81sG1DiN4Q.jpg", "HBXv26qByCmTOB0YptR5vzcyeB9uCiXAHxPJZNRv.jpg", "2lHy1KLVnYyCixtA4YJUVD5xhNvNHjH1YyYuxvJt.jpg", "D9dKWzh9bT6SMsn29ptFndiBbDFA3Ki5tLIvSXsr.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "4", "status": true}}, {"type": "facility", "fields": {"name": null, "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:13:23',
+                'updated_at' => '2024-06-20 04:13:23',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'Resident Bungalow',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 13,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi, perferendis eligendi dolore.',
+                'opening_hours' => NULL,
+                'longitude' => '78.0000000',
+                'latitude' => '41.0000000',
+                'address' => 'B33, lbbagamuwa, Kandy',
+                'contact_no_1' => '0714582369',
+                'contact_no_2' => '0745896324',
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 5,
+                'main_image' => '"jSBb2shW9f5YhqLJaSK1RTekjViqAWjg4YPhYdiM.jpg"',
+                'images' => '["xEQWDgZRH8pCfIO68bnenAdYpOwO9vlKTfar2SJi.jpg", "3GcDOQ62MCwJacyLiboutpzZDZ7hL4rNeWBkMclY.jpg", "TrC9dhXJE5I4Zz5DwpOab79DzZLsHOKkZQvdQdtB.jpg", "esknehqWG32d6idloQW8dM1NRep9mGnipHWconlr.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "2", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:16:34',
+                'updated_at' => '2024-06-20 04:16:34',
+            ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'Aura Resident Suite',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 14,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi.',
+                'opening_hours' => NULL,
+                'longitude' => '47.0000000',
+                'latitude' => '52.0000000',
+                'address' => '201/1B, Silkhouse Street, Kandy',
+                'contact_no_1' => '0715423698',
+                'contact_no_2' => '0785425693',
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 5,
+                'main_image' => '"f1vUQajN8Pyl3RaKe9e9FbNlrtuqwJHsj6dvGA5z.jpg"',
+                'images' => '["twruu3FZFB6HsTnZlebiAkdnBjEp5Ukw8uTsXcBz.jpg", "LAR3jrjtMyafkmWdWBEda24kt9NxQCLbBmI3nURI.jpg", "N4Vv9oTzFQe6hUxMefeXQKOuaUmbeiN044GLq35N.jpg", "hhdInZ0SLOGwxd0Cxi8hJmu0DLipKUamk64SySWV.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "4", "status": true}}, {"type": "facility", "fields": {"name": "2", "status": true}}, {"type": "facility", "fields": {"name": "3", "status": true}}, {"type": "facility", "fields": {"name": "5", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:20:53',
+                'updated_at' => '2024-06-20 04:20:53',
+            ),
+            4 => 
+            array (
+                'id' => 5,
+                'name' => 'Samantha Guest',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 8,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus.',
+                'opening_hours' => NULL,
+                'longitude' => '45.0000000',
+                'latitude' => '47.0000000',
+                'address' => 'No/200, Manning Town, Kandy',
+                'contact_no_1' => '0745898745',
+                'contact_no_2' => '714523697',
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 1,
+                'main_image' => '"wap4UE1E67jtOdgQJqwvMj2Ivgb0c6KMJYdRoyWZ.jpg"',
+                'images' => '["jwJbyJXpWJYjVf27IJMKFWgOpXgk4rc7ltIgwufz.jpg", "hAyFQGcVZGBVdMKshMy8ROMaLKuE4yf5IW0CCLyY.jpg", "Bs0TuhsfquB40pt2EGtguHQ4QA70tgyImvpaW5eY.jpg", "iQjbHsiXNFt1Q6DOYL1oR6isNxDesLhiuBgXGalT.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "2", "status": true}}, {"type": "facility", "fields": {"name": "4", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:24:24',
+                'updated_at' => '2024-06-20 04:24:24',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'name' => 'Lakefront Escape by Wander Collection',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 7,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi, perferendis eligendi dolore, voluptates maxime.',
+                'opening_hours' => NULL,
+                'longitude' => '85.0000000',
+                'latitude' => '14.0000000',
+                'address' => '401, Silkhouse rd, Kandy',
+                'contact_no_1' => '0748574123',
+                'contact_no_2' => '769535823',
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 2,
+                'main_image' => '"w6s657PfofyuhSpZeePzzKE9oAOH70el0NOqoKus.jpg"',
+                'images' => '["uHzF9wmGutk8IUW3f7g9GC4WNwz4mfUa2B1EbXnf.jpg", "l0eMJ71NQNCmMHKiNATscXXILV3q2dwwWl8N4xna.jpg", "p35xoccvZQNu0MeKoenTONDtlysAydx1QvSWeb4x.jpg", "qXIqbNwRuWGaipCOVjr9hMgYnP0TKCeQkWoJ69ds.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "2", "status": true}}, {"type": "facility", "fields": {"name": "4", "status": true}}, {"type": "facility", "fields": {"name": "5", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:29:02',
+                'updated_at' => '2024-06-20 04:29:02',
+            ),
+            6 => 
+            array (
+                'id' => 7,
+                'name' => 'Bluegreen Vacations Big Bear Village, Ascend Lodges Collection',
+                'type' => 3,
+                'city_id' => 13,
+                'user_id' => NULL,
+                'category_id' => 7,
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae minus, sunt impedit aperiam illo nisi, perferendis eligendi.',
+                'opening_hours' => NULL,
+                'longitude' => '74.0000000',
+                'latitude' => '58.0000000',
+                'address' => '502, Goldhouse Street, Kandy',
+                'contact_no_1' => '0712584963',
+                'contact_no_2' => '0742942233',
+                'status' => 1,
+                'points' => 10,
+                'Boosting' => 1,
+                'main_image' => '"wGgyfmtef5h3uErcCMBz6UVhOP49URk0g0BK8b87.jpg"',
+                'images' => '["oq6Aa0AehsIxEMxWiVz3iPSGMyYEc3mcUf8DuYsK.jpg", "TdsCDVjQC7kIIFCmggguDKU6jHL6shDBeLA5IqkF.jpg", "Qwj4tbWcudILpBJelmtD3OqWhXLgDvp1vnQzwVpd.jpg", "nBRPEOSmGzkvpHEqeYFQr5za4VnH7XJ0baCwDpL7.jpg"]',
+                'features' => '[{"type": "facility", "fields": {"name": "2", "status": true}}, {"type": "facility", "fields": {"name": "4", "status": true}}]',
+                'created_by' => NULL,
+                'updated_by' => NULL,
+                'created_at' => '2024-06-20 04:31:50',
+                'updated_at' => '2024-06-20 04:31:50',
+            ),
+        ));
+        
+        
+    }
+}
