@@ -1,5 +1,4 @@
-<div>
-    <a href="#">
+
         <div class="keen-slider__slide">
             <blockquote class="flex flex-col justify-between h-full p-2 bg-gray-200 shadow-sm rounded-xl sm:p-8 lg:p-2">
                 <div>
@@ -34,8 +33,6 @@
                 </div>
             </blockquote>
         </div>
-    </a>
 
-</div>
 
 
