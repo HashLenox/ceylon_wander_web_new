@@ -21,7 +21,7 @@
     @livewireStyles
 </head>
 
-<body class="h-full font-sans antialiased bg-slate-100 dark:bg-slate-900">
+<body class="h-full font-sans antialiased bg-white dark:bg-slate-900">
     <x-app-loader></x-app-loader>
     @stack('modals')
 
@@ -29,10 +29,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
 
+
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
 </body>

@@ -22,6 +22,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 1,
                         'name' => 'Wildlife',
                         'type' => '1',
+                        'slug' => 'Wildlife',
                         'description' => 'Places possess a high level of biodiversity and wildlife resources',
                     ),
                 1 =>
@@ -29,6 +30,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 2,
                         'name' => 'Beaches',
                         'type' => '1',
+                        'slug' => 'Beach',
                         'description' => 'Tropical beaches which are popular among both local and foreign tourists',
                     ),
                 2 =>
@@ -36,6 +38,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 3,
                         'name' => 'Natural scenic beauty',
                         'type' => '1',
+                        'slug' => 'Nature',
                         'description' => 'Areas of natural scenic beauty, primarily including mountainous terrains, agricultural landscapes, waterfalls, places with diverse climatic conditions, reservoirs, and rivers.',
                     ),
                 3 =>
@@ -43,6 +46,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 4,
                         'name' => 'Heritage',
                         'type' => '1',
+                        'slug' => 'Heritage',
                         'description' => 'Pre-historic, proto-historic, and historic monuments, which bespeak its ancient civilization and culture.',
                     ),
                 4 =>
@@ -50,6 +54,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 5,
                         'name' => 'Hotel',
                         'type' => '2',
+                        'slug' => 'Hotel',
                         'description' => 'Comes in all shapes, sizes and personalities, from budget to luxury',
                     ),
                 5 =>
@@ -57,6 +62,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 6,
                         'name' => 'Apartment',
                         'type' => '2',
+                        'slug' => 'Apartment',
                         'description' => 'A self-contained housing unit that occupies part of a building, generally on a single storey',
                     ),
                 6 =>
@@ -64,6 +70,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 7,
                         'name' => 'Luxury Lodges',
                         'type' => '2',
+                        'slug' => 'Lodge',
                         'description' => 'Extremely accommodating and cater to the most discerning visitor',
                     ),
                 7 =>
@@ -71,6 +78,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 8,
                         'name' => 'Boutiques and Lodges',
                         'type' => '2',
+                        'slug' => 'B&L',
                         'description' => 'Encompasses historic estates, vineyard cottages or boutique guest houses, typically providing unique facilities, location, service and guest experiences',
                     ),
                 8 =>
@@ -78,6 +86,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 9,
                         'name' => 'Chinese',
                         'type' => '3',
+                        'slug' => 'chinese',
                         'description' => 'Sample Description',
                     ),
 
@@ -86,6 +95,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 10,
                         'name' => 'Bakery',
                         'type' => '3',
+                        'slug' => 'Backery',
                         'description' => 'Sample Description',
                     ),
 
@@ -94,6 +104,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 11,
                         'name' => 'Fast Food',
                         'type' => '3',
+                        'slug' => 'FastFood',
                         'description' => 'Sample Description',
                     ),
 
@@ -102,6 +113,7 @@ class CategoryTableSeeder extends Seeder
                         'id' => 12,
                         'name' => 'Street Food',
                         'type' => '3',
+                        'slug' => 'StreetFood',
                         'description' => 'Sample Description',
                     ),
             )

@@ -51,6 +51,10 @@ class Category extends Resource
                 ->sortable()
                 ->rules('required'),
 
+            Text::make('Category slug', 'slug')
+                ->sortable()
+                ->rules('required'),
+
             Select::make('Type')->options([
                 '1' => 'Travel Location',
                 '2' => 'Restaurant',

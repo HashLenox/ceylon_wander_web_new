@@ -9,6 +9,14 @@ class Room extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'images' => 'array',
+        'price' => 'array',
+        'features' => 'array',
+        'include' => 'array',
+        'facilities' => 'array',
+    ];
+
     public function room_type()
     {
         return $this->belongsTo(RoomType::class);

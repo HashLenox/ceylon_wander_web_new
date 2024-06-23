@@ -6,14 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class HotelOverviewSideCard extends Component
+class ImageGrid extends Component
 {
+    public $images;
+
     /**
      * Create a new component instance.
+     *
+     * @param $images The schedule data
      */
-    public function __construct()
+    public function __construct($images)
     {
-        //
+        $this->images = $images;
     }
 
     /**
@@ -21,6 +25,6 @@ class HotelOverviewSideCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.hotel-overview-side-card');
+        return view('components.image-grid');
     }
 }

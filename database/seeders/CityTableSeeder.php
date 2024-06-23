@@ -217,6 +217,23 @@ class CityTableSeeder extends Seeder
                         'created_at' => NULL,
                         'updated_at' => NULL,
                     ),
+
+                12 =>
+                    array(
+                        'id' => 13,
+                        'district_id' => 5,
+                        'name_en' => 'Kandy',
+                        'name_si' => 'කොළඹ 2',
+                        'name_ta' => 'கொழும்பு 2',
+                        'sub_name_en' => 'Slave Island',
+                        'sub_name_si' => 'කොම්පඤ්ඤ වීදිය',
+                        'sub_name_ta' => 'கொம்பனித்தெரு',
+                        'postcode' => '00200',
+                        'latitude' => '6.91993310',
+                        'longitude' => '79.85402740',
+                        'created_at' => NULL,
+                        'updated_at' => NULL,
+                    ),
             )
         );
     }

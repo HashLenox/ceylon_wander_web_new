@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -23,12 +22,13 @@ return new class extends Migration
             $table->decimal('longitude', 10, 7);
             $table->decimal('latitude', 10, 7);
             $table->string('address');
-            $table->string('contact_no_1', 10);
-            $table->string('contact_no_2', 10);
+            $table->string('contact_no_1');
+            $table->string('contact_no_2')->nullable();
             $table->boolean('status')->default(true);
             $table->integer('points')->default('10');
             $table->integer('Boosting')->default('0');
-            $table->string('image_path')->nullable();
+            $table->json('main_image')->nullable();
+            $table->json('images')->nullable();
             $table->json('features');
             $table->foreignId('created_by')->nullable()->references('id')->on('users')->cascadeOnDelete();
             $table->foreignId('updated_by')->nullable()->references('id')->on('users')->cascadeOnDelete();

@@ -8,13 +8,18 @@ use Illuminate\View\Component;
 
 class HotelCard extends Component
 {
+    public $location;
+
     /**
      * Create a new component instance.
+     *
+     * @param $location The schedule data
      */
-    public function __construct()
+    public function __construct($location)
     {
-        //
+        $this->location = $location;
     }
+
 
     /**
      * Get the view / contents that represent the component.

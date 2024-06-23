@@ -1,8 +1,8 @@
 <aside
-    class="fixed top-0 left-0 z-40 w-64 h-screen mt-4 transition-transform -translate-x-full bg-white border-r border-gray-200 pt-14 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+    class="fixed top-0 left-0 z-40 w-64 h-screen mt-4 transition-transform -translate-x-full bg-white border-r border-gray-200 pt-14 lg:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
     aria-label="Sidenav" id="drawer-navigation">
     <div class="h-full px-3 py-5 overflow-y-auto bg-white dark:bg-gray-800">
-        <form action="#" method="GET" class="mb-2 md:hidden">
+        <form action="#" method="GET" class="mb-2 lg:hidden">
             <label for="sidebar-search" class="sr-only">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -115,7 +115,7 @@
             </li>
         </ul>
         <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-            <x-side-nav-link href="#" :active="request()->is('#')">
+            <x-side-nav-link href="{{ route('profile') }}" :active="request()->is('profile')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-2">
                     <path fill-rule="evenodd"
                         d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"

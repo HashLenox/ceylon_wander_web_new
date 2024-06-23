@@ -7,7 +7,8 @@
                     alt="Neil Sims">
             </div>
             <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">Sudu Nona (Level 69 Traveler)
+                <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">{{ $feed?->user?->name }} (Level
+                    69 Traveler)
                 </p>
                 <p class="text-sm font-normal text-gray-500 truncate dark:text-gray-400">12 April
                     at 09.28 PM</p>
@@ -22,19 +23,44 @@
             </a>
         </div>
         <div class="space-y-4">
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Hi Baba, I Love you somuch sudu nona, Ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmma</p>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{ $feed->review }}</p>
 
-            <div class="flex flex-wrap">
-                <img class="mr-4 mb-4 h-40 rounded-lg"
-                    src="{{ asset('assets\images\K9b8fVZzWn51ORqcwRKnwnJW36ROTSeG6Gjs7Jol.jpg') }}"
-                    alt="task screenshot">
 
-                <img class="mr-4 mb-4 h-40 rounded-lg"
-                    src="{{ asset('assets\images\K9b8fVZzWn51ORqcwRKnwnJW36ROTSeG6Gjs7Jol.jpg') }}"
-                    alt="task screenshot">
-            </div>
-            <a class="text-gray-500 dark:text-gray-400 hover:text-blue-500 font-bold text-md" href="#">@Location
-                Name</a>
+            @if ($feed->images)
+                @php
+                    $imageCount = count($feed->images);
+                @endphp
+                <div class="container max-h-52 flex">
+                    @foreach ($feed->images as $image)
+                        @if ($imageCount == 1)
+                            <div class="w-full lg:w-1/3 max-h-52 overflow-hidden">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 2)
+                            <div class="w-1/2 lg:w-1/3 max-h-52 overflow-hidden">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 3)
+                            <div class="w-1/3 max-h-52 overflow-hidden">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 4)
+                            <div class="w-1/4 max-h-52 overflow-hidden">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            @endif
+
+
+
+            <a class="text-gray-500 dark:text-gray-400 hover:text-blue-500 font-bold text-md"
+                href="#">{{ '@' . $feed?->location?->name }}</a>
         </div>
         <div class="flex py-3 space-x-6 border-t border-b border-gray-200 dark:border-gray-700">
             <a href="#"

@@ -2,8 +2,10 @@
 
 namespace App\Nova;
 
+use DigitalCreative\Filepond\Filepond;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -49,16 +51,16 @@ class Room extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('Name')
-                ->required()
-                ->sortable(),
-
-            BelongsTo::make('Location')
+            BelongsTo::make('location')
                 ->sortable()
                 ->searchable()
                 ->withSubtitles()
                 ->showCreateRelationButton()
                 ->modalSize('5xl'),
+
+            Text::make('Name')
+                ->required()
+                ->sortable(),
 
             BelongsTo::make('Room Type', 'room_type')
                 ->sortable()
@@ -67,11 +69,14 @@ class Room extends Resource
                 ->showCreateRelationButton()
                 ->modalSize('5xl'),
 
-            Number::make('Person Count', 'max_person_count')
+            Number::make('Block Size', 'size')
                 ->min(0)
                 ->required()
+                ->step(.02),
+
+            Text::make('Description')
                 ->hideFromIndex()
-                ->help('Maximum number of person allowed for the room'),
+                ->required(),
 
             Number::make('Total', 'number_of_rooms')
                 ->min(0)
@@ -84,17 +89,22 @@ class Room extends Resource
                 ->required()
                 ->help('Total number of available rooms'),
 
-            Text::make('Description')
+            Boolean::make('free_cancellation'),
+
+            Boolean::make('prepayment'),
+
+            Boolean::make('smoking'),
+
+            Filepond::make('Images', 'images')
+                ->multiple(),
+
+            Repeater::make('Room Prices', 'price')
+                ->repeatables([
+                    \App\Nova\Repeater\RoomPrice::make()->confirmRemoval(),
+                ])
+                ->asJson()
+                ->rules('required')
                 ->hideFromIndex(),
-
-            Number::make('Price', 'price')
-                ->min(0)
-                ->required()
-                ->step(.02),
-
-            Text::make('image_path')
-                ->hideFromIndex(),
-
 
             Repeater::make('Add Feature', 'features')
                 ->repeatables([
@@ -103,6 +113,16 @@ class Room extends Resource
                 ->asJson()
                 ->rules('required')
                 ->hideFromIndex(),
+
+            Repeater::make('Room Facilities', 'facilities')
+                ->repeatables([
+                    \App\Nova\Repeater\RoomFacilities::make()->confirmRemoval(),
+                ])
+                ->asJson()
+                ->rules('required')
+                ->hideFromIndex(),
+
+
 
             //created_by, updated_by foreign keys
 

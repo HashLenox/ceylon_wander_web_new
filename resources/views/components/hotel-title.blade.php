@@ -1,8 +1,8 @@
-<!--Start - Hotel Title with save and share buttons-->
+<!--Start - Hotel details with save and share buttons-->
 <div class="flex items-center justify-between p-5">
-    <h2 class="mx-4 my-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Hotel ABC
-    </h2>
+    <h6 class="mx-4 my-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        {{$slot}}
+    </h6>
     <div class="flex justify-between space-x-8">
         <a href="#" title=""
             class="flex items-center justify-center w-full px-5 py-2.5 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-purple-700  focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -29,4 +29,3 @@
 
     </div>
 </div>
-<!--End- Hotel Title with save and share buttons-->

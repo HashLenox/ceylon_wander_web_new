@@ -19,7 +19,7 @@ class Facilities extends Repeatable
     {
         return [
             Select::make('Feature Name', 'name')
-                ->options(\App\Models\Feature::pluck('name', 'id'))
+                ->options(\App\Models\Feature::pluck('name', 'name'))
                 ->searchable()
                 ->required()
                 ->sortable(),
