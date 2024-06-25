@@ -1,4 +1,4 @@
-<div class="rounded-lg relative pt-36  sm:pt-60 pb-8">
+<div class="rounded-lg relative pt-36 sm:pt-60 pb-2">
     <div
         class="bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/coast-house-view.jpg')] rounded-lg w-full  absolute top-0 left-0 z-0 h-48 sm:h-[350px] bg-no-repeat bg-cover bg-center bg-gray-300 bg-blend-multiply">
     </div>
@@ -24,7 +24,7 @@
 
 
     </div>
-    <div class="w-full max-w-[200px] mx-auto lg:mt-4 px-6 md:px-8">
+    <div class=" w-[200px] mx-auto lg:mt-4 px-6 md:px-8">
         <div class="flex items-center justify-center flex-col lg:flex-row relative z-10">
             <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
                 class="border-4 border-solid border-white rounded-full max-sm:w-20">
