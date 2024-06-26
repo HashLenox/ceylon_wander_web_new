@@ -21,7 +21,7 @@
     @livewireStyles
 </head>
 
-<body class="h-full font-sans antialiased bg-white dark:bg-slate-900">
+<body class="h-full font-sans antialiased bg-gray-100 dark:bg-slate-900">
     <x-app-loader></x-app-loader>
     @stack('modals')
 

@@ -128,6 +128,9 @@
                     <x-hotel-card></x-hotel-card> --}}
                 </div>
             </div>
+
+
+            <x-main-components.side-img-slider />
         </div>
 
 
