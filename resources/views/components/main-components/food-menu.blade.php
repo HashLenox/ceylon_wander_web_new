@@ -43,6 +43,10 @@
 
 
         <div class="p-2 grid lg:grid-cols-2  lg:gap-y-8 gap-10" x-show="currentPage === 1">
+
+            {{-- @foreach ($restaurant->foods as $food)
+                maru kama ekak bn {{ $food->name }}
+            @endforeach --}}
             <!-- Page 1 Cards -->
             <x-main-components.food-card />
             <x-main-components.food-card />
