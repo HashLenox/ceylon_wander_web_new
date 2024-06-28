@@ -14,4 +14,10 @@ class RestaurantController extends Controller
         $locations = Location::where('type', LocationType::Restaurant->value)->paginate(10);
         return view('user.restaurant', ['locations' => $locations]);
     }
+
+    public function singleRestaurant($id)
+    {
+        $restaurant = Location::where('id', $id)->first();
+        return view('user.single.single-restaurant', ['restaurant' => $restaurant]);
+    }
 }

@@ -11,14 +11,14 @@
 
         <x-main-components.promo-slider />
 
-        <div>
-            <x-header>Best Resturent in Area</x-header>
-        </div>
+        {{-- <div>
+            <x-header>Best Restaurant in Area</x-header>
+        </div> --}}
 
-        <div class="mt-5">
+        <div>
             <div class="grid items-center justify-center gap-6 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4">
                 @forelse ($locations as $location)
-                    <x-hotel-card :location="$location" />
+                    <x-restaurant-card :location="$location" />
                 @empty
                     <div
                         class="flex items-center justify-center col-span-4 border-2 border-gray-700 border-dashed bg-primary-100 dark:bg-gray-700 rounded-xl dark:border-gray-500">
