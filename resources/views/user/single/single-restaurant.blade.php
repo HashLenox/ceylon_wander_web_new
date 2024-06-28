@@ -4,13 +4,12 @@
 
         <x-main-components.restaurant-hero />
 
-        <x-main-components.food-filter />
-
         <x-main-components.promo-slider />
 
+        <x-main-components.food-menu />
 
-        <div class="h-40 bg-red-500">
-            <h1>Comment Section</h1>
+        <div class="bg-red-200 h-24 my-6 items-center justify-between">
+            <h1>Comment section</h1>
         </div>
 
     </div>

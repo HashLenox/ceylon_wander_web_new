@@ -1,11 +1,26 @@
 <div>
+    <style>
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            content: " " !important;
+        }
 
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            content: " " !important;
+        }
+
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: relative !important;
+        }
+    </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <div class="relative w-full my-8">
+    <div class="  relative w-full my-8 sm:my-4">
         <div class="relative swiper multiple-slide-carousel swiper-container">
-            <div class="mb-12 swiper-wrapper">
+            <div class="lg:mb-12 md:mb-4 sm:mb-2 swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="flex items-center justify-center w-full bg-indigo-200 h-44 rounded-2xl">
                         <span class="text-2xl font-semibold text-indigo-600">Slide 1</span>

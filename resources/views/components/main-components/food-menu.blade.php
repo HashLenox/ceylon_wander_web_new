@@ -7,7 +7,7 @@
 
             <div class="flex space-x-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
                 <template x-for="page in visiblePages" :key="page">
-                    <button @click="goToPage(page)" class="px-4 py-2 w-32 p-4"
+                    <button @click="goToPage(page)" class="px-4 py-2 w-full p-4"
                         :class="{
                             ' font-extrabold text-lg text-slate-900 border-b-4 border-slate-900': currentPage ===
                                 page,
@@ -121,7 +121,7 @@
                         case 1:
                             return 'Rice';
                         case 2:
-                            return 'Noodles';
+                            return 'Noodles ';
                         case 3:
                             return 'Soup';
 
