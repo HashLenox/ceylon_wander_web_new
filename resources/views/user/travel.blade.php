@@ -6,15 +6,22 @@
             <x-card-list-header></x-card-list-header>
 
             <div class="flex flex-col flex-wrap px-2 md:flex-row md:-mx-4">
-                <x-travel-card></x-travel-card>
-                <x-travel-card></x-travel-card>
-                <x-travel-card></x-travel-card>
-                <x-travel-card></x-travel-card>
+                @forelse ($locations as $location)
+                    <x-travel-card :location="$location" />
+                @empty
+
+                    <div
+                        class="flex items-center justify-center col-span-4 border-2 border-gray-700 border-dashed bg-primary-100 dark:bg-gray-700 rounded-xl dark:border-gray-500">
+                        <div class="text-center">
+                            <p class="py-16 text-gray-800 dark:text-white ">No records found to your criteria</p>
+                        </div>
+                    </div>
+                @endforelse
             </div>
         </div>
 
 
-        <div class="max-w-screen-xl px-6 pt-8 pb-4 mx-auto mt-4 sm:mt-2">
+        {{-- <div class="max-w-screen-xl px-6 pt-8 pb-4 mx-auto mt-4 sm:mt-2">
             <x-card-list-header></x-card-list-header>
 
             <div class="flex flex-col flex-wrap px-2 md:flex-row md:-mx-4">
@@ -23,7 +30,7 @@
                 <x-travel-card></x-travel-card>
                 <x-travel-card></x-travel-card>
             </div>
-        </div>
+        </div> --}}
 
         <x-travel-banner></x-travel-banner>
 
@@ -33,13 +40,13 @@
 
 
             <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-                <div class="max-w-2xl items-center mx-auto  mb-10 lg:mb-14">
+                <div class="items-center max-w-2xl mx-auto mb-10 lg:mb-14">
                     <h2 class="text-2xl font-bold md:text-md md:leading-tight dark:text-white">Browse locations by
                         Most-Popular Cities</h2>
 
                 </div>
 
-                <div class="grid sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="grid gap-6 sm:grid-cols-3 lg:grid-cols-5">
 
                     <x-city-card></x-city-card>
                     <x-city-card></x-city-card>

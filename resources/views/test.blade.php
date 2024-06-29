@@ -1,82 +1,46 @@
 <x-layouts.user-layout>
     <div class="mt-20">
-
-        <section class="relative pt-24 lg:pt-40 pb-24">
-
-            <img src="https://pagedone.io/asset/uploads/1705475165.png" alt="cover-image"
-                class="w-full absolute top-0 left-0 z-0 h-[410px]" />
-
-
-            <div class="w-full max-w-7xl mx-auto px-6 md:px-8">
-                <div class="flex items-center justify-center relative z-10 mb-3 w-max mx-auto">
-                    <img src="https://pagedone.io/asset/uploads/1705475153.png" alt="user-avatar-image"
-                        class="border-4 border-solid border-white rounded-full" />
-                </div>
-                <div
-                    class="w-full relative z-[5] -mt-20 lg:-mt-28 bg-white p-10 pt-20 lg:p-10 max-w-6xl mx-auto shadow-lg shadow-gray-100">
-                    <div
-                        class="flex flex-col lg:flex-row items-center max-lg:gap-6 lg:items-start justify-between mb-10">
-                        <ul class="flex items-center">
-                            <li class="w-28 border-r border-solid border-gray-200">
-                                <p class="font-semibold text-xl leading-8 text-gray-900 mb-2.5 text-center">
-                                    22
-                                </p>
-                                <p class="font-normal text-xs leading-5 text-gray-500 text-center">
-                                    Friends
-                                </p>
-                            </li>
-                            <li class="w-28 border-r border-solid border-gray-200">
-                                <p class="font-semibold text-xl leading-8 text-gray-900 mb-2.5 text-center">
-                                    10
-                                </p>
-                                <p class="font-normal text-xs leading-5 text-gray-500 text-center">
-                                    Photos
-                                </p>
-                            </li>
-                            <li class="w-28">
-                                <p class="font-semibold text-xl leading-8 text-gray-900 mb-2.5 text-center">
-                                    89
-                                </p>
-                                <p class="font-normal text-xs leading-5 text-gray-500 text-center">
-                                    Comments
-                                </p>
-                            </li>
-                        </ul>
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="rounded-full bg-gray-50 border border-solid border-gray-300 py-3 px-6 font-semibold text-sm leading-6 text-gray-900 shadow-sm shadow-transparent transition-all duration-500 hover:bg-gray-100 hover:shadow-gray-50">
-                                Connect
-                            </button>
-                            <button
-                                class="rounded-full bg-indigo-600 border border-solid border-gray-300 py-3 px-6 font-semibold text-sm leading-6 text-white shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-50">
-                                Message
-                            </button>
-                        </div>
+        <nav class="flex pb-4 border-b-2" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="#"
+                        class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <a href="#"
+                            class="text-sm font-medium text-gray-700 ms-1 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Hotels</a>
                     </div>
-                    <div class="flex items-center flex-col gap-2 pb-6 lg:pb-10 border-b border-solid border-gray-300">
-                        <h3 class="font-manrope font-bold text-3xl text-gray-900">
-                            Jane Cooper
-                        </h3>
-                        <p class="font-normal text-base leading-7 text-gray-400">
-                            jane_cooper
-                        </p>
-                        <p class="font-medium text-base leading-7 text-gray-700">
-                            Soluction Manager • Creative Team Officer
-                        </p>
-                        <p class="font-normal text-base leading-7 text-gray-400">
-                            University of Computer Science
-                        </p>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">ABC Hotel</span>
                     </div>
-                    <p
-                        class="pt-6 lg:pt-10 max-w-3xl mx-auto text-center font-normal text-base leading-7 text-gray-500">
-                        I'm Jane Cooper, a passionate enthusiast and . Join me on this journey as I
-                        explore the beauty of specific interests or topics. I believe in
-                        personal or professional philosophy,. Let's connect, share
-                        experiences, and inspire each other!
-                    </p>
-                </div>
-            </div>
-        </section>
+                </li>
+            </ol>
+        </nav>
+
+        <x-travel-image-grid />
+
+
+
 
 
     </div>

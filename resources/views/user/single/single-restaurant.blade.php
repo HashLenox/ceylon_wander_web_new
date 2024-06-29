@@ -8,7 +8,7 @@
 
         <x-main-components.food-menu :restaurant="$restaurant" />
 
-        <div class="bg-red-200 h-24 my-6 items-center justify-between">
+        <div class="items-center justify-between h-24 my-6 bg-red-200">
             <h1>Comment section</h1>
         </div>
 

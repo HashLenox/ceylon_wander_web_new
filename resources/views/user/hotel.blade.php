@@ -12,7 +12,7 @@
                     <x-hotel-card :location="$location" />
                 @empty
                     <div
-                        class="col-span-4 bg-primary-100 dark:bg-gray-700 flex justify-center items-center rounded-xl border-dashed border-2 border-gray-700 dark:border-gray-500">
+                        class="flex items-center justify-center col-span-4 border-2 border-gray-700 border-dashed bg-primary-100 dark:bg-gray-700 rounded-xl dark:border-gray-500">
                         <div class="text-center">
                             <p class="py-16 text-gray-800 dark:text-white ">No records found to your criteria</p>
                         </div>

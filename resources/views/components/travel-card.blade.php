@@ -1,9 +1,11 @@
 <div class="w-full mb-4 md:w-1/2 lg:w-1/4 lg:mb-0">
-    <a href="#" class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
-        <img src="https://images.unsplash.com/photo-1580889240912-c39ecefd3d95?q=80&w=1779&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    <a href="{{ route('travel.details', ['id' => $location->id]) }}"
+        class="relative block mx-2 overflow-hidden shadow-lg h-72 md:h-96 group">
+        <img src="{{ asset('storage/' . $location->main_image) }}" alt="{{ $location->main_image }}"
             class="absolute z-0 object-cover w-full duration-700 transform h-72 md:h-96 group-hover:scale-110">
 
-        <span class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">Hiking</span>
+        <span class="absolute right-0 px-4 py-1 text-xs font-semibold text-white bg-green-500 top-2">
+            {!! Str::limit($location?->category?->slug, 15) !!}</span>
 
         <div
             class="absolute z-10 w-full transition duration-300 gradient group-hover:bg-black group-hover:opacity-90 h-72 md:h-96">
@@ -14,7 +16,8 @@
                 <div class="absolute bottom-0">
                     <h2
                         class="pb-4 text-2xl font-bold leading-tight text-white transition duration-300 group-hover:underline">
-                        The Temple of the Tooth</h2>
+                        {!! Str::limit($location->name, 20) !!}</h2>
+
                 </div>
             </div>
             <div class="h-1/2">

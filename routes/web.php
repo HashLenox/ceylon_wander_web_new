@@ -81,8 +81,8 @@ Route::middleware(['auth'])->group(
         Route::get('/setting', [ProfileController::class, 'setting'])->name('setting');
 
         Route::get('/hotel/details/{id}', [AccommodationController::class, 'singleHotel'])->name('hotel.details');
-
-
+        Route::get('/restaurant/details/{id}', [RestaurantController::class, 'singleRestaurant'])->name('restaurant.details');
+        Route::get('/travel-location/details/{id}', [LocationController::class, 'singleTravelLocation'])->name('travel.details');
 
         Route::POST('/add-review', [FrontendController::class, 'addReview'])->name('addreview');
     }

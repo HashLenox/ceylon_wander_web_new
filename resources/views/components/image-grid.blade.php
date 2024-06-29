@@ -4,10 +4,10 @@
         <div class="flex flex-col flex-1">
             <a data-fancybox="gallery" class="flex flex-col flex-1 w-full " {{-- data-caption="<h6>View from
                 Herzogstand over Lake Walchen, Bavaria</h6>" --}}
-                href="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3" draggable="false">
-                <img alt="" class="shadow-lg object-cover object-center w-full h-96"
-                    class="object-cover object-center w-full h-96"
-                    src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-4.0.3">
+                href="{{ asset('storage/' . $main) }}" alt="{{ $main }}" draggable="false">
+                <img alt="" class="object-cover object-center w-full shadow-lg h-96"
+                    class="object-cover object-center w-full h-96" src="{{ asset('storage/' . $main) }}"
+                    alt="{{ $main }}">
 
             </a>
         </div>
