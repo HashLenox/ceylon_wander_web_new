@@ -1,13 +1,13 @@
-<div class=" flex justify-center items-center shadow-slate-700 ">
+<div class="flex items-center justify-center shadow-slate-700">
 
     <div x-data="paginationComponent()" class="w-full p-4 bg-white rounded shadow">
 
         <!-- Pagination Controls -->
-        <div class="flex justify-between items-start my-4 mr-2">
+        <div class="flex items-start justify-between my-4 mr-2">
 
             <div class="flex space-x-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal">
                 <template x-for="page in visiblePages" :key="page">
-                    <button @click="goToPage(page)" class="px-4 py-2 w-full p-4"
+                    <button @click="goToPage(page)" class="w-full p-4 px-4 py-2"
                         :class="{
                             ' font-extrabold text-lg text-slate-900 border-b-4 border-slate-900': currentPage ===
                                 page,
@@ -42,7 +42,7 @@
         </div>
 
 
-        <div class="p-2 grid lg:grid-cols-2  lg:gap-y-8 gap-10" x-show="currentPage === 1">
+        <div class="grid gap-8 p-2 lg:grid-cols-2 md:grid-cols-1 " x-show="currentPage === 1">
 
             {{-- @foreach ($restaurant->foods as $food)
                 maru kama ekak bn {{ $food->name }}
@@ -58,14 +58,14 @@
             <x-main-components.food-card />
         </div>
 
-        <div class="p-2 grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6" x-show="currentPage === 2">
+        <div class="grid grid-cols-1 gap-4 p-2 mb-6 sm:grid-cols-2" x-show="currentPage === 2">
             <!-- Page 2 Cards -->
             <x-main-components.food-card />
             <x-main-components.food-card />
             <x-main-components.food-card />
         </div>
 
-        <div class="grid p-2 grid-cols-1 sm:grid-cols-2 gap-4 mb-6" x-show="currentPage === 3">
+        <div class="grid grid-cols-1 gap-4 p-2 mb-6 sm:grid-cols-2" x-show="currentPage === 3">
             <!-- Page 3 Cards -->
             <x-main-components.food-card />
         </div>
