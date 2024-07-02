@@ -21,7 +21,9 @@
             </button>
             <a href="#" class="flex items-center justify-between mr-4">
                 <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="h-8 mr-3" alt="Logo" />
-                <span class="hidden lg:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ceylon Wander</span>
+                <span
+                    class="self-center hidden text-2xl font-semibold lg:block whitespace-nowrap dark:text-white">Ceylon
+                    Wander</span>
             </a>
             <div>
                 <livewire:global-search />
@@ -438,26 +440,10 @@
                 </ul>
                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                     <li>
-                        <a href="#" id="logoutBtn"
+                        <a href="{{ route('logout') }}"
                             class="block px-4 py-2 text-sm hover:rounded-bl-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout</a>
                     </li>
-                    <!-- Modal -->
-                    <div id="logoutModal" class="fixed inset-0 z-10 hidden overflow-y-auto">
-                        <div class="flex items-center justify-center min-h-screen">
-                            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-                            <div class="p-8 mx-4 bg-white rounded-lg">
-                                <div class="text-center">
-                                    <h3 class="mb-4 text-lg font-semibold">Are you sure you want to logout?</h3>
-                                    <div class="flex justify-center">
-                                        <button id="confirmLogout"
-                                            class="px-4 py-2 mr-2 text-white bg-red-500">Yes</button>
-                                        <button id="cancelLogout" class="px-4 py-2 text-white bg-gray-400">No</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
                 </ul>
             </div>
         </div>

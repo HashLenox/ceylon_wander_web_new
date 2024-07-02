@@ -1,13 +1,13 @@
 <div>
     <section class="py-3 sm:py-5">
-        <div class="mx-auto max-w-screen-2xl px-4 lg:px-10">
+        <div class="px-4 mx-auto max-w-screen-2xl lg:px-10">
             <!-- Start coding here -->
-            <div class="bg-gray-50 dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+            <div class="relative overflow-hidden shadow-md bg-gray-50 dark:bg-gray-800 sm:rounded-lg">
                 <div
-                    class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4 border-b dark:border-gray-700">
-                    <div class="w-full flex items-center space-x-3">
-                        <h5 class="dark:text-white font-semibold">Available Accommodation types</h5>
-                        <div class="text-gray-400 font-medium">1 results</div>
+                    class="flex flex-col items-center justify-between p-4 space-y-3 border-b md:flex-row md:space-y-0 md:space-x-4 dark:border-gray-700">
+                    <div class="flex items-center w-full space-x-3">
+                        <h5 class="font-semibold dark:text-white">Available Accommodation types</h5>
+                        <div class="font-medium text-gray-400">1 results</div>
                     </div>
                 </div>
                 <div class="overflow-x-auto">
@@ -31,10 +31,10 @@
                                 <x-tables.hotel-room-table-row :room="$room" />
                             @empty
                                 <div
-                                    class="col-span-4 bg-primary-100 dark:bg-gray-700 flex justify-center items-center rounded-xl border-dashed border-2 border-gray-700 dark:border-gray-500">
-                                    <div class="text-center">
-                                        <p class="py-16 text-gray-800 dark:text-white ">No records found to
-                                            your criteria</p>
+                                    class="flex items-center justify-center col-span-4 border-2 border-gray-700 border-dashed bg-slate-200 bg-primary-100 dark:bg-gray-700 rounded-xl dark:border-gray-500">
+                                    <div class="text-center ">
+                                        <p class="py-16 font-bold text-gray-800 dark:text-white ">No Reservations found.
+                                        </p>
                                     </div>
                                 </div>
                             @endforelse

@@ -4,7 +4,7 @@
 @include('layouts.side_navigation')
 
 <div class="lg:ml-64">
-    <main class="px-4 max-w-7xl mx-auto">
+    <main class="max-w-full px-4 mx-auto">
         @if (session('success'))
             <x-alert-box :colour="'green'">
                 {{ session('success') }}

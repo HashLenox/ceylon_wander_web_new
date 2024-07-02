@@ -43,7 +43,7 @@
             <div class="justify-between border-b-2 lg:flex">
 
                 <div class="px-8 md:mb-4">
-                    <x-image-grid :images="$hotel->images" />
+                    <x-image-grid :images="$hotel->images" :main="$hotel->main_image" />
 
                     <!--Start - Hotel Name-->
                     <div class="max-w-md mx-auto mb-4 lg:max-w-none">
@@ -128,6 +128,9 @@
                     <x-hotel-card></x-hotel-card> --}}
                 </div>
             </div>
+
+
+            <x-main-components.side-img-slider />
         </div>
 
 

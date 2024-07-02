@@ -25,31 +25,56 @@
         <div class="space-y-4">
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{ $feed->review }}</p>
 
-            <div class="flex flex-wrap">
-                @if ($feed->images)
-                    @foreach ($feed->images as $image)
-                        <img class="mr-4 mb-4 h-52 max-w-1/4 rounded-lg" src="{{ asset('storage/' . $image) }}"
-                            alt="task screenshot">
-                    @endforeach
-                @endif
 
-            </div>
-            <a class="text-gray-500 dark:text-gray-400 hover:text-blue-500 font-bold text-md"
+            @if ($feed->images)
+                @php
+                    $imageCount = count($feed->images);
+                @endphp
+                <div class="container flex max-h-52">
+                    @foreach ($feed->images as $image)
+                        @if ($imageCount == 1)
+                            <div class="w-full overflow-hidden lg:w-1/3 max-h-52">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 2)
+                            <div class="w-1/2 overflow-hidden lg:w-1/3 max-h-52">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 3)
+                            <div class="w-1/3 overflow-hidden max-h-52">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @elseif ($imageCount == 4)
+                            <div class="w-1/4 overflow-hidden max-h-52">
+                                <img src="{{ asset('storage/' . $image) }}" class="object-cover w-full h-full"
+                                    alt="Image">
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            @endif
+
+
+
+            <a class="font-bold text-gray-500 dark:text-gray-400 hover:text-blue-500 text-md"
                 href="#">{{ '@' . $feed?->location?->name }}</a>
         </div>
         <div class="flex py-3 space-x-6 border-t border-b border-gray-200 dark:border-gray-700">
-            <a href="#"
+            {{-- <a href="#"
                 class="flex items-center text-sm font-medium text-gray-500 hover:underline hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                <svg class="mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
                         clip-rule="evenodd"></path>
                 </svg>
                 7 Comments
-            </a>
+            </a> --}}
             <a href="#"
                 class="flex items-center text-sm font-medium text-gray-500 hover:underline hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                <svg class="mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                         clip-rule="evenodd"></path>
@@ -57,12 +82,12 @@
                 457 Likes
             </a>
         </div>
-        <div>
+        {{-- <div>
             <form action="#">
                 <label for="write-message" class="sr-only">Comment</label>
                 <input type="text" id="write-message" placeholder="Write comment"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
             </form>
-        </div>
+        </div> --}}
     </div>
 </div>

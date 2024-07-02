@@ -38,9 +38,10 @@
         </nav>
 
         <div class="max-w-screen-xl mx-auto bg-white md:py-2 xl:py-4 dark:bg-gray-900">
-            <x-hotel-title>Name</x-hotel-title>
+            <x-hotel-title>{{ $travel_location->name }}</x-hotel-title>
 
-            {{-- Your code goes here --}}
+            <x-travel-image-grid :images="$travel_location->images" :main="$travel_location->main_image" />
+
 
         </div>
     </div>
