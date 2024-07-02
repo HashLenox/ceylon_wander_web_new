@@ -5,7 +5,7 @@
                 <div>
                     <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden aspect-square">
                         <img class="absolute top-0 object-cover transition-transform duration-500 ease-in-out aspect-square start-0 group-hover:scale-105 rounded-xl"
-                            src="https://plus.unsplash.com/premium_photo-1661676056771-f6c2711249e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src="https://plus.unsplash.com/premium_photo-1687960117069-567a456fe5f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="Image Description">
                         <div class="absolute bottom-0 left-0 w-full p-2 bg-black bg-opacity-60 h-1/4">
                             <h1 class="text-xl font-bold text-white">Hotel ABC</h1>
@@ -26,10 +26,10 @@
                                 </h1>
                             </div>
                         </div>
-                        <span
+                        {{-- <span
                             class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
                             Sponsored
-                        </span>
+                        </span> --}}
                     </div>
                 </div>
             </blockquote>

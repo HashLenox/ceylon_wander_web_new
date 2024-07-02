@@ -44,7 +44,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         Nova::footer(function ($request) {
             return Blade::render('
-                <center>Copyright &copy; ' . now()->year . ' <a href="https://web.facebook.com/shehan.saralk/" target="blank"> <font color="red"> Shehan Rashmika. </font></a> All Rights Reserved.<br/>Built upon the Nova Startup Foundation. Crafted with boundless love for the world.</center>
+                <center>Copyright &copy; ' . now()->year . ' <a href="https://web.facebook.com/hashini.lenox.3/" target="blank"> <font color="red"> Hashini Sudeshika </font></a> All Rights Reserved.<br/>Built upon the Nova Startup Foundation. Crafted with boundless love for the world.</center>
             ');
         });
     }

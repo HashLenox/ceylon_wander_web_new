@@ -1,5 +1,5 @@
 <div>
-    <div class="mx-auto max-w-6xl px-4 2xl:px-0">
+    <div class="max-w-6xl px-4 mx-auto 2xl:px-0">
         <div class="flex items-center gap-2">
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Reviews</h2>
         </div>
@@ -7,7 +7,7 @@
         <div class="grid grid-cols-3 gap-4 px-6">
             <div class="w-full justify-items-center">
 
-                <div class="mt-2 flex items-center gap-2">
+                <div class="flex items-center gap-2 mt-2">
                     <x-star-rating />
                     <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">(4.6)</p>
                     <a href="#"
@@ -15,16 +15,16 @@
                         645 Reviews </a>
                 </div>
 
-                <div class="shrink-0 space-y-4 mt-4">
+                <div class="mt-4 space-y-4 shrink-0">
                     <p class="text-2xl font-semibold leading-none text-gray-900 dark:text-white">4.65 out of 5</p>
                 </div>
 
-                <div class="min-w-0 flex-1 space-y-3 mt-5">
+                <div class="flex-1 min-w-0 mt-5 space-y-3">
                     <div class="flex items-center gap-2">
                         <p
-                            class="w-2 shrink-0 text-start text-sm font-medium leading-none text-gray-900 dark:text-white">
+                            class="w-2 text-sm font-medium leading-none text-gray-900 shrink-0 text-start dark:text-white">
                             5</p>
-                        <svg class="h-4 w-4 shrink-0 text-yellow-300" aria-hidden="true"
+                        <svg class="w-4 h-4 text-yellow-300 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -34,15 +34,15 @@
                             <div class="h-1.5 rounded-full bg-yellow-300" style="width: 20%"></div>
                         </div>
                         <a href="#"
-                            class="w-8 shrink-0 text-right text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">239
+                            class="w-8 text-sm font-medium leading-none text-right shrink-0 text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">239
                             <span class="hidden sm:inline">reviews</span></a>
                     </div>
 
                     <div class="flex items-center gap-2">
                         <p
-                            class="w-2 shrink-0 text-start text-sm font-medium leading-none text-gray-900 dark:text-white">
+                            class="w-2 text-sm font-medium leading-none text-gray-900 shrink-0 text-start dark:text-white">
                             4</p>
-                        <svg class="h-4 w-4 shrink-0 text-yellow-300" aria-hidden="true"
+                        <svg class="w-4 h-4 text-yellow-300 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -52,15 +52,15 @@
                             <div class="h-1.5 rounded-full bg-yellow-300" style="width: 60%"></div>
                         </div>
                         <a href="#"
-                            class="w-8 shrink-0 text-right text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">432
+                            class="w-8 text-sm font-medium leading-none text-right shrink-0 text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">432
                             <span class="hidden sm:inline">reviews</span></a>
                     </div>
 
                     <div class="flex items-center gap-2">
                         <p
-                            class="w-2 shrink-0 text-start text-sm font-medium leading-none text-gray-900 dark:text-white">
+                            class="w-2 text-sm font-medium leading-none text-gray-900 shrink-0 text-start dark:text-white">
                             3</p>
-                        <svg class="h-4 w-4 shrink-0 text-yellow-300" aria-hidden="true"
+                        <svg class="w-4 h-4 text-yellow-300 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -70,15 +70,15 @@
                             <div class="h-1.5 rounded-full bg-yellow-300" style="width: 15%"></div>
                         </div>
                         <a href="#"
-                            class="w-8 shrink-0 text-right text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">53
+                            class="w-8 text-sm font-medium leading-none text-right shrink-0 text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">53
                             <span class="hidden sm:inline">reviews</span></a>
                     </div>
 
                     <div class="flex items-center gap-2">
                         <p
-                            class="w-2 shrink-0 text-start text-sm font-medium leading-none text-gray-900 dark:text-white">
+                            class="w-2 text-sm font-medium leading-none text-gray-900 shrink-0 text-start dark:text-white">
                             2</p>
-                        <svg class="h-4 w-4 shrink-0 text-yellow-300" aria-hidden="true"
+                        <svg class="w-4 h-4 text-yellow-300 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -88,15 +88,15 @@
                             <div class="h-1.5 rounded-full bg-yellow-300" style="width: 5%"></div>
                         </div>
                         <a href="#"
-                            class="w-8 shrink-0 text-right text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">32
+                            class="w-8 text-sm font-medium leading-none text-right shrink-0 text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">32
                             <span class="hidden sm:inline">reviews</span></a>
                     </div>
 
                     <div class="flex items-center gap-2">
                         <p
-                            class="w-2 shrink-0 text-start text-sm font-medium leading-none text-gray-900 dark:text-white">
+                            class="w-2 text-sm font-medium leading-none text-gray-900 shrink-0 text-start dark:text-white">
                             1</p>
-                        <svg class="h-4 w-4 shrink-0 text-yellow-300" aria-hidden="true"
+                        <svg class="w-4 h-4 text-yellow-300 shrink-0" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -106,17 +106,17 @@
                             <div class="h-1.5 rounded-full bg-yellow-300" style="width: 0%"></div>
                         </div>
                         <a href="#"
-                            class="w-8 shrink-0 text-right text-sm font-medium leading-none text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">13
+                            class="w-8 text-sm font-medium leading-none text-right shrink-0 text-primary-700 hover:underline dark:text-primary-500 sm:w-auto sm:text-left">13
                             <span class="hidden sm:inline">reviews</span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-span-2 w-full px-4">
+            <div class="w-full col-span-2 px-4">
                 <form class="mb-6" wire:submit="submit">
                     <div>
                         <div class="flex space-x-1">
                             <input type="hidden" name="rating" id="rating-input" value="">
-                            <p>Ane rate karannako</p>
+                            <p class="font-bold text-slate-900">Add a review</p>
                             <svg aria-hidden="true" class="w-8 h-8 text-gray-400 star" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-value="1">
                                 <path
@@ -170,14 +170,14 @@
                         </script>
                     </div>
                     <div
-                        class="my-4 w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
-                        <div class="py-2 px-4 bg-gray-50 rounded-t-lg dark:bg-gray-800">
+                        class="w-full my-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                        <div class="px-4 py-2 rounded-t-lg bg-gray-50 dark:bg-gray-800">
                             <label for="comment" class="sr-only">Your comment</label>
                             <textarea id="comment" rows="6" wire:model="review"
-                                class="px-0 w-full text-sm text-gray-900 bg-gray-50 border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                                class="w-full px-0 text-sm text-gray-900 border-0 bg-gray-50 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                                 placeholder="Write a comment..." required></textarea>
                         </div>
-                        <div class="flex justify-between items-center py-2 px-3 border-t dark:border-gray-600">
+                        <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
                             <button type="submit"
                                 class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
                                 Post comment
@@ -238,14 +238,14 @@
                     </div>
                 </form>
                 @error('photos.*')
-                    <span class="error text-sm text-red-600">{{ $message }}</span>
+                    <span class="text-sm text-red-600 error">{{ $message }}</span>
                 @enderror
                 <div class="grid grid-cols-4 gap-4">
                     @if ($images)
                         @foreach ($images as $images)
-                            <div class="w-full h-24 bg-gray-100 rounded-lg overflow-hidden">
+                            <div class="w-full h-24 overflow-hidden bg-gray-100 rounded-lg">
                                 <img src="{{ $images->temporaryUrl() }}" alt=""
-                                    class="w-full h-full object-cover">
+                                    class="object-cover w-full h-full">
                             </div>
                         @endforeach
                     @endif
@@ -253,14 +253,14 @@
             </div>
         </div>
 
-        <div class="mt-6 divide-y divide-gray-200 dark:divide-gray-700 px-6">
+        <div class="px-6 mt-6 divide-y divide-gray-200 dark:divide-gray-700">
             @if (count($comments) > 0)
                 @foreach ($comments as $comment)
                     <x-review :comment="$comment" />
                 @endforeach
             @else
-                <div class="py-10 bg-gray-200 dark:bg-gray-800 rounded-xl border-dashed border-2 border-primary-100">
-                    <p class="text-center text-xl font-semibold text-gray-500 ">
+                <div class="py-10 bg-gray-200 border-2 border-dashed dark:bg-gray-800 rounded-xl border-primary-100">
+                    <p class="text-xl font-semibold text-center text-gray-500 ">
                         No any reviews yet
                     </p>
                 </div>
